@@ -12,8 +12,9 @@ From relevant policy documents we want to extract data to end up with a set of K
     6. In case they do, we should add them to the template (Pulkit)
 3. Pull out from those actions and data points:
     1. The **variables** (e.g. from "Collect middle name of senior manager" the role should be "middle manager") -> we have a <u>fixed list</u> of needed variables (Alessio)
-    2. The type of evidence we should request to satisfy that data point (Alessio)
-4. **Store** excel with section numbers, actions, data points and variables in the database (should be versioned, at least in the filename)
+    2. The **type of evidence** we should request to satisfy that data point (Alessio)
+4. **Output CSV** with section numbers, actions, data points and variables  (should be versioned, at least in the filename) (Alessio)
+5. **Call the backend** POST route to save document in S3 and map them to database
 
 ## TBD - human reiteration loop
 An admin should be added in the loop to supervise the steps. This can be modeled an **accept/refuse** UI button after each step 1-4. We need to decide what action the user can take in case they refuse. Current options are:
