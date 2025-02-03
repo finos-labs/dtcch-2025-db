@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Multiple Documents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .upload-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .upload-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .upload-container input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .upload-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .upload-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="upload-container">
+        <h2>Upload KYC Documents</h2>
+        <form action="/backend2/upload" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="uid">
+
+            <h2>Passport</h2>
+            <input type="file" name="Passport" multiple>
+
+            <h2>Government Issued photo ID</h2>
+            <input type="file" name="GovernmentIssuedphotoID" multiple>
+
+
+            <input type="submit" value="Upload Documents">
+        </form>
+    </div>
+
+<script lang="javascript">
+    // Function to extract a specific parameter from the URL
+    const getParameterFromUrl = function (paramName) {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get(paramName);
+    };
+
+    const paramValue = getParameterFromUrl('id');
+    console.log(paramValue); // Outputs the value of 'param1' from the URL
+    const form = document.querySelector('form'); // Select the form element
+    form.elements["uid"].value = paramValue;
+</script>
+</body>
+</html>
