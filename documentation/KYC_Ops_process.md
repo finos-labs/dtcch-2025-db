@@ -2,8 +2,8 @@
 1. Background check with **x policy for y client** (triggered by KYC-ops) (Matthew + Valeria)
 2. Obtain **evidence**. Sources ordered by priority (Matthew + Valeria):
     1. Internal -> from DB with API
-    2. Public
-    3. Client
+    2. Public -> mocked (?)
+    3. Client -> provided by users via email
     - Two types of **integrations** (Nikolay):
         1. Internal tools (DB)
         2. Ask client via email (Automated)
