@@ -1,15 +1,18 @@
-from typing import List, Optional
 import boto3
 import os
 import json
+import time
+
 from dotenv import load_dotenv
+from typing import List, Optional
+from botocore.exceptions import ClientError
 
 class Agent:
     def __init__(
         self,
-        role: str,
-        goal: str,
-        backstory: str,
+        role: str = None,
+        goal: str = None,
+        backstory: str = None,
         tools: Optional[List[str]] = None,
         verbose: bool = False
     ):
@@ -18,8 +21,69 @@ class Agent:
         self.backstory = backstory
         self.tools = tools or []
         self.verbose = verbose
+        self.bedrock_client = self._init_bedrock_client()
         self.client = self._get_bedrock_client()
-        
+
+    def _init_bedrock_client(self):
+        """Initialize AWS Bedrock client with credentials from .env file."""
+        load_dotenv()  # Load environment variables from .env file
+        return boto3.client(
+            'bedrock-runtime',
+            region_name='us-west-2',
+            aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
+            aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'),
+            aws_session_token=os.getenv('AWS_SESSION_TOKEN')
+        )
+
+    def invoke_bedrock(self, prompt: str, max_retries=3) -> str:
+        """Invoke AWS Bedrock model with the given prompt and retry logic."""
+        for attempt in range(max_retries):
+            try:
+                body = json.dumps({
+                    "anthropic_version": "bedrock-2023-05-31",
+                    "max_tokens": 1000,
+                    "top_k": 250,
+                    "stop_sequences": [],
+                    "temperature": 0.7,
+                    "top_p": 0.999,
+                    "messages": [
+                        {
+                            "role": "assistant",
+                            "content": [{"type": "text",
+                                         "text": "I am a helpful AI assistant that will analyze the content you provide."}]
+                        },
+                        {
+                            "role": "user",
+                            "content": [{"type": "text", "text": prompt}]
+                        }
+                    ]
+                })
+
+                response = self.bedrock_client.invoke_model(
+                    modelId="anthropic.claude-3-5-sonnet-20241022-v2:0",
+                    contentType="application/json",
+                    accept="application/json",
+                    body=body
+                )
+
+                response_body = json.loads(response.get('body').read())
+                return response_body.get('content')[0].get('text', '')
+
+            except ClientError as e:
+                if e.response['Error']['Code'] == 'ExpiredTokenException':
+                    print(f"AWS token expired (attempt {attempt + 1}/{max_retries})")
+                    if attempt < max_retries - 1:
+                        print("Refreshing credentials...")
+                        self.bedrock_client = self._init_bedrock_client()
+                        time.sleep(1)  # Wait before retry
+                        continue
+                print(f"Error invoking Bedrock: {str(e)}")
+                return ""
+            except Exception as e:
+                print(f"Error invoking Bedrock: {str(e)}")
+                return ""
+        return ""
+
     def _get_bedrock_client(self):
         """Initialize AWS Bedrock client"""
         required_env_vars = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']
