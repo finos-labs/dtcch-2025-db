@@ -41,7 +41,7 @@ class Agent:
             
             return boto3.client(
                 service_name='bedrock-runtime',
-                region_name='us-west-2',
+                region_name='us-west-2',  # Changed to us-west-2
                 **credentials
             )
         except Exception as e:
@@ -75,14 +75,25 @@ class Agent:
             
             response = self.client.invoke_model(
                 modelId="anthropic.claude-3-5-sonnet-20241022-v2:0",
+                contentType="application/json",
+                accept="application/json",
                 body=json.dumps({
                     "anthropic_version": "bedrock-2023-05-31",
                     "max_tokens": 2000,
-                    "system": system_prompt,
-                    "messages": [{
-                        "role": "user",
-                        "content": [{"type": "text", "text": task}]
-                    }]
+                    "top_k": 250,
+                    "stop_sequences": [],
+                    "temperature": 0.7,
+                    "top_p": 0.999,
+                    "messages": [
+                        {
+                            "role": "assistant",
+                            "content": [{"type": "text", "text": f"I understand my role: {system_prompt}"}]
+                        },
+                        {
+                            "role": "user",
+                            "content": [{"type": "text", "text": task}]
+                        }
+                    ]
                 })
             )
             result = json.loads(response['body'].read())['content'][0]['text']
