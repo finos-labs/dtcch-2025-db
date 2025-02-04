@@ -18,12 +18,7 @@ def main():
     
     # Define tasks with dependencies
     tasks = [
-        Task(
-            description="Research current AI trends in healthcare",
-            agent_role="assistant",
-            expected_output="Comprehensive analysis of AI healthcare trends",
-            dependencies=[]
-        )
+        agent_sections_to_actions.task_section_to_actions()
     ]
 
     
