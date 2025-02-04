@@ -10,9 +10,9 @@ from botocore.exceptions import ClientError
 class Agent:
     def __init__(
         self,
-        role: str,
-        goal: str,
-        backstory: str,
+        role: str = None,
+        goal: str = None,
+        backstory: str = None,
         tools: Optional[List[str]] = None,
         verbose: bool = False
     ):
@@ -35,7 +35,7 @@ class Agent:
             aws_session_token=os.getenv('AWS_SESSION_TOKEN')
         )
 
-    def _invoke_bedrock(self, prompt: str, max_retries=3) -> str:
+    def invoke_bedrock(self, prompt: str, max_retries=3) -> str:
         """Invoke AWS Bedrock model with the given prompt and retry logic."""
         for attempt in range(max_retries):
             try:

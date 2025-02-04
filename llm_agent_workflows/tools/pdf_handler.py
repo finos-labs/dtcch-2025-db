@@ -14,7 +14,7 @@ from agents.agent_filter_policy import AgentFilterPolicy
 class PDFHandler:
     def __init__(self):
         """Initialize the PDF Handler with AWS Bedrock client."""
-        self.agent = AgentFilterPolicy
+        self.agent = AgentFilterPolicy("","","")
 
     def _extract_text_and_images(self, page) -> Dict[str, Union[str, List[str]]]:
         """Extract both text and images from a PDF page."""
@@ -103,7 +103,7 @@ class PDFHandler:
                     print(f"Processing page {page_idx + 1}...")
                     page = doc[page_idx]
                     content = self._extract_text_and_images(page)
-                    analysis = self.agent._analyze_page(self, content, page_idx + 1)
+                    analysis = self.agent._analyze_page(content, page_idx + 1)
                     
                     writer.writerow([
                         pdf_name,

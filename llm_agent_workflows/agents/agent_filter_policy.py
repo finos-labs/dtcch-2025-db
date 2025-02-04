@@ -28,7 +28,7 @@ class AgentFilterPolicy(Agent):
         }}
         """
         
-        response = self._invoke_bedrock(prompt)
+        response = self.invoke_bedrock(prompt)
         try:
             if not response:
                 return {"labels": [], "summary": "Error analyzing page"}
