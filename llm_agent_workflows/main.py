@@ -22,12 +22,6 @@ def main():
     # Define tasks with dependencies
     tasks = [
         Task(
-            description="Research current AI trends in healthcare",
-            agent_role="assistant",
-            expected_output="Comprehensive analysis of AI healthcare trends",
-            dependencies=[]
-        ),
-        Task(
             description=f"""
         You are an expert in KYC (Know Your Customer) compliance and data mapping. 
         Your task is to analyze a given text and determine whether it contains a KYC action. 
