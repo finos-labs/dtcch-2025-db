@@ -39,22 +39,22 @@ export AWS_SESSION_TOKEN=your_session_token  # if using temporary credentials
 
 1. Process all pages in a PDF:
 ```bash
-python pdf_handler.py --pdf path/to/your.pdf
+python pdf_handler.py --examples_pdf path/to/your.examples_pdf
 ```
 
 2. Process specific pages:
 ```bash
-python pdf_handler.py --pdf path/to/your.pdf --pages 1,3,5
+python pdf_handler.py --examples_pdf path/to/your.examples_pdf --pages 1,3,5
 ```
 
 3. Process a range of pages:
 ```bash
-python pdf_handler.py --pdf path/to/your.pdf --pages 1-5
+python pdf_handler.py --examples_pdf path/to/your.examples_pdf --pages 1-5
 ```
 
 4. Specify custom output location:
 ```bash
-python pdf_handler.py --pdf path/to/your.pdf --output custom/path/analysis.csv
+python pdf_handler.py --examples_pdf path/to/your.examples_pdf --output custom/path/analysis.csv
 ```
 
 ### Command Line Arguments
