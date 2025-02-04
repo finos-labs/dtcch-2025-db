@@ -5,9 +5,12 @@ from typing import List, Dict, Union
 from crew import Agent
 
 class AgentFilterPolicy(Agent):
-    def __init__(self, role: str, goal: str, backstory: str, bedrock_client=None):
+    def __init__(self, bedrock_client=None):
         """Initialize the PDF Handler with AWS Bedrock client."""
-        super().__init__(role, goal, backstory)
+        super().__init__()
+        self.role = ""
+        self.goal = ""
+        self.backstory = ""
         self.bedrock_client = bedrock_client or self._init_bedrock_client()
 
     def _analyze_page(self, page_content: Dict[str, Union[str, List[str]]], page_num: int) -> Dict[str, str]:
