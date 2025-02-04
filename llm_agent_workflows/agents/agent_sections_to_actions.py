@@ -241,7 +241,7 @@ def main():
             page_range = [int(p) for p in args.pages.split(',')]
 
     try:
-        print(f"Processing PDF: {args.examples_pdf}")
+        print(f"Processing PDF: {args.pdf}")
         print(f"Output will be saved to: {args.output}")
         if page_range:
             if isinstance(page_range, tuple):
@@ -251,7 +251,7 @@ def main():
         else:
             print("Processing all pages")
 
-        handler.process_pdf(args.examples_pdf, args.output, page_range)
+        handler.process_pdf(args.pdf, args.output, page_range)
         
     except Exception as e:
         print(f"Error processing PDF: {str(e)}")
