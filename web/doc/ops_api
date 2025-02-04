@@ -1,0 +1,118 @@
+Login:
+//TODO
+
+Get OPS details
+Request:
+GET /ops/{opsId}
+opsId: int
+
+Response:
+{
+  details: OpsDetails {
+    opsId: int,
+    name: string,
+    department: string
+  }
+}
+
+Get Clients list:
+Request:
+GET /clientsList
+
+Response:
+[
+  Client {
+    kycId: int,
+    clientId: int,
+    clientName: string,
+    date: date,
+    status: string,
+    afcStatus: string,
+    riskRate: string
+  }
+]
+
+Get KYC Details:
+Request:
+GET /kycId/{kycId}
+optId: int
+kyc: int
+
+Response:
+{
+  clientDetails: ClientDetails {
+      kycId: int,
+      clientId: int,
+      clientName: string,
+      date: date,
+      status: string
+  }
+  actionResults: [
+    actionResult {
+      actionId: int,
+      actionName: string,
+      variable: string,
+      status: string,
+      documents: [
+        Document {
+          documentId: int,
+          documentName: string
+        }
+      ]
+    }
+  ]
+}
+
+Download Document:
+Request:
+GET /documentId={documentId}
+
+Response:
+//TODO
+
+Get Requirement History:
+Request:
+GET /kycDetails?kycId={kycId}&requirementId={reqId}
+
+Response:
+{
+  kycId: int,
+  requirementId: int,
+  history: [
+//TODO
+  ]
+}
+
+
+Retrigger KYC:
+Request:
+PUT /retrigger?clientId={clientId}&kycId={kycId}
+
+Response:
+Code
+
+
+Get Policies:
+Request:
+GET /getPoliciesList
+
+Response:
+[
+    policyId: int,
+    policyName: string
+]
+
+Trigger KYC:
+Request:
+POST /triggerKyc
+{
+  clientId: int,
+  policyId: int
+}
+
+Response:
+{
+  clientId: int,
+  policyId: int,
+  kyc: int
+}
