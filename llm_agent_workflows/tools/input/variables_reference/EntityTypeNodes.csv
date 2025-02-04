@@ -1,0 +1,20 @@
+ETUID,entityType
+ETUID10,Trust
+ETUID11,Partnership
+ETUID12,Club or society
+ETUID13,Special Purpose Vehicle
+ETUID14,Pension Fund
+ETUID15,Parent Listed On A Regulated Market
+ETUID16,Listed On A Regulated Market
+ETUID17,Foundation
+ETUID18,Legal Form Similar to Trust
+ETUID19,Other Legal Structure
+ETUID2,All Entity Types
+ETUID3,Private Limited By Shares
+ETUID4,Private Individual
+ETUID5,Government and Supranational
+ETUID6,Fund
+ETUID7,Money Service Business
+ETUID8,Charity
+ETUID9,Sovereign Wealth Funds
+ETUID1,All Organisation Entity Types

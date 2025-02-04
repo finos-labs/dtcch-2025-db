@@ -1,0 +1,120 @@
+NPEUID,document,type
+NPEUID1,Account Authorised Signatory list,Non-public
+NPEUID11,Articles of Association,Non-public
+NPEUID110,Trade Licence,Non-public
+NPEUID111,Transaction documentation,Non-public
+NPEUID112,Transaction Monitoring policy,Non-public
+NPEUID113,Transaction Monitoring procedure,Non-public
+NPEUID114,Trust Administrator confirmation of beneficial owners.,Non-public
+NPEUID115,Trust deed,Non-public
+NPEUID116,UCAS database of students,Non-public
+NPEUID117,Underwriting agreement,Non-public
+NPEUID118,Utility Bill,Non-public
+NPEUID119,Visa,Non-public
+NPEUID12,Bank statement,Non-public
+NPEUID120,Wage slip,Non-public
+NPEUID121,Wolfsberg Questionnaire,Non-public
+NPEUID13,Benefit claimants Entitlement letter issued by HMRC,Non-public
+NPEUID14,Benefit claimants Entitlement letter issued by local authority,Non-public
+NPEUID15,Bill of lading,Non-public
+NPEUID16,Birth certificate,Non-public
+NPEUID17,Certificate of incorporation,Non-public
+NPEUID18,Certificate of Origin,Non-public
+NPEUID19,Child benefit documentation,Non-public
+NPEUID2,Act or law,Non-public
+NPEUID20,Child Tax Credit documentation,Non-public
+NPEUID21,Client email,Non-public
+NPEUID22,Client letter headed paper,Non-public
+NPEUID23,Confirmation from introducer that they will provide information on request,Non-public
+NPEUID24,Confirmation that the Fund Manager has the authority to act on behalf of the fund,Non-public
+NPEUID25,Constitutional document,Non-public
+NPEUID26,Council tax letter,Non-public
+NPEUID27,Course Letter of Acceptance,Non-public
+NPEUID28,Court document,Non-public
+NPEUID29,Curriculum Vitae,Non-public
+NPEUID30,Director's list,Non-public
+NPEUID31,Document from independent lawyer or accountant,Non-public
+NPEUID32,Document issued by public sector or local authority,Non-public
+NPEUID33,Document of title,Non-public
+NPEUID34,Driving licence,Non-public
+NPEUID35,DVLA Share driving licence service,Non-public
+NPEUID36,Email from HR,Non-public
+NPEUID37,Employee ID card,Non-public
+NPEUID38,Entitlement letter from the DWP,Non-public
+NPEUID39,Evidence of insurance,Non-public
+NPEUID4,AML and CTF policy,Non-public
+NPEUID40,Evidence of registration with professional body,Non-public
+NPEUID41,Export control obligation policy and procedures,Non-public
+NPEUID42,Export licence,Non-public
+NPEUID43,Financial statements,Non-public
+NPEUID44,Fund Due Diligence provided by Investment Manager,Non-public
+NPEUID45,Fund Manager Representation,Non-public
+NPEUID46,Fund prospectus,Non-public
+NPEUID47,Government Issued photo ID,Non-public
+NPEUID48,Group AML/CTF controls audit report,Non-public
+NPEUID49,Identity Confirmation Letter issued by DWP,Non-public
+NPEUID5,AML and CTF procedure,Non-public
+NPEUID50,Identity Confirmation letter issued by local authority,Non-public
+NPEUID51,Immigration Status Document with Biometric Residence Permit,Non-public
+NPEUID52,IND Application Registration Card (ARC),Non-public
+NPEUID53,"IND travel document (i.e., Blue Convention Travel doc, or Red Stateless Persons doc, or Brown Certificate of Identity doc)",Non-public
+NPEUID54,Intermediary email,Non-public
+NPEUID55,Investment Management Agreement,Non-public
+NPEUID56,Investment Manager Assurance letter,Non-public
+NPEUID57,Investment Manager email,Non-public
+NPEUID58,Investor list,Non-public
+NPEUID59,Invoice,Non-public
+NPEUID6,AML programme,Non-public
+NPEUID60,Know Your Client policy,Non-public
+NPEUID61,Know Your Client procedure,Non-public
+NPEUID62,Law firm's Client Due Diligence pack,Non-public
+NPEUID63,Legal document,Non-public
+NPEUID64,Letter from a hostel manager,Non-public
+NPEUID65,Letter from an employer,Non-public
+NPEUID66,Letter from care home manager,Non-public
+NPEUID67,Letter from care institution.,Non-public
+NPEUID68,Letter from college,Non-public
+NPEUID69,Letter from external professional,Non-public
+NPEUID7,AML Questionnaire,Non-public
+NPEUID70,Letter from matron of care home,Non-public
+NPEUID72,Letter from medical professional,Non-public
+NPEUID73,Letter from police,Non-public
+NPEUID74,Letter from referee,Non-public
+NPEUID75,Letter from school,Non-public
+NPEUID76,Letter from the client’s probation officer,Non-public
+NPEUID77,Letter from the DWP confirming that the person is in receipt of a pension,Non-public
+NPEUID78,Letter from the Foreign Office,Non-public
+NPEUID79,Letter from the governor of the prison,Non-public
+NPEUID8,AML/CTF controls audit report,Non-public
+NPEUID80,Letter from the school,Non-public
+NPEUID81,Letter from the warden of a homeless shelter,Non-public
+NPEUID82,Letter from university,Non-public
+NPEUID83,Letter from warden of refuge,Non-public
+NPEUID84,Letter from warden of sheltered accommodation,Non-public
+NPEUID85,Letter from workplace,Non-public
+NPEUID86,Letters of administration,Non-public
+NPEUID87,List of card holders country of residence,Non-public
+NPEUID88,List of card holders names,Non-public
+NPEUID89,Market Maker's due diligence confirmation,Non-public
+NPEUID9,Anti-Money Laundering policy,Non-public
+NPEUID9,Anti-Money Laundering procedure,Non-public
+NPEUID90,National Insurance Card,Non-public
+NPEUID90,Professional Register Screenshot,Non-public
+NPEUID91,Proof of capital invested,Non-public
+NPEUID91,NHS Medical Card,Non-public
+NPEUID92,Notarised Ownership chart,Non-public
+NPEUID92,Proof of HMRC registration,Non-public
+NPEUID93,Proof of Introducer's authorisation,Non-public
+NPEUID93,Notary Certificate,Non-public
+NPEUID94,Offering memorandum,Non-public
+NPEUID94,Proof of listing,Non-public
+NPEUID95,Partnership Agreement,Non-public
+NPEUID95,Proof of professional registration,Non-public
+NPEUID96,Pay slips,Non-public
+NPEUID96,Proof of regulation,Non-public
+NPEUID97,Prospectus,Non-public
+NPEUID97,Pension Scheme Tax Reference number,Non-public
+NPEUID98,Power of attorney,Non-public
+NPEUID98,Reliance Assurance letter or equivalent,Non-public
+NPEUID99,Self-employed trading accounts,Non-public
+NPEUID99,Practising certificates.,Non-public
