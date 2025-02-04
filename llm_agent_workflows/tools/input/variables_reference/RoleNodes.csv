@@ -1,0 +1,82 @@
+RUID,role
+RUID1,Account Authorised Signatory
+RUID2,Additional Borrower
+RUID3,Administrator
+RUID4,Adult acting on behalf of a minor
+RUID5,Advising Bank
+RUID6,Agent
+RUID9,Applicant
+RUID10,Assignee
+RUID11,Assignor
+RUID12,Beneficial Owner
+RUID13,Beneficiary
+RUID14,Borrower
+RUID15,Broker or dealer
+RUID16,Buyer
+RUID17,Client
+RUID20,Control party
+RUID53,Organisation Senior Management
+RUID18,Client's Clients
+RUID19,Client's Parent
+RUID21,Counterparty
+RUID22,Distributor
+RUID23,Drawee
+RUID24,Drawer
+RUID25,Employee
+RUID26,Executor
+RUID7,Exporter
+RUID27,Feeder Fund
+RUID28,Financial Advisor
+RUID29,Founder
+RUID30,Freight Forwarder
+RUID31,Fund
+RUID32,Fund Manager
+RUID33,General Partner
+RUID34,Guarantor
+RUID8,Importer
+RUID35,Individual Starting the new business
+RUID36,Individual who act on behalf of the corporate trust
+RUID37,Instructing Party
+RUID38,Insurance Provider
+RUID39,Intermediary
+RUID40,Intermediate Beneficial Owner
+RUID41,Introducer
+RUID42,Investment Manager
+RUID43,Investor
+RUID44,Law or Accountancy firm
+RUID45,Lead Underwriter
+RUID46,Legal Professional
+RUID47,Lender
+RUID48,Mandate Lead Arranger
+RUID49,Member
+RUID50,Money Service Business
+RUID51,NewCo
+RUID52,Non-financial business and profession involved with the Trade Finance relationship
+RUID54,Other party
+RUID55,Payee
+RUID56,Payer
+RUID57,Pooled Account Individual
+RUID58,Protector
+RUID59,Referee
+RUID60,Secondary Cardholder
+RUID61,Settlor
+RUID62,Transferee
+RUID63,Trustee
+RUID64,Underlying Client
+RUID65,Port
+RUID66,Previous Pension Scheme
+RUID67,Professional Trustee
+RUID68,Security Provider
+RUID69,Security Trustee
+RUID70,Seller
+RUID71,Shipper or Carrier
+RUID72,Start-up fund
+RUID73,Supplier
+RUID74,Technical Bank
+RUID75,Third Party
+RUID76,Third Party Investment Vehicle
+RUID77,Tied Agent
+RUID78,Trade Finance Financial Institution
+RUID79,Umbrella Fund
+RUID80,Vendor
+RUID81,Vessel
