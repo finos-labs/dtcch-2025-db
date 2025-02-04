@@ -2,26 +2,25 @@ import boto3
 import os
 import json
 import time
-
+from abc import ABC
 from dotenv import load_dotenv
 from typing import List, Optional
 from botocore.exceptions import ClientError
 
-class Agent:
+class Agent(ABC):
     def __init__(
         self,
-        role: str = None,
-        goal: str = None,
-        backstory: str = None,
         tools: Optional[List[str]] = None,
-        verbose: bool = False
+        verbose: bool = False,
+        bedrock_client=None
     ):
-        self.role = role
-        self.goal = goal
-        self.backstory = backstory
+        self.role = ""
+        self.goal = ""
+        self.backstory = ""
+
         self.tools = tools or []
         self.verbose = verbose
-        self.bedrock_client = self._init_bedrock_client()
+        self.bedrock_client = bedrock_client or self._init_bedrock_client()
         self.client = self._get_bedrock_client()
 
     def _init_bedrock_client(self):
@@ -34,6 +33,38 @@ class Agent:
             aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'),
             aws_session_token=os.getenv('AWS_SESSION_TOKEN')
         )
+
+    def _get_bedrock_client(self):
+        """Initialize AWS Bedrock client"""
+        required_env_vars = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']
+        missing_vars = [var for var in required_env_vars if not os.getenv(var)]
+        
+        if missing_vars:
+            raise ValueError(f"Missing required AWS credentials: {', '.join(missing_vars)}. "
+                           f"Please set these in your .env file.")
+        
+        try:
+            credentials = {
+                'aws_access_key_id': os.getenv('AWS_ACCESS_KEY_ID'),
+                'aws_secret_access_key': os.getenv('AWS_SECRET_ACCESS_KEY'),
+            }
+            
+            # Only add session token if it exists
+            if os.getenv('AWS_SESSION_TOKEN'):
+                credentials['aws_session_token'] = os.getenv('AWS_SESSION_TOKEN')
+            
+            return boto3.client(
+                service_name='bedrock-runtime',
+                region_name='us-west-2',  # Changed to us-west-2
+                **credentials
+            )
+        except Exception as e:
+            if 'ExpiredTokenException' in str(e):
+                raise Exception(
+                    "AWS credentials have expired. Please update your AWS credentials in the .env file. "
+                    "If you're using temporary credentials, you'll need to refresh them."
+                ) from e
+            raise Exception(f"Failed to initialize Bedrock client: {str(e)}") from e
 
     def invoke_bedrock(self, prompt: str, max_retries=3) -> str:
         """Invoke AWS Bedrock model with the given prompt and retry logic."""
@@ -83,38 +114,6 @@ class Agent:
                 print(f"Error invoking Bedrock: {str(e)}")
                 return ""
         return ""
-
-    def _get_bedrock_client(self):
-        """Initialize AWS Bedrock client"""
-        required_env_vars = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']
-        missing_vars = [var for var in required_env_vars if not os.getenv(var)]
-        
-        if missing_vars:
-            raise ValueError(f"Missing required AWS credentials: {', '.join(missing_vars)}. "
-                           f"Please set these in your .env file.")
-        
-        try:
-            credentials = {
-                'aws_access_key_id': os.getenv('AWS_ACCESS_KEY_ID'),
-                'aws_secret_access_key': os.getenv('AWS_SECRET_ACCESS_KEY'),
-            }
-            
-            # Only add session token if it exists
-            if os.getenv('AWS_SESSION_TOKEN'):
-                credentials['aws_session_token'] = os.getenv('AWS_SESSION_TOKEN')
-            
-            return boto3.client(
-                service_name='bedrock-runtime',
-                region_name='us-west-2',  # Changed to us-west-2
-                **credentials
-            )
-        except Exception as e:
-            if 'ExpiredTokenException' in str(e):
-                raise Exception(
-                    "AWS credentials have expired. Please update your AWS credentials in the .env file. "
-                    "If you're using temporary credentials, you'll need to refresh them."
-                ) from e
-            raise Exception(f"Failed to initialize Bedrock client: {str(e)}") from e
 
     def execute_task(self, task, context=""):
         """Execute a given task using the agent's role and capabilities"""
