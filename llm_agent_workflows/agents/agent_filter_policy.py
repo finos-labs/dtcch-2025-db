@@ -2,7 +2,7 @@ import json
 
 from typing import List, Dict, Union
 
-from llm_agent_workflows.crew import Agent
+from crew import Agent
 
 class AgentFilterPolicy(Agent):
     def __init__(self, role: str, goal: str, backstory: str, bedrock_client=None):

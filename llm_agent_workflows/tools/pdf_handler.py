@@ -2,7 +2,6 @@ import io
 import base64
 import os
 import csv
-import json
 import time
 import fitz  # PyMuPDF
 
@@ -10,8 +9,7 @@ from typing import List, Dict, Union, Optional
 from pathlib import Path
 from PIL import Image
 
-#from llm_agent_workflows.agents.a
-from agent_filter_policy import AgentFilterPolicy
+from agents.agent_filter_policy import AgentFilterPolicy
 
 class PDFHandler:
     def __init__(self):
