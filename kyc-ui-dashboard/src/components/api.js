@@ -26,33 +26,41 @@ export const getUserInfo = async () => {
 export const getKycRequests = async () => {
   const token = localStorage.getItem("token");
   
-  return axios.get(`${API_ENDPOINTS.BASE_URL}/kyc_requests`, {
+  return axios.get(`${API_ENDPOINTS.BASE_URL}/getKycList`, {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
 
 export const getClients = async () => {
-  const response = await fetch(`${API_ENDPOINTS.BASE_URL}/clients`);
-
+  const token = localStorage.getItem("token");
+  
+  const response = await fetch(`${API_ENDPOINTS.BASE_URL}/clients`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  console.log(response)
   if (!response.ok) throw new Error("Failed to fetch clients");
   return response.json();
 };
 
 export const getPolicies = async () => {
-  const response = await fetch(`${API_ENDPOINTS.BASE_URL}/policies`);
-
+  const token = localStorage.getItem("token");
+  
+  const response = await fetch(`${API_ENDPOINTS.BASE_URL}/policies`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
   if (!response.ok) throw new Error("Failed to fetch policies");
   return response.json();
 };
 
 
-export const triggerKyc = async (client, policy) => {
+export const triggerKyc = async (requestData) => {
   const token = localStorage.getItem("token");
 
   try {
-    const response = await axios.post(
-      `${API_ENDPOINTS.BASE_URL}/kyc_requests`,
-      { client, policy },
+    console.log('trigger kyc for ', requestData)
+     const response = await axios.post(
+      `${API_ENDPOINTS.BASE_URL}/triggerKyc`,
+      requestData,
       {
         headers: {
           Authorization: `Bearer ${token}`,

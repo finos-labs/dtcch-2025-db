@@ -62,11 +62,10 @@ const Dashboard = () => {
       getPolicies(),
     ]);
 
+    console.log(clientsData)
     setClients(clientsData);
     setPolicies(policiesData);
-  
-      setClients(clientsData);
-      setPolicies(policiesData);
+
       setIsModalOpen(true); // Open modal after fetching data
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -76,15 +75,25 @@ const Dashboard = () => {
   const handleCloseModal = () => setIsModalOpen(false);
 
   const handleSubmit = async () => {
+
     if (!selectedClient || !selectedPolicy) {
       alert("Please select a client and policy.");
       return;
     }
   
     try {
-      const response = await triggerKyc(selectedClient, selectedPolicy);
+      
+      const requestData = {
+        client_id: selectedClient,  // Ensure this holds the client's ID
+        policy_id: selectedPolicy,  // Ensure this holds the policy's ID
+      };
+
+      const response = await triggerKyc(requestData);
+      alert("New Kyc is triggrered !")
       // Add the new KYC request to the state
-      setKycRequests((prevRequests) => [response.data, ...prevRequests]);
+      
+      const kycResponse = await getKycRequests();
+      setKycRequests(kycResponse.data);
 
       handleCloseModal(); // Close modal
     } catch (error) {
@@ -159,11 +168,11 @@ const Dashboard = () => {
                 <tr
                   key={index}
                   className="text-center bg-white hover:bg-gray-50 cursor-pointer"
-                  onClick={() => handleRowClick(request.id)}
+                  onClick={() => handleRowClick(request.kycId)}
                 >
-                  <td className="border p-3">{request.id}</td>
+                  <td className="border p-3">{request.kycId}</td>
                   <td className="border p-3">{request.clientName}</td>
-                  <td className="border p-3">{request.policy}</td>
+                  <td className="border p-3">{request.policyName}</td>
                   <td className="border p-3">{request.triggerDate}</td>
                   <td
                     className={`border p-3 font-semibold ${
@@ -206,13 +215,13 @@ const Dashboard = () => {
                 {/* Clients Dropdown */}
                 <select
                   value={selectedClient}
-                  onChange={(e) => setSelectedClient(e.target.value)}
+                  onChange={(e) => setSelectedClient(e.target.options[e.target.selectedIndex].id)}
                   className="w-full p-2 border rounded-lg"
                 >
                   <option value="">Select Client</option>
                   {clients.map((client, index) => (
-                    <option key={index} value={client}>
-                      {client}
+                    <option key={client.client_id} value={client.client_id} id={client.client_id}>
+                      {client.client_name}
                     </option>
                   ))}
                 </select>
@@ -222,13 +231,13 @@ const Dashboard = () => {
                   {/* Policies Dropdown */}
                   <select
                     value={selectedPolicy}
-                    onChange={(e) => setSelectedPolicy(e.target.value)}
+                    onChange={(e) => setSelectedPolicy(e.target.options[e.target.selectedIndex].id)}
                     className="w-full p-2 border rounded-lg"
                   >
                     <option value="">Select Policy</option>
                     {policies.map((policy, index) => (
-                      <option key={index} value={policy}>
-                        {policy}
+                      <option key={policy.policy_id} value={policy.policy_id} id={policy.policy_id}>
+                        {policy.policy_name}
                       </option>
                     ))}
                   </select>
