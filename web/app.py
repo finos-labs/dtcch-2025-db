@@ -2,11 +2,16 @@ from dataclasses import dataclass
 
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
+from flask_jwt_extended import (
+    JWTManager, create_access_token, jwt_required, get_jwt_identity
+)
+from flask_bcrypt import Bcrypt
 from datetime import datetime
 
 from sqlalchemy.orm import Session
 
-from model.data import Kyc, Ops
+from model.data import Kyc
 
 app = Flask(__name__)
 
@@ -15,6 +20,32 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dtcch:mypassword@localhost
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}}, expose_headers=["Authorization"])
+app.config["JWT_SECRET_KEY"] = "supersecretkey"  # Change this in production
+
+bcrypt = Bcrypt(app)
+jwt = JWTManager(app)
+
+# Simulated user database
+users = {
+    "admin": {
+        "password": bcrypt.generate_password_hash("password").decode("utf-8"),
+        "email": "john@example.com",
+        "department": "Compliance",
+        "avatar": "https://i.pravatar.cc/100"
+    }
+}
+
+clients = ["Client A", "Client B", "Client C"]
+policies = ["Policy X", "Policy Y", "Policy Z"]
+
+kyc_requests = [
+            {"id": "KYC001", "clientName": "Alice Smith", "policy": "Policy A", "triggerDate": "2024-02-01", "status": "Pending"},
+            {"id": "KYC002", "clientName": "Bob Johnson", "policy": "Policy B", "triggerDate": "2024-02-02", "status": "Approved"},
+            {"id": "KYC003", "clientName": "Charlie Brown", "policy": "Policy C", "triggerDate": "2024-02-03", "status": "Rejected"},
+        ]
+
 
 # Define the REQUEST_FOR_DOCS model
 class RequestForDocs(db.Model):
@@ -26,8 +57,8 @@ class RequestForDocs(db.Model):
 
 @dataclass
 class Client(db.Model):
-    client_id = db.Column(db.Integer, primary_key=True)
-    client_name = db.Column(db.String(255), nullable=False)
+    client_id: int = db.Column(db.Integer, primary_key=True)
+    client_name: str = db.Column(db.String(255), nullable=False)
     # client_email = db.Column(db.String(255), nullable=False)
 
 class KycProcess(db.Model):
@@ -39,15 +70,15 @@ class KycProcess(db.Model):
 
 @dataclass
 class KycOps(db.Model):
-    ops_id = db.Column(db.Integer, primary_key=True)
-    ops_name = db.Column(db.String(255), nullable=False)
-    ops_designation = db.Column(db.String(255), nullable=False)
+    ops_id: int = db.Column(db.Integer, primary_key=True)
+    ops_name: str = db.Column(db.String(255), nullable=False)
+    ops_designation: str = db.Column(db.String(255), nullable=False)
 
 @dataclass
 class Policy(db.Model):
-    policy_id = db.Column(db.Integer, primary_key=True)
-    policy_name = db.Column(db.String(255), nullable=False)
-    policy_version = db.Column(db.String(50), nullable=False)
+    policy_id: int = db.Column(db.Integer, primary_key=True)
+    policy_name: str = db.Column(db.String(255), nullable=False)
+    policy_version: str = db.Column(db.String(50), nullable=False)
 
 def send_email_request(new_request):
     pass
@@ -109,6 +140,22 @@ def request_docs():
 
     return jsonify({'message': 'Request stored successfully'}), 201
 
+# User Login API
+@app.route("/login", methods=["POST"])
+def login():
+    data = request.json
+    username = data.get("username")
+    password = data.get("password")
+    print('User:', username, 'Password:', password)
+
+    if username in users and bcrypt.check_password_hash(users[username]["password"], password):
+        access_token = create_access_token(identity=username)  # ✅ Fix: Ensure identity is a string
+        print('Token created:', access_token)
+        return jsonify(access_token=access_token)
+
+    print('Failed login')
+    return jsonify({"error": "Invalid credentials"}), 401
+
 @app.route('/ops/<ops_id>', methods=['GET'])
 def get_ops_details(ops_id):
     try:
@@ -117,7 +164,7 @@ def get_ops_details(ops_id):
         return jsonify({'error': str(e)}), 500
 
     if ops:
-        return jsonify(Ops(ops.ops_id, ops.ops_name, ops.ops_designation)), 200
+        return jsonify(ops), 200
     else:
         return jsonify({"error": "Ops not found"}), 404
 
@@ -143,18 +190,21 @@ def get_kyc_list(ops_id):
 
     return jsonify(result), 200
 
-@app.route('/getPoliciesList', methods=['GET'])
+@app.route('/policies', methods=['GET'])
 def get_policies_list():
-    result = []
     try:
-        policies = Policy.query.all()
-        for policy in policies:
-            result.append()
         return jsonify(Policy.query.all())
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
     return jsonify(result), 200
+
+@app.route('/clients', methods=['GET'])
+def get_clients_list():
+    try:
+        return jsonify(Client.query.all())
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/triggerKyc', methods=['POST'])
 def trigger_kyc():
