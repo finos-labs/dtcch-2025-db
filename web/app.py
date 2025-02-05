@@ -28,7 +28,7 @@ class RequestForDocs(db.Model):
 class Client(db.Model):
     client_id = db.Column(db.Integer, primary_key=True)
     client_name = db.Column(db.String(255), nullable=False)
-    client_email = db.Column(db.String(255), nullable=False)
+    # client_email = db.Column(db.String(255), nullable=False)
 
 class KycProcess(db.Model):
     kyc_id = db.Column(db.Integer, primary_key=True)
