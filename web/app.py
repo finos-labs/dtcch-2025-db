@@ -30,6 +30,7 @@ jwt = JWTManager(app)
 # Simulated user database
 users = {
     "admin": {
+        "id": 1,
         "password": bcrypt.generate_password_hash("password").decode("utf-8"),
         "email": "john@example.com",
         "department": "Compliance",
@@ -64,6 +65,7 @@ class Client(db.Model):
 class KycProcess(db.Model):
     kyc_id = db.Column(db.Integer, primary_key=True)
     client_id = db.Column(db.Integer, db.ForeignKey('client.client_id'), nullable=False)
+    policy_id = db.Column(db.Integer, nullable=False)
     ops_id  = db.Column(db.Integer, db.ForeignKey('kyc_ops.ops_id'), nullable=False)
     initiation_timestamp  = db.Column(db.DateTime, nullable=False)
     overall_status = db.Column(db.String(50), nullable=False)
@@ -189,21 +191,30 @@ def get_ops_details(ops_id):
     else:
         return jsonify({"error": "Ops not found"}), 404
 
-@app.route('/getKycList/<ops_id>', methods=['GET'])
-def get_kyc_list(ops_id):
+@app.route('/getKycList', methods=['GET'])
+@jwt_required()
+def get_kyc_list():
+    username = get_jwt_identity()  # ✅ Now returns only a string
+    print("Current User:", username)
 
+    if username not in users:
+        return jsonify({"error": "User not found"}), 404
+    ops_id = users[username]["id"]
     result = []
     try:
         kyc_processes = (db.session.query(
-            KycProcess, Client
+            KycProcess, Client, Policy
         ).filter(KycProcess.client_id == Client.client_id
+        ).filter(KycProcess.policy_id == Policy.policy_id
         ).filter(KycProcess.ops_id == ops_id
         ).all())
 
-        for kyc_process, client in kyc_processes:
+        for kyc_process, client, policy in kyc_processes:
             result.append(Kyc(kyc_process.kyc_id,
                            kyc_process.client_id,
+                           kyc_process.policy_id,
                            client.client_name,
+                           policy.policy_name,
                            kyc_process.initiation_timestamp,
                            kyc_process.overall_status))
     except Exception as e:
@@ -236,6 +247,7 @@ def trigger_kyc():
         new_kyc = KycProcess(
             client_id=data['client_id'],
             ops_id=data['ops_id'],
+            policy_id=data['policy_id'],
             initiation_timestamp=datetime.now(),
             overall_status='NEW'
         )

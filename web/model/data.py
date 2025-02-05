@@ -5,8 +5,10 @@ from datetime import datetime
 class Kyc:
     kycId: int
     clientId: int
+    policyId:int
     clientName: str
-    date: datetime
+    policyName: str
+    triggerDate: datetime
     status: str
     afcStatus: str = 'none'
     riskRate: str = 'none'
