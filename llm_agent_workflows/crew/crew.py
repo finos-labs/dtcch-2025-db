@@ -20,7 +20,7 @@ class Crew:
                 # Check if dependencies are met
                 if task.dependencies:
                     context = "\n".join([
-                        f"Result from {dep}: {self.task_results.get(dep, 'Not completed')}"
+                        f"{self.task_results.get(dep.context, 'Not completed')}"
                         for dep in task.dependencies
                     ])
                     task.context = context
@@ -38,11 +38,21 @@ class Crew:
                         print(f"Context from dependencies:\n{task.context}\n")
                 
                 result = agent.execute_task(task.description, task.context)
+                # validation of json
+                try:
+                    self._validation(task.validation_type)
+                except Exception as e:
+                    print(f"Validation error: {e}")
+
                 self.task_results[task.description] = result
                 
                 if result is None:  # If there was an error, stop execution
                     return self.task_results
             
             iteration += 1
-        
+
         return self.task_results
+
+    def _validation(self, validation_type: str):
+        #TODO: add validation depending on string need to validate the type too
+        pass
