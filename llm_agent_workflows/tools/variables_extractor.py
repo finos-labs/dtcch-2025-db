@@ -55,7 +55,6 @@ class JSONHandler:
             # Open JSON
             with (open(json_path)) as f:
                 json_input = json.load(f)
-            output_json = []
             variables_references = self.extract_variable_values(variable_references_path)
             # Process pages and write to JSON
             with open(output_path, 'w') as output_file:
@@ -64,10 +63,11 @@ class JSONHandler:
                         quote = json_input[i]["quote"]
                         action = json_input[i]["action"]
                         variables = self.agent._analyze_quote_and_action(action, quote, variables_references)
-                        if variables:
+                        if not variables:
                             raise Exception("LLM-returned JSON incorrectly parsed")
                         json_input[i].update(variables)
                         # TODO: add return value to json entry
+                json.dump(json_input, output_file)
             print(f"Extraction complete. Output saved to {output_path}")
             
         except Exception as e:
