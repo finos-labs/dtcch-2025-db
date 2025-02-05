@@ -8,10 +8,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/kyc/:kycId" element={<KycDetails /> } />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/kyc/:kycId" element={localStorage.getItem("token") ? <KycDetails /> : <LoginPage />} />
-        
+        <Route path="/" element={<LoginPage />} />
       </Routes>
     </Router>
   );
