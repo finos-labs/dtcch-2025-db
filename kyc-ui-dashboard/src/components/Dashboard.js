@@ -10,6 +10,8 @@ const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedClient, setSelectedClient] = useState("");
   const [selectedPolicy, setSelectedPolicy] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc"); // "asc" or "desc"
+
 
   const [clients, setClients] = useState([]);
   const [policies, setPolicies] = useState([]);
@@ -33,7 +35,8 @@ const Dashboard = () => {
         ]);
 
         setUser(userResponse.data);
-        setKycRequests(kycResponse.data);
+        const sortedData = kycResponse.data.sort((a, b) => a.kyc_id - b.kyc_id); // Sort ascending initially
+        setKycRequests(sortedData || []);
       } catch (err) {
         console.error("Error fetching data:", err);
         setError("Session expired. Please log in again.");
@@ -62,7 +65,6 @@ const Dashboard = () => {
       getPolicies(),
     ]);
 
-    console.log(clientsData)
     setClients(clientsData);
     setPolicies(policiesData);
 
@@ -108,6 +110,15 @@ const Dashboard = () => {
       value.toString().toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
+
+  const handleSortById = () => {
+    const sortedData = [...kycRequests].sort((a, b) =>
+      sortOrder === "asc" ? b.kyc_id - a.kyc_id : a.kyc_id - b.kyc_id
+    );
+
+    setKycRequests(sortedData);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc"); // Toggle sort order
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
@@ -155,7 +166,9 @@ const Dashboard = () => {
         <table className="w-full border-collapse border border-gray-200">
           <thead>
             <tr className="bg-gray-200">
-              <th className="border p-3">KYC ID</th>
+            <th className="px-4 py-2 border cursor-pointer" onClick={handleSortById}>
+              KYC ID {sortOrder === "asc" ? "🔼" : "🔽"}
+            </th>
               <th className="border p-3">Client Name</th>
               <th className="border p-3">Policy</th>
               <th className="border p-3">Trigger Date</th>
@@ -168,12 +181,12 @@ const Dashboard = () => {
                 <tr
                   key={index}
                   className="text-center bg-white hover:bg-gray-50 cursor-pointer"
-                  onClick={() => handleRowClick(request.kycId)}
+                  onClick={() => handleRowClick(request.kyc_id)}
                 >
-                  <td className="border p-3">{request.kycId}</td>
-                  <td className="border p-3">{request.clientName}</td>
-                  <td className="border p-3">{request.policyName}</td>
-                  <td className="border p-3">{request.triggerDate}</td>
+                  <td className="border p-3">{request.kyc_id}</td>
+                  <td className="border p-3">{request.client_name}</td>
+                  <td className="border p-3">{request.policy_name}</td>
+                  <td className="border p-3">{request.trigger_date}</td>
                   <td
                     className={`border p-3 font-semibold ${
                       request.status === "Approved"
@@ -208,7 +221,8 @@ const Dashboard = () => {
         {/* Modal */}
         {isModalOpen && (
           <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+            <div className="bg-white p-6 rounded-lg shadow-lg w-[80%] max-w-3xl">
+            
               <h2 className="text-xl font-semibold mb-4">Select Client and Policy</h2>
               <div className="mb-4">
                 <label className="block text-gray-700">Client</label>

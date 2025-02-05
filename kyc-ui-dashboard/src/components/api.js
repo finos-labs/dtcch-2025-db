@@ -7,8 +7,7 @@ const api = axios.create({
 });
 
 // Add Authorization token to requests
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
+api.interceptors.request.use((config) => {  const token = localStorage.getItem("token");
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -76,3 +75,22 @@ export const triggerKyc = async (requestData) => {
   }
 };
 
+export const getKycDetail = async (kycId) => {
+  const token = localStorage.getItem("token");
+  
+  const response = await fetch(`${API_ENDPOINTS.BASE_URL}/kyc/${kycId}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!response.ok) throw new Error("Failed to fetch kycDetails");
+  return response.json();
+};
+
+export const getActionsList = async (kycId) => {
+  const token = localStorage.getItem("token");
+  
+  const response = await fetch(`${API_ENDPOINTS.BASE_URL}/actionsList/${kycId}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!response.ok) throw new Error("Failed to fetch getActionsList");
+  return response.json();
+};
