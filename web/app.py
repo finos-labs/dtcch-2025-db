@@ -28,11 +28,12 @@ class RequestForDocs(db.Model):
 class Client(db.Model):
     client_id = db.Column(db.Integer, primary_key=True)
     client_name = db.Column(db.String(255), nullable=False)
+    client_email = db.Column(db.String(255), nullable=False)
 
 class KycProcess(db.Model):
     kyc_id = db.Column(db.Integer, primary_key=True)
-    client_id = db.Column(db.Integer, nullable=False)
-    ops_id  = db.Column(db.Integer, nullable=False)
+    client_id = db.Column(db.Integer, db.ForeignKey('client.client_id'), nullable=False)
+    ops_id  = db.Column(db.Integer, db.ForeignKey('kyc_ops.ops_id'), nullable=False)
     initiation_timestamp  = db.Column(db.DateTime, nullable=False)
     overall_status = db.Column(db.String(50), nullable=False)
 
@@ -41,6 +42,12 @@ class KycOps(db.Model):
     ops_id = db.Column(db.Integer, primary_key=True)
     ops_name = db.Column(db.String(255), nullable=False)
     ops_designation = db.Column(db.String(255), nullable=False)
+
+@dataclass
+class Policy(db.Model):
+    policy_id = db.Column(db.Integer, primary_key=True)
+    policy_name = db.Column(db.String(255), nullable=False)
+    policy_version = db.Column(db.String(50), nullable=False)
 
 def send_email_request(new_request):
     pass
@@ -136,10 +143,26 @@ def get_kyc_list(ops_id):
 
     return jsonify(result), 200
 
+@app.route('/getPoliciesList', methods=['GET'])
+def get_policies_list():
+    result = []
+    try:
+        policies = Policy.query.all()
+        for policy in policies:
+            result.append()
+        return jsonify(Policy.query.all())
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+    return jsonify(result), 200
+
 @app.route('/triggerKyc', methods=['POST'])
 def trigger_kyc():
     data = request.get_json()
-    print(data)
+
+    if not data or 'client_id' not in data or 'ops_id' not in data or 'policy_id' not in data:
+        return jsonify({'error': 'Missing required fields'}), 400
+
     try:
         new_kyc = KycProcess(
             client_id=data['client_id'],
