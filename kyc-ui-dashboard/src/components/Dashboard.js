@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getUserInfo, getKycRequests, getClients, getPolicies } from "./api";
+import { getUserInfo, getKycRequests, getClients, getPolicies, triggerKyc } from "./api";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
@@ -75,11 +75,23 @@ const Dashboard = () => {
   
   const handleCloseModal = () => setIsModalOpen(false);
 
-  const handleSubmit = () => {
-    console.log("Selected Client:", selectedClient);
-    console.log("Selected Policy:", selectedPolicy);
-    handleCloseModal();
+  const handleSubmit = async () => {
+    if (!selectedClient || !selectedPolicy) {
+      alert("Please select a client and policy.");
+      return;
+    }
+  
+    try {
+      const response = await triggerKyc(selectedClient, selectedPolicy);
+      // Add the new KYC request to the state
+      setKycRequests((prevRequests) => [response.data, ...prevRequests]);
+
+      handleCloseModal(); // Close modal
+    } catch (error) {
+      alert(error.error || "Failed to trigger KYC. Please try again.");
+    }
   };
+  
 
 
   const filteredRequests = kycRequests.filter((request) =>
