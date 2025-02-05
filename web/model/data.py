@@ -3,12 +3,12 @@ from datetime import datetime
 
 @dataclass
 class Kyc:
-    kycId: int
-    clientId: int
-    policyId:int
-    clientName: str
-    policyName: str
-    triggerDate: datetime
+    kyc_id: int
+    client_id: int
+    policy_id: int
+    client_name: str
+    policy_name: str
+    trigger_date: datetime
     status: str
-    afcStatus: str = 'none'
-    riskRate: str = 'none'
+    afc_status: str = 'none'
+    risk_rate: str = 'none'
