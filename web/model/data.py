@@ -15,10 +15,5 @@ class Kyc:
 class Client:
     clientId: int
     clientName: str
-    clientEmail: str
+    # clientEmail: str
 
-@dataclass
-class Ops:
-    opsId: int
-    opsName: str
-    opsDetails: str
