@@ -6,7 +6,7 @@ from datetime import datetime
 
 from sqlalchemy.orm import Session
 
-from web.model.data import Kyc, Ops
+from model.data import Kyc, Ops
 
 app = Flask(__name__)
 
