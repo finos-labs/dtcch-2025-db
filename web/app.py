@@ -38,16 +38,6 @@ users = {
     }
 }
 
-clients = ["Client A", "Client B", "Client C"]
-policies = ["Policy X", "Policy Y", "Policy Z"]
-
-kyc_requests = [
-            {"id": "KYC001", "clientName": "Alice Smith", "policy": "Policy A", "triggerDate": "2024-02-01", "status": "Pending"},
-            {"id": "KYC002", "clientName": "Bob Johnson", "policy": "Policy B", "triggerDate": "2024-02-02", "status": "Approved"},
-            {"id": "KYC003", "clientName": "Charlie Brown", "policy": "Policy C", "triggerDate": "2024-02-03", "status": "Rejected"},
-        ]
-
-
 # Define the REQUEST_FOR_DOCS model
 class RequestForDocs(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -65,10 +55,25 @@ class Client(db.Model):
 class KycProcess(db.Model):
     kyc_id = db.Column(db.Integer, primary_key=True)
     client_id = db.Column(db.Integer, db.ForeignKey('client.client_id'), nullable=False)
-    policy_id = db.Column(db.Integer, nullable=False)
-    ops_id  = db.Column(db.Integer, db.ForeignKey('kyc_ops.ops_id'), nullable=False)
+    policy_id = db.Column(db.Integer, db.ForeignKey('policy.policy_id'), nullable=False)
+    ops_id = db.Column(db.Integer, db.ForeignKey('kyc_ops.ops_id'), nullable=False)
     initiation_timestamp  = db.Column(db.DateTime, nullable=False)
     overall_status = db.Column(db.String(50), nullable=False)
+
+@dataclass
+class Actions(db.Model):
+    kyc_id: int = db.Column(db.Integer, db.ForeignKey('kyc_process.kyc_id'), primary_key=True)
+    latest_action_activity: str = db.Column(db.String(50), nullable=False)
+    business_type: str = db.Column(db.ARRAY(db.String))
+    due_diligence_level: str = db.Column(db.ARRAY(db.String))
+    entity_type: str = db.Column(db.ARRAY(db.String))
+    role: str = db.Column(db.ARRAY(db.String))
+    policy_quote: str = db.Column(db.Text)
+    internal_evidence_source: list = db.Column(db.ARRAY(db.String))
+    external_evidence_source: list = db.Column(db.ARRAY(db.String))
+    client_evidence_source: list = db.Column(db.ARRAY(db.String))
+    data_point: str = db.Column(db.String(255))
+    action_description: str = db.Column(db.Text)
 
 @dataclass
 class KycOps(db.Model):
@@ -266,6 +271,37 @@ def trigger_kyc():
         db.session.commit()
 
     return jsonify(new_kyc.kyc_id), 200
+
+@app.route('/kyc/<kyc_id>', methods=['GET'])
+@jwt_required()
+def kyc_details(kyc_id):
+    try:
+        kyc_process, client, policy = (db.session.query(
+            KycProcess, Client, Policy
+        ).filter(KycProcess.client_id == Client.client_id
+        ).filter(KycProcess.policy_id == Policy.policy_id
+        ).filter(KycProcess.kyc_id == kyc_id
+        ).one())
+        return jsonify(Kyc(kyc_process.kyc_id,
+                           kyc_process.client_id,
+                           kyc_process.policy_id,
+                           client.client_name,
+                           policy.policy_name,
+                           kyc_process.initiation_timestamp,
+                           kyc_process.overall_status))
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/actionsList/<kyc_id>', methods=['GET'])
+@jwt_required()
+def actions(kyc_id):
+    try:
+        result = (db.session.query(Actions
+        ).filter(Actions.kyc_id == kyc_id
+        ).all())
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
