@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
 import os
-from alchemy_models import KycOps, Actions
+from alchemy_models import Actions
 import json
 
 load_dotenv()
@@ -20,16 +20,15 @@ SessionLocal = sessionmaker(bind=engine)
 session = SessionLocal()
 
 # Function to insert data into kyc_ops table
-def update_action(payload):
+def update_action_in_progress(payload):
     
     entry_json_obj = json.loads(payload)
-    pass
     
     for row in entry_json_obj:
         db_entry = Actions(
             kyc_id = 1,
             data_point = row['data_point'],
-            latest_action_activity = "Test",
+            latest_action_activity = "",
             business_type = row['business_type'],
             due_diligence_level = row['due_diligence_level'],
             entity_type = row['entity_type'],
@@ -40,16 +39,9 @@ def update_action(payload):
             client_evidence_source = row['client_evidence'],
             action_description = row['action']            
         )
-        
-    # db_entry = Actions(
-    #     kyc_id = 1,
-    #     data_point= entry_json_obj[]
-    # )
-    
-    # new_entry = KycOps(ops_name=ops_name, ops_designation=ops_designation)
-    # session.add(new_entry)  # Add to session
-    # session.commit()  # Commit transaction
-    # print(f"Added {ops_name} as {ops_designation} to the database.")
+        session.add(db_entry)
+    session.commit()
+    print(f"Added output action info to the database.")
 
 # Example usage
 payload = """[
@@ -75,4 +67,4 @@ payload = """[
 ]
 """
 
-update_action(payload)
+update_action_in_progress(payload)
