@@ -41,7 +41,7 @@ def main():
     )
 
     # TODO: here we should call a function like this:
-    # pdf_handler(pdf_policy_path) -> filename: str, processed_policy_sections: List(ProcessedPolicySection)
+    # pdf_handler.some_function(pdf_policy_path) -> filename: str, processed_policy_sections: List(ProcessedPolicySection)
     # where:
     # class ProcessedPolicySection():
     #   policy_num: int
