@@ -68,7 +68,7 @@ def main():
             Add Ultimate Beneficial Owner role to Client Senior Manager with Significant control, UBO role
             """,
             dependencies=[]
-        )
+        )   
     ]
 
     
