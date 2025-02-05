@@ -6,7 +6,7 @@ import json
 
 from agents.agent_extract_variables import AgentExtractVariables
 
-class JSONHandler:
+class VariablesExtractor:
     def __init__(self):
         """Initialize the JSON Handler with AWS Bedrock client."""
         self.agent = AgentExtractVariables()

@@ -1,4 +1,4 @@
-from .pdf_handler import PDFHandler
-from .variables_extractor import JSONHandler
+# from .pdf_handler import PDFHandler
+from .variables_extractor import VariablesExtractor
 
-__all__ = ['PDFHandler', "JSONHandler"]
+__all__ = ["VariablesExtractor"]
