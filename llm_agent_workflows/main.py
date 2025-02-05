@@ -33,6 +33,7 @@ def main():
         3. Extract the corresponding KYC data point. The data point is the key piece of information that must be collected to complete the action. Common data points include: "First name", "Last name", "Role", "Residential Address", "Screening Result", "UBO Role", etc
         4. Format your response in the following structure:
         {{
+        "quote": <Complete original document line from which you extract the action>
         "action_detected": true,
         "action": "<Extracted KYC Action>",
         "data_point": "<Corresponding Data Point>"
