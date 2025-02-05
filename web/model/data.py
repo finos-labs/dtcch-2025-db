@@ -12,10 +12,3 @@ class Kyc:
     status: str
     afcStatus: str = 'none'
     riskRate: str = 'none'
-
-@dataclass
-class Client:
-    clientId: int
-    clientName: str
-    # clientEmail: str
-
