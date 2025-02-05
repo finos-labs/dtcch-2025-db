@@ -15,6 +15,7 @@ html
 
 # Virtual environments
 venv
+.env
 
 # Miscellaneous
 .idea
@@ -28,3 +29,4 @@ __pycache__
 
 # MSFT Office
 ~$*.*
+
