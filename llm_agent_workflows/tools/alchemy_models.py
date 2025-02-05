@@ -33,6 +33,7 @@ class KycProcess(Base):
     ops_id = Column(Integer, ForeignKey("kyc_ops.ops_id", ondelete="CASCADE"), nullable=False)
     initiation_timestamp = Column(TIMESTAMP, default=func.current_timestamp())
     overall_status = Column(String(50), nullable=False)
+    policy_id = Column(Integer, ForeignKey("policy.policy_id", ondelete="CASCADE"), nullable=False)
 
     client = relationship("Client", backref="kyc_processes")
     ops = relationship("KycOps", backref="kyc_processes")
@@ -44,20 +45,18 @@ class Actions(Base):
     kyc_id = Column(Integer, ForeignKey("kyc_process.kyc_id", ondelete="CASCADE"), primary_key=True)
     data_point = Column(String(255), primary_key=True)
     latest_action_activity = Column(String(50), nullable=False)
-    business_type = Column(String(255))
-    due_diligence_level = Column(String(255))
-    entity_type = Column(String(255))
-    role = Column(String(255))
+    business_type = Column(ARRAY(Text))
+    due_diligence_level = Column(ARRAY(Text))
+    entity_type = Column(ARRAY(Text))
+    role = Column(ARRAY(Text))
     policy_quote = Column(Text)
     internal_evidence_source = Column(ARRAY(Text))
     external_evidence_source = Column(ARRAY(Text))
     client_evidence_source = Column(ARRAY(Text))
     action_description = Column(Text)
-    policy_id = Column(Integer, ForeignKey("policy.policy_id", ondelete="CASCADE"), nullable=False)
     
     # Relationships
     kyc_process = relationship("KycProcess", backref="actions")
-    policy = relationship("Policy", backref="actions")
 
 # Table: action_data_point
 class ActionDataPoint(Base):
