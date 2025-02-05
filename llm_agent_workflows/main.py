@@ -42,6 +42,7 @@ def main():
         {{
         "action_detected": false
         }}
+        5. Please only and only output a single json string with all the results together in one json and nothing else so that it can be parsed.
         
         Please do it for below piece of texts individually:
         1. Identify the Natural Person Client Senior Manager's residential address
