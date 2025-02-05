@@ -45,6 +45,12 @@ class JSONHandler:
                    output_path: str,
                    variable_references_path) -> None:
         """Process a JSON file and add variables to it."""
+        # Generate default output path if not specified
+        if output_path is None:
+            timestamp = time.strftime('%Y%m%d_%H%M%S')
+            output_path = f"./output/variables_{timestamp}.json"
+        # Create output directory if it doesn't exist
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
         try:
             # Open JSON
             with (open(json_path)) as f:
@@ -57,12 +63,15 @@ class JSONHandler:
                     if json_input[i]["action_detected"]:
                         quote = json_input[i]["quote"]
                         action = json_input[i]["action"]
-                        self.agent._analyze_page(self, action, quote, variables_references)
+                        variables = self.agent._analyze_quote_and_action(action, quote, variables_references)
+                        if variables:
+                            raise Exception("LLM-returned JSON incorrectly parsed")
+                        json_input[i].update(variables)
                         # TODO: add return value to json entry
-                    
             print(f"Extraction complete. Output saved to {output_path}")
             
         except Exception as e:
+            os.remove(output_path)
             print(f"Error processing JSON: {str(e)}")
 
 def main():
@@ -81,21 +90,12 @@ def main():
                        help='Path to the directory containing CSV files, one for each variable with possible values')
     
     parser.add_argument('--output', '-o',
-                       help='Output JSON file path (default: ../tools/output/analysis_TIMESTAMP.json)')
+                       help='Output JSON file path (default: ../tools/output/variables_TIMESTAMP.json)')
     
     args = parser.parse_args()
-
-    # Generate default output path if not specified
-    if args.output is None:
-        timestamp = time.strftime('%Y%m%d_%H%M%S')
-        args.output = f"./output/analysis_{timestamp}.json"
-            
-    # Create output directory if it doesn't exist
-    os.makedirs(os.path.dirname(args.output), exist_ok=True)
     handler = JSONHandler()
     try:
         print(f"Processing JSON: {args.json_path}")
-        print(f"Output will be saved to: {args.output}")
         handler.process_json(args.json_path, args.output, args.variable_references_path)
         
     except Exception as e:
