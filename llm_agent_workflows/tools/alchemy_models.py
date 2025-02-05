@@ -8,6 +8,7 @@ class Client(Base):
     __tablename__ = "client"
     client_id = Column(Integer, primary_key=True, autoincrement=True)
     client_name = Column(String(255), nullable=False)
+    client_info_file_path = Column(String(255), nullable=False)
 
 # Table: kyc_ops
 class KycOps(Base):
@@ -16,12 +17,13 @@ class KycOps(Base):
     ops_name = Column(String(255), nullable=False)
     ops_designation = Column(String(255), nullable=False)
 
-# Table: policy
 class Policy(Base):
     __tablename__ = "policy"
+    
     policy_id = Column(Integer, primary_key=True, autoincrement=True)
     policy_name = Column(String(255), nullable=False)
     policy_version = Column(String(50), nullable=False)
+    policy_file_path = Column(String(255), nullable=False)
 
 # Table: kyc_process
 class KycProcess(Base):

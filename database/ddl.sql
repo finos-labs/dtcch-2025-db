@@ -24,12 +24,12 @@ CREATE TABLE policy (
 CREATE TABLE kyc_process (
     kyc_id SERIAL PRIMARY KEY,
     client_id INT NOT NULL,
-    -- policy_id INT NOT NULL,
+    policy_id INT NOT NULL,
     ops_id INT NOT NULL,
     initiation_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     overall_status VARCHAR(50) NOT NULL,
     FOREIGN KEY (client_id) REFERENCES client(client_id) ON DELETE CASCADE,
-    -- FOREIGN KEY (policy_id) REFERENCES policy(policy_id) ON DELETE CASCADE,
+    FOREIGN KEY (policy_id) REFERENCES policy(policy_id) ON DELETE CASCADE,
     FOREIGN KEY (ops_id) REFERENCES kyc_ops(ops_id) ON DELETE CASCADE
 );
 
@@ -47,8 +47,6 @@ CREATE TABLE actions (
     client_evidence_source TEXT[],
     data_point VARCHAR(255),
     action_description TEXT,
-    policy_id INT NOT NULL,
     PRIMARY KEY (kyc_id, data_point),
-    FOREIGN KEY (kyc_id) REFERENCES kyc_process(kyc_id) ON DELETE CASCADE,
-    FOREIGN KEY (policy_id) REFERENCES policy(policy_id) ON DELETE CASCADE
+    FOREIGN KEY (kyc_id) REFERENCES kyc_process(kyc_id) ON DELETE CASCADE
 );
