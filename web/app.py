@@ -56,25 +56,24 @@ class KycProcess(db.Model):
     kyc_id = db.Column(db.Integer, primary_key=True)
     client_id = db.Column(db.Integer, db.ForeignKey('client.client_id'), nullable=False)
     policy_id = db.Column(db.Integer, db.ForeignKey('policy.policy_id'), nullable=False)
-    ops_id  = db.Column(db.Integer, db.ForeignKey('kyc_ops.ops_id'), nullable=False)
+    ops_id = db.Column(db.Integer, db.ForeignKey('kyc_ops.ops_id'), nullable=False)
     initiation_timestamp  = db.Column(db.DateTime, nullable=False)
     overall_status = db.Column(db.String(50), nullable=False)
 
 @dataclass
 class Actions(db.Model):
-    kyc_id = db.Column(db.Integer, db.ForeignKey('kyc_process.kyc_id'), primary_key=True)
-    latest_action_activity  = db.Column(db.String(50), nullable=False)
-    business_type = db.Column(db.String(255))
-    due_diligence_level = db.Column(db.String(255))
-    entity_type = db.Column(db.String(255))
-    role = db.Column(db.String(255))
-    policy_quote = db.Column(db.Text)
-    internal_evidence_source = db.Column(db.Text)
-    external_evidence_source = db.Column(db.Text)
-    client_evidence_source = db.Column(db.Text)
-    data_point = db.Column(db.String(255))
-    action_description = db.Column(db.Text)
-    ops_id  = db.Column(db.Integer, db.ForeignKey('kyc_ops.ops_id'), nullable=False)
+    kyc_id: int = db.Column(db.Integer, db.ForeignKey('kyc_process.kyc_id'), primary_key=True)
+    latest_action_activity: str = db.Column(db.String(50), nullable=False)
+    business_type: str = db.Column(db.ARRAY(db.String))
+    due_diligence_level: str = db.Column(db.ARRAY(db.String))
+    entity_type: str = db.Column(db.ARRAY(db.String))
+    role: str = db.Column(db.ARRAY(db.String))
+    policy_quote: str = db.Column(db.Text)
+    internal_evidence_source: list = db.Column(db.ARRAY(db.String))
+    external_evidence_source: list = db.Column(db.ARRAY(db.String))
+    client_evidence_source: list = db.Column(db.ARRAY(db.String))
+    data_point: str = db.Column(db.String(255))
+    action_description: str = db.Column(db.Text)
 
 @dataclass
 class KycOps(db.Model):
@@ -294,7 +293,7 @@ def kyc_details(kyc_id):
         return jsonify({'error': str(e)}), 500
 
 @app.route('/actionsList/<kyc_id>', methods=['GET'])
-# @jwt_required()
+@jwt_required()
 def actions(kyc_id):
     try:
         result = (db.session.query(Actions
