@@ -156,6 +156,27 @@ def login():
     print('Failed login')
     return jsonify({"error": "Invalid credentials"}), 401
 
+
+# User Info API (Protected)
+@app.route("/user", methods=["GET"])
+@jwt_required()
+def user_info():
+    try:
+        token_header = request.headers.get("Authorization", None)
+        print("Authorization Header:", token_header)  # Debugging
+
+        username = get_jwt_identity()  # ✅ Now returns only a string
+        print("Current User:", username)
+
+        if username not in users:
+            return jsonify({"error": "User not found"}), 404
+
+        return jsonify(users[username])
+
+    except Exception as e:
+        print("Error:", str(e))
+        return jsonify({"error": str(e)}), 401
+
 @app.route('/ops/<ops_id>', methods=['GET'])
 def get_ops_details(ops_id):
     try:
@@ -196,8 +217,6 @@ def get_policies_list():
         return jsonify(Policy.query.all())
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-    return jsonify(result), 200
 
 @app.route('/clients', methods=['GET'])
 def get_clients_list():
