@@ -14,7 +14,7 @@ from agents.agent_filter_policy import AgentFilterPolicy
 class PDFHandler:
     def __init__(self):
         """Initialize the PDF Handler with AWS Bedrock client."""
-        self.agent = AgentFilterPolicy("","","")
+        self.agent = AgentFilterPolicy()
 
     def _extract_text_and_images(self, page) -> Dict[str, Union[str, List[str]]]:
         """Extract both text and images from a PDF page."""
