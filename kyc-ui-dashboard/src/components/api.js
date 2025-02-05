@@ -44,3 +44,27 @@ export const getPolicies = async () => {
   if (!response.ok) throw new Error("Failed to fetch policies");
   return response.json();
 };
+
+
+export const triggerKyc = async (client, policy) => {
+  const token = localStorage.getItem("token");
+
+  try {
+    const response = await axios.post(
+      `${API_ENDPOINTS.BASE_URL}/kyc_requests`,
+      { client, policy },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    console.error("Error triggering KYC:", error.response?.data || error.message);
+    throw error.response?.data || error.message;
+  }
+};
+
