@@ -1,0 +1,3397 @@
+[
+    {
+        "sentence_number": 1,
+        "sentence": "Prevention of money laundering/combating terrorist financing",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 1,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "GUIDANCE FOR THE UK FINANCIAL SECTOR",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 1,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "International AML/CFT standards and legislation",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 2,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Senior management should adopt a formal policy, and carry out a risk assessment, in relation to financial crime prevention",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 2,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Monitoring effectiveness of money laundering controls",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 2,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Risk assessment - Identification and assessment of business risks",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 2,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "A risk-based approach - customer risk assessments",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 2,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Electronic transfer of funds",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 3,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Identification and verification of the customer",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 3,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Identification and verification of a beneficial owner",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 3,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Nature and purpose of proposed business relationship",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 3,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Characteristics and evidence of identity",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 3,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Persons and entities subject to financial sanctions",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 3,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Shell banks and anonymous accounts",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 3,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 8,
+        "sentence": "Source of funds as evidence",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 3,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Corporate customers (other than regulated firms) must obtain standard evidence for verification.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 4,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Directors and beneficial owners must be identified and verified.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 4,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Simplified due diligence may be applied in lower risk scenarios.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 4,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Enhanced due diligence must be applied for higher risk customers.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 4,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Politically exposed persons require risk based procedures, source of wealth verification, senior management approval and ongoing monitoring.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 4,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Monitoring customer activity - The need to monitor customer activities",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 5,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "What records have to be kept? Customer information",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 5,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Staff alertness to specific situations",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 5,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Internal and external reports",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 5,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Money Laundering Regulations 2017 (as amended)",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 6,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In the UK, there has been a long-standing obligation to have effective procedures in place to detect and prevent money laundering.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 7,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "This guidance sets out what is expected of firms and their staff in relation to the prevention of money laundering and terrorist financing, but allows them some discretion as to how they apply the requirements of the UK AML/CTF regime in the particular circumstances of the firm, and its products, services, transactions and customers.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 7,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "It is important that customers understand that production of the required evidence of identity does not automatically qualify them for access to the product or service they may be seeking.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 7,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The techniques used by money launderers constantly evolve to match the source and amount of funds to be laundered, and the legislative/regulatory/law enforcement environment of the market in which the money launderer wishes to operate.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 8,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "It is also a separate offence under the ML Regulations not to establish adequate and appropriate policies and procedures in place to forestall and prevent money laundering (regardless of whether or not money laundering actually takes place).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 8,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "In combating terrorist financing, the obligation on firms is to report any suspicious activity to the authorities.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 8,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "When considering money laundering and terrorist financing issues, firms should consider their procedures against fraud and market abuse and how these might reinforce each other.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 8,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "This guidance emphasises the responsibility of senior management to manage the firm's money laundering and terrorist financing risks, and how this should be carried out on a risk-based approach.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 9,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "It sets out a standard approach to the identification and verification of customers, separating out basic identity from other aspects of customer due diligence measures, as well as giving guidance on the obligation to monitor customer activity.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 9,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The FCA has made clear its expectation that FCA-regulated firms address their management of risk in a thoughtful and considered way, and establish and maintain systems and procedures that are appropriate, and proportionate to the risks identified.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 9,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Part I sets out industry guidance on adopting a risk-based approach to the application of CDD measures (Chapter 4);",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 10,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Part I sets out industry guidance on helping a firm have confidence that it has properly carried out its CDD obligations, including monitoring customer transactions and activity (Chapter 5);",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 10,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Part I sets out industry guidance on the identification and reporting of suspicious activity (Chapter 6);",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 10,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "POCA requires a court to take account of industry guidance that has been approved by a Treasury minister when considering whether a person within the regulated sector has committed the offence of failing to report where that person knows, suspects, or has reasonable grounds for knowing or suspecting, that another person is engaged in money laundering.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 10,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Senior management in all firms must identify, assess, and manage effectively, the risks in their businesses",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 12,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Senior management in FCA-regulated firms must appoint individual(s) (including an MLRO) with certain responsibilities",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 12,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Prepare a formal policy statement in relation to the prevention, and risk assessment of, money laundering/terrorist financing",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 12,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Commission annual report from the MLRO and take any necessary action to remedy deficiencies identified by the report in a timely manner",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 12,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Being used for money laundering or terrorist financing involves firms in reputational, legal and regulatory risks.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 13,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The ML Regulations require firms to take appropriate steps to identify and assess the risks of money laundering and terrorist financing to which their business is subject, taking into account: ➢ information on money laundering and terrorist financing made available to them by the FCA; ➢ risk factors, including factors relating to their customers, countries or geographic areas in which they operate, products, services, transactions and delivery channels.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 13,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Under a risk-based approach, firms start from the premise that most customers are not money launderers or terrorist financiers.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 13,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "However, firms must have systems in place to highlight those customers who, on criteria established by the firm, may indicate that they present a higher risk of this.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 13,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Senior management approval is specifically required for the firm's policies, controls and procedures for mitigating and managing effectively the risks of money laundering and terrorist financing identified in the firm's risk assessment.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 13,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Senior management must be aware of the level of money laundering risk the firm is exposed to and take a view whether the firm is equipped to mitigate that risk effectively; this implies that decisions on entering or maintaining high-risk business relationships must be escalated to senior management.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 14,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "FATF also maintains an International Co-operation Review Group (ICRG) and publishes a regularly updated list of those countries and jurisdictions that have strategic deficiencies and works with them to address those deficiencies that pose a risk to the international financial system.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 14,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The UK's list of high-risk countries is set out in Schedule 3ZA of the ML Regulations (as amended by The Money Laundering and Terrorist Financing (Amendment) (High-Risk Countries) Regulations 2022) which identifies high-risk third countries with strategic deficiencies in the area of anti-money laundering or counter terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 14,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Internationally, the FATF Recommendations, the Basel paper Sound management of risks related to money laundering and financing of terrorism (www.bis.org), IAIS Guidance Paper 5 (www.iaisweb.org) and the IOSCO Principles paper (www.iosco.org) encourage national supervisors of financial firms to require firms in their jurisdictions to follow specific due diligence procedures in relation to customers.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 15,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "These organisations explicitly envisage a risk-based approach to AML/CTF being followed by firms.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 15,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The United Nations and the EU have sanctions in place to deny a range of named individuals and organisations, as well as nationals from certain countries, access to the financial services sector.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 15,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In view of the nature of the risks associated with financial crime, multiple UK bodies share responsibility for combating money laundering and terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 16,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The ML Regulations apply to a range of specified firms undertaking business in the UK.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 16,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Law enforcement agencies, supervisors and the private sector working in partnership to target resources at the highest money laundering and terrorist financing risks.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 16,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "New means of information sharing to strengthen the application of the risk-based approach and mitigate vulnerabilities.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 16,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "HM Treasury and the Home Office jointly published the first UK national risk assessment (NRA) of money laundering and terrorist financing in October 2015 8, the second in 2017, and the third in 2020 9.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 17,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Senior management of any enterprise is responsible for managing its business effectively.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 17,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Certain obligations are placed on all firms subject to the ML Regulations, POCA and the Terrorism Act and under the UK financial sanctions regimes - fulfilling these responsibilities falls to senior management as a whole.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 17,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Following the completion of thematic and other reviews, the FCA may clarify their expectations of firms in the relevant areas; firms should be aware of these expectations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 17,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "From a practical perspective, firms must consider how best they should assess and manage their overall exposure to financial crime.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 18,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The ML Regulations place a general obligation on firms within their scope to establish adequate and appropriate policies, controls and procedures to prevent money laundering and terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 18,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where appropriate with regard to the size and nature of its business, a firm must appoint a member of its board of directors (or equivalent management body) or of its senior management as the officer responsible for the firm's compliance with the ML Regulations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 18,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "However, firms have an obligation under the ML Regulations to take appropriate measures to ensure that their employees and agents are made aware of the law relating to money laundering, and terrorist financing (and to data protection), and are regularly given training in how to recognise and deal with transactions and other activities which may be related to money laundering or terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 18,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "One prescribed responsibility - for the firm's policies and procedures for countering the risk that the firm might be used to further financial crime - must be allocated to an SMF Manager.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 19,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Senior management has operational responsibility for ensuring that the firm has appropriate systems and controls in place to combat financial crime.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 19,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "In FCA-regulated firms (but see paragraph 1.49 for general insurance firms and mortgage intermediaries), a director or senior manager must be allocated overall responsibility for the establishment and maintenance of the firm's anti-money laundering systems and controls.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 19,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "In FCA-regulated firms (but see paragraph 1.49 for general insurance firms and mortgage intermediaries), an individual must be allocated responsibility for oversight of a firm's compliance with the FCA's Rules on systems and controls against money laundering: this is the firm's",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 19,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Senior management of FCA-regulated firms must appoint an appropriately qualified senior member of the firm's staff as the MLRO (see Chapter 3); and must provide direction to, and oversight of the firm's AML/CTF strategy.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 20,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Although the FCA Rule referred to in paragraph 1.37 requires overall responsibility for AML/CTF systems and controls to be allocated to a single individual, in practice this may often be difficult to achieve, especially in larger firms.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 20,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "At least once in each calendar year, an FCA-regulated firm should commission a report from its MLRO (see Chapter 3) on the operation and effectiveness of the firm's systems and controls to combat money laundering.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 20,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "When senior management receives reports from the firm's MLRO it should consider them and take any necessary action to remedy any deficiencies identified in a timely manner.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 20,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "This includes establishing, and monitoring the effectiveness of, systems and controls to prevent ML/TF.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 21,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The level of resource should reflect the size, complexity and geographical spread of the firm's customer and product base.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 21,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The role, standing and competence of the MLRO, and the way the internal processes for reporting suspicions are designed and implemented, impact directly on the effectiveness of a firm's money laundering/terrorist financing prevention arrangements.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 21,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "They are, however, subject to the general requirements of SYSC, and so have an obligation to have appropriate risk management systems and controls in place, including controls to counter the risk that the firm may be used to further financial crime.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 21,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "This includes taking appropriate steps to identify and assess the risks of money laundering and terrorist financing to which its business is subject.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 22,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "A firm's risk assessment must be documented, kept up-to-date and made available to the FCA on request.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 22,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "A firm should produce appropriate documentation of its risk management policies and risk profile in relation to money laundering, including documentation of its application of those policies.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 22,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "A statement of the firm's AML/CTF policy and the controls and procedures to implement it will clarify how the firm's senior management intends to discharge its responsibility for the prevention of money laundering and terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 22,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "The policy will also set out how senior management undertakes its assessment of the money laundering and terrorist financing risks the firm faces, and how these risks are to be managed.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 22,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "a commitment to ensuring that customers' identities will be satisfactorily verified before the firm accepts them;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 23,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "a commitment to the firm 'knowing its customers' appropriately - both at acceptance and throughout the business relationship - through taking appropriate steps to verify the customer's identity and business, and his reasons for seeking the particular business relationship with the firm;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 23,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "a summary of the firm's controls and procedures for carrying out appropriate identification and monitoring checks on the basis of their risk-based approach;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 23,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "A firm that is a parent undertaking must ensure that its policies, controls and procedures apply to all subsidiary undertakings and non-UK branches.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 23,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Such a firm must establish and maintain throughout its group, policies, controls and procedures for data protection and sharing, with other members of the group, information for the purposes of preventing money laundering and terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 23,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "If any subsidiary undertaking or branch is established in a third country which does not impose AML/CTF requirements as strict as those of the UK, the firm must ensure that such subsidiary undertakings or branches apply measures equivalent to those required by the ML Regulations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 24,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms must communicate their policies, controls and procedures established to prevent activities related to money laundering and terrorist financing to branches and subsidiary undertakings located outside the UK.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 24,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where a firm has a listing in, or activities in, or is linked to, certain overseas jurisdictions, whether through a branch, subsidiary undertaking, associated company or correspondent relationship, or where a firm deals in another jurisdiction's currency, there is a risk that the application of that jurisdiction's AML/CTF and financial sanctions regimes may apply to the non-domestic activities of the firm.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 24,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms must establish and maintain adequate and appropriate policies and procedures to forestall and prevent operations relating to money laundering",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 25,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms are required to establish and maintain policies, controls and procedures to mitigate and manage effectively the risks of money laundering and terrorist financing identified in its risk assessment.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 25,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "There are specific requirements under the ML Regulations for the firm to establish adequate and appropriate policies, controls and procedures relating to: internal controls, including where appropriate employee screening and the appointment of an internal audit function; risk management practices; customer due diligence and ongoing monitoring; record keeping; reporting of suspicions; the monitoring and management of the effectiveness of, and compliance with, such policies and procedures, and the internal communication of such policies and procedures.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 25,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Where appropriate with regard to the size and nature of its business, a firm must appoint a member of its board (or equivalent management body) or of its senior management as the officer responsible for the firm's compliance with the ML Regulations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 26,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Carry out screening of relevant employees and agents appointed by the firm, both before the appointment is made, and at regular intervals during the course of the appointment.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 26,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "An individual in the firm must be appointed as a nominated officer, whose identity, as well as any subsequent appointment to this position, must be notified to their supervisor.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 26,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "A firm's policies, controls and procedures must include policies, controls and procedures which provide for the identification and scrutiny of complex or unusually large transactions, or an unusual pattern of transactions.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 26,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "A firm's policies, controls and procedures must include policies, controls and procedures which provide for the identification and scrutiny of transactions which have no apparent economic or legal purpose.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 26,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms should also have in place policies, controls and procedures to assess and mitigate the risks arising from remote booking arrangements.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 27,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms must establish and maintain systems which enable them to respond fully and rapidly to enquiries from financial investigators accredited under s3 of POCA, persons acting on behalf of the Scottish Ministers in their capacity as an enforcement authority under the Act or constables, relating to: whether it maintains, or has maintained during the previous five years, a business relationship with any person; and the nature of that relationship.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 27,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The nature and extent of systems and controls will vary by firm and depend on a variety of factors, including: the nature, scale and complexity of the firm's business; the diversity of its operations, including geographical diversity; its customer, product and activity profile; its distribution channels; the volume and size of its transactions; and the degree of risk associated with each area of its operation.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 27,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "An FCA-regulated firm must ensure that these systems and controls enable it to identity, assess, monitor and manage money laundering risk; and are comprehensive and proportionate to the nature, scale and complexity of its activities.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 28,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "An FCA-regulated firm's systems and controls are required to cover senior management accountability, including allocation to a director or senior manager of overall responsibility for the establishment and maintenance of effective AML systems and controls and the appointment of a person with adequate seniority and experience as MLRO.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 28,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Appropriate measures to ensure that money laundering risk is taken into account in the day-to-day operation of the firm, including in relation to: the development of new products; the taking-on of new customers; and changes in the firm's business profile.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 28,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Firms must obtain assurance that outsourcing providers meet the standards or requirements set out in this Guidance.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 28,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Nothing in the ML Regulations prevents a firm applying CDD measures by means of an agent or an outsourcing service provider, provided that the arrangements between the firm and the agent or outsourcing service provider provide for the firm to remain liable for any failure to apply such measures.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 29,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "This will include the requirement to ensure that the provider of the outsourced services has in place satisfactory AML/CTF systems, controls and procedures, and that those policies and procedures are kept up to date to reflect changes in UK requirements.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 29,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where UK operational activities are undertaken by staff in other jurisdictions (for example, overseas call centres), those staff are subject to the AML/CTF policies and procedures that are applicable to UK staff, and internal reporting procedures implemented to ensure that all suspicions relating to UK-related accounts, transactions or activities are reported to the nominated officer in the UK.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 29,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Procedures should be in place to meet local AML/CTF regulations and reporting requirements.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 29,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "All financial services businesses that outsource functions and activities should therefore assess any possible AML/CTF risk associated with the outsourced functions, record the assessment and monitor the risk on an ongoing basis.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 29,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Nominated officer to be appointed, who must receive and review internal disclosures",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 30,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Nominated officer is responsible for making external reports",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 30,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "MLRO is responsible for oversight of the firm's AML systems and controls",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 30,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "A sole trader with no employees who knows or suspects, or where there are reasonable grounds to know or suspect, that a customer of his, or the person on whose behalf the customer is acting, is or has been engaged in, or attempting, money laundering or terrorist financing, must make a report promptly to the NCA.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 30,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The MLRO is responsible for oversight of the firm's compliance with the FCA's Rules on systems and controls against money laundering.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 31,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "An MLRO should be able to monitor the day-to-day operation of the firm's AML/CTF policies, and respond fully and rapidly to enquiries for information made by the FCA or law enforcement.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 31,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "They therefore are under no obligation to appoint a nominated officer or an MLRO, or to allocate to a director or senior manager the responsibility for the establishment and maintenance of effective anti-money laundering systems and controls.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 31,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In FCA-regulated firms, the MLRO is responsible for the oversight of all aspects of the firm's AML/CTF activities and is the focal point for all activity within the firm relating to anti-money laundering.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 32,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The MLRO will need to be involved in establishing the basis on which a risk-based approach to the prevention of money laundering/terrorist financing is put into practice.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 32,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Along with the SMF Manager appointed by the Board (see paragraph 1.37), an MLRO will support and co-ordinate senior management focus on managing the money laundering/terrorist financing risk in individual business areas.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 32,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Senior management of the firm must ensure that the MLRO has sufficient resources available to them, including appropriate staff and technology.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 33,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "A firm must require that anyone in the firm to whom information or other matter comes in the course of business as a result of which they know or suspect, or have reasonable grounds for knowing or suspecting, that a person is engaged in money laundering or terrorist financing complies with Part 7 of POCA or Part 3 of the Terrorism Act (as the case may be).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 33,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "A firm is expected to use its existing customer information effectively by making such information readily available to its nominated officer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 33,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In most cases, before deciding to make a report, the nominated officer is likely to need access to the firm's relevant business information.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 34,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Relevant business information may include details of: the financial circumstances of a customer or beneficial owner, or any person on whose behalf the customer has been or is acting;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 34,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "To consider the level of identity information held on the customer, and any information on their personal circumstances that might be available to the firm;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 34,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "To review other transaction patterns and volumes through the account or accounts in the same name, the length of the business relationship and identification records held.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 34,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "An MLRO should ensure that the firm obtains, and makes appropriate use of, any government or FATF findings concerning the approach to money laundering prevention in particular countries or jurisdictions.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 34,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Countries may also be assessed using publicly available indices from, for example, HM Treasury Sanctions10, FATF high-risk and non-cooperative jurisdictions11, FATF Mutual Evaluation Reports, Transparency International Corruption Perceptions Index12, FCO Human Rights Report13 and Department for International Trade overseas country risk pages14.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 35,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms considering business relations and transactions with individuals and firms – whether direct or through correspondents - located in higher risk jurisdictions, or jurisdictions against which the UK has outstanding advisory notices, should take account of the background against which the assessment, or the specific recommendations contained in the advisory notices, have been made.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 35,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "A firm is required to carry out regular assessments of the adequacy of its systems and controls to ensure that they manage the money laundering risk effectively.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 35,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Oversight of the implementation of the firm's AML/CTF policies and procedures, including the operation of the risk-based approach, is primarily the responsibility of the MLRO, under delegation from senior management.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 35,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "The MLRO must therefore ensure that appropriate monitoring processes and procedures across the firm are established and maintained.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 35,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "At least annually the senior management of an FCA-regulated firm should commission a report from its MLRO which assesses the operation and effectiveness of the firm's systems and controls in relation to managing money laundering risk.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 36,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The MLRO will wish to bring to the attention of senior management areas where the operation of AML/CTF controls should be improved, and proposals for making appropriate improvements.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 36,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "In addition, the MLRO should report on the outcome of any relevant quality assurance or internal audit reviews of the firm's AML/CTF processes, as well as the outcome of any review of the firm's risk assessment procedures.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 36,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In December 2006, after discussion with the FCA, JMLSG issued a template suggesting a suitable presentation and content framework for a working paper underpinning the production of the MLRO Annual Report.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 37,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The MLRO is likely to be responsible for the preparation and submission of the Annual Financial Crime Report required by the FCA.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 37,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "All firms, other than credit unions and certain firms with limited permissions and total revenues of less than £5 million, must submit an Annual Financial Crime Report to the FCA annually in respect of their financial year ending on its latest accounting reference date.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 37,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Determine appropriate CDD measures on a risk-sensitive basis, depending on the type of customer, business relationship, product or transaction",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 38,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Take into account situations and products which by their nature can present a higher risk of money laundering or terrorist financing; these specifically include correspondent relationships; and business relationships and occasional transactions with PEPs",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 38,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Carry out a formal, and regular, money laundering/terrorist financing risk assessment, including market changes, and changes in products, customers and the wider environment",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 38,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Ensure customer identification and acceptance procedures reflect the risk characteristics of customers",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 38,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Ensure arrangements for monitoring systems and controls are robust, and reflect the risk characteristics of customers",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 38,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In this Chapter, references to 'customer' should be taken to include beneficial owner, where appropriate.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 39,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Whatever approach is considered most appropriate to the firm's money laundering/terrorist financing risk, the broad objective is that the firm should know at the outset of the relationship who its customers (and, where relevant, beneficial owners) are, where they operate, what they do, and their expected level of activity with the firm.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 39,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The firm then should consider how the profile of the customer's financial behaviour builds up over time, thus allowing the firm to identify transactions or activity that may be suspicious.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 39,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The ML Regulations require firms to take appropriate steps to identify and assess the risks of money laundering and terrorist financing to which its business is subject, taking into account: ➢ information on money laundering and terrorist financing made available to them by the FCA; ➢ risk factors, including factors relating to their customers, countries or geographic areas in which they operate, products, services, transactions and delivery channels.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 39,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "The risk assessments carried out must be documented, kept up to date and made available to the FCA on request.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 39,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "A firm therefore uses its assessment of the risks inherent in its business to inform its risk-based approach to the identification and verification of individual customers, which will in turn drive the level and extent of due diligence appropriate to that customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 40,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "A risk-based approach will, however, serve to balance the cost burden placed on individual firms and their customers with a realistic assessment of the threat of the firm being used in connection with money laundering or terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 40,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "A firm is required to assess the risks inherent in its business, taking into account risk factors including those relating to its customers, countries or geographical areas in which it operates, products, services, its transactions and delivery channels.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 40,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The risk environment faced by the firm includes the wider context within which the firm operates – whether in terms of the risks posed by the jurisdictions in which it and its customers operate, the relative attractiveness of the firm's products or the nature of the transactions undertaken.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 41,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Risks are posed not only in relation to the extent to which the firm has, or has not, been able to carry out the appropriate level of CDD in relation to the customer or beneficial owner(s), nor by who the customer or its beneficial owner(s) is (are), but also in relation to the activities undertaken by the customer – whether in the normal course of its business, or through the products used and transactions undertaken.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 41,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "For firms which operate internationally, or which have customers based or operating abroad, there are additional risk considerations relating to the position of the jurisdictions involved, and their reputation and standing as regards the inherent ML/TF risk, and the effectiveness of their AML/CTF enforcement regime.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 41,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The UK's list of high-risk countries is set out in Schedule 3ZA of the ML Regulations (as amended by The Money Laundering and Terrorist Financing (Amendment) (High-Risk Countries) Regulations 2022) which identifies high-risk third countries with strategic deficiencies in the area of anti-money laundering or counter terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 41,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In identifying its money laundering risk an FCA-regulated firm should consider a range of factors, including its customer, product and activity profiles; its distribution channels; the complexity and volume of its transactions; its processes and systems; and its operating environment.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 42,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The firm should therefore assess its risks in the context of how it might most likely be involved in money laundering or terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 42,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "What risk is posed by the firm's customers?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 42,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "What risk is posed by a customer's behaviour?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 42,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "How does the way the customer comes to the firm affect the risk?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 42,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "What risk is posed by the products/services the customer is using?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 42,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "In identifying and assessing the money laundering or terrorist financing risks, firms must take account of whether new products and new business practices are involved, including new delivery mechanisms, and the use of new or developing technologies for both new and pre-existing products.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 42,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 8,
+        "sentence": "Once the firm has identified and assessed the risks it faces in respect of money laundering or terrorist financing, senior management must establish and maintain policies, controls and procedures to mitigate and",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 42,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "These policies, controls and procedures must take account of the size and nature of the firm's business.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 43,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The policies, controls and procedures designed to mitigate assessed ML/TF risks should be appropriate and proportionate to these risks, and should be designed to provide an effective level of mitigation.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 43,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms must obtain approval from their senior management for the policies, controls and procedures that they put in place and for monitoring and enhancing the measures taken, where appropriate.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 43,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The application of CDD measures is intended to enable a firm to form a reasonable belief that it knows the true identity of each customer and beneficial owner, and, with an appropriate degree of confidence, knows the types of business and transactions the customer is likely to undertake.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 43,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Identify and verify the identity of each customer on a timely basis",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 44,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Identify and take reasonable measures to verify the identity of any ultimate beneficial owner",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 44,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Obtain appropriate additional information to understand the customer's circumstances and business, including the expected nature and level of transactions",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 44,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Based on the risk assessment carried out, a firm will determine the level of CDD that should be applied in respect of each customer and beneficial owner.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 44,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "As regards money laundering and terrorist financing, managing and mitigating the risks will involve measures to verify the customer's identity; collecting additional information about the customer; and monitoring their transactions and activity, to determine whether there are reasonable grounds for knowing or suspecting that money laundering or terrorist financing may be taking place.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 44,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Firms must determine the extent of their CDD measures on a risk-sensitive basis depending on the type of customer, business relationship, product or transaction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 44,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Introducing a customer identification programme that varies the procedures in respect of customers appropriate to their assessed money laundering/terrorist financing risk;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 45,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Requiring the quality of evidence – whether documentary, electronic or by way of third party assurance - to be of a certain standard;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 45,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Obtaining additional customer information, where this is appropriate to their assessed money laundering/terrorist financing risk;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 45,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Monitoring customer transactions/activities.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 45,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "A customer identification programme that is graduated to reflect risk could involve: a standard information dataset to be held in respect of all customers;",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 45,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "The risk posed by an individual customer may be assessed differently depending on whether the customer operates, or is based, in a jurisdiction with a reputation for ML/TF, or in one which has a reputation for strong AML/CTF enforcement, or whether a customer is established in a high risk third country.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 45,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In reaching an appropriate level of satisfaction as to whether the ML/TF risk posed by the customer is acceptable and able to be managed, requesting more and more identification is not always the right answer – it is sometimes better to reach a full and documented understanding of what the customer does, and the transactions it is likely to undertake.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 46,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "If a firm cannot satisfy itself as to the identity of a customer or the beneficial owner who is not the customer; verify that identity; or obtain sufficient information on the nature and intended purpose of the business relationship, it must not enter into a new business relationship and must terminate an existing one.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 46,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "While a risk assessment should always be performed at the inception of the customer relationship, for some customers a comprehensive risk profile may only become evident once the customer has begun transacting through an account, making the monitoring of transactions and on-going reviews a fundamental component of a reasonably designed RBA.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 46,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "In order to be able to implement a reasonable RBA, firms should identify criteria to assess potential money laundering risks.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 46,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Money laundering and terrorist financing risks may be measured using a number of factors.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 46,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "The key risk criteria are: country or geographic risk; customer risk; and product/services risk.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 46,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "When assessing the ML/TF risks relating to types of customers, countries or geographic areas, and particular products, services, transactions or delivery channel risks, a firm should take into account risk variables relating to those risk categories.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 47,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "When assessing risk, firms should consider all relevant risk factors before determining what is the overall risk category and the appropriate level of mitigation to be applied.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 47,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "A risk assessment will often result in a stylised categorisation of risk: e.g., high/medium/low.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 47,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "When weighting risk factors, firms should make an informed judgment about the relevance of different risk factors in the context of a particular customer relationship or occasional transaction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 47,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms are able to override any automatically generated risk scores where necessary.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 47,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "A firm must always be able to satisfy itself that the scores allocated reflect the firm's understanding of ML/TF risk, and it should be able to demonstrate this to the FCA if necessary.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 48,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Many customers, by their nature or through what is already known about them by the firm, carry a lower money laundering or terrorist financing risk.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 48,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "There are other circumstances where the risk of money laundering or terrorist financing may be lower.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 48,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Having a lower money laundering or terrorist financing risk for identification and verification purposes does not automatically mean that the same customer is lower risk for all types of CDD measures, in particular for ongoing monitoring of transactions.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 48,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms should not, however, judge the level of risk solely on the nature of the customer or the product.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 48,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Where, in a particular customer/product combination, either or both the customer and the product are considered to carry a higher risk of money laundering or terrorist financing, the overall risk of the customer should be considered carefully.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 48,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Where higher risks are identified, firms are required to take enhanced measures to manage and mitigate the risks.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 49,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Where a customer is assessed as carrying a higher risk, then depending on the product sought, it will be necessary to seek additional information in respect of the customer, to be better able to judge whether or not the higher risk that the customer is perceived to present is likely to materialise.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 49,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Such additional information may include an understanding of where the customer's funds and wealth have come from.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 49,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Where the risks of ML/TF are higher, firms must conduct enhanced due diligence measures consistent with the risks identified.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 49,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "As far as reasonably possible, examine the background and purpose of the transaction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 49,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Increase the degree and nature of monitoring of the business relationship, in order to determine whether these transactions or activities appear unusual or suspicious.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 49,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Obtaining, and where appropriate verifying, additional information on the customer and updating more regularly the identification of the customer and any beneficial owner",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 50,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Obtaining additional information on the intended nature of the business relationship",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 50,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Obtaining information on the source of funds or source of wealth of the customer",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 50,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Obtaining information on the reasons for intended or performed transactions",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 50,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Conducting enhanced monitoring of the business relationship, by increasing the number and timing of controls applied, and selecting patterns of transactions that need further examination",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 50,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Requiring the first payment to be carried out through an account in the customer's name with a bank subject to similar CDD standards",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 50,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Where EDD measures are applied, firms must as far as reasonably possible examine the background and purpose of all complex or unusually large transactions, unusual patterns of transactions and transactions which have no apparent economic or legal purpose.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 50,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 8,
+        "sentence": "The firm must decide, on the basis of its assessment of the risks posed by different customer/product combinations, on the level of verification that should be applied at each level of risk presented by the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 50,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The policies, controls and procedures should be approved by senior management, and the measures taken to manage and mitigate the risks (whether higher or lower) should be consistent with national requirements and with guidance from competent authorities.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 51,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Independent testing of, and reporting on, the development and effective operation of the firm's RBA should be conducted by, for example, an internal audit function (where one is established), external auditors, specialist consultants or other qualified parties who are not involved in the implementation or operation of the firm's AML/CTF compliance programme.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 51,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The firm will need to have some means of assessing that its risk mitigation procedures and controls are working effectively, or, if they are not, where they need to be improved.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 51,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Its policies, controls and procedures will need to be kept under regular review.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 51,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms must document their risk assessments in order to be able to demonstrate their basis, keep these assessments up to date, and have appropriate mechanisms to provide appropriate risk assessment information to competent authorities.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 52,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Documentation of those responses should enable the firm to demonstrate to its regulator and/or to a court: ➢ how it assesses the threats/risks of being used in connection with money laundering or terrorist financing; ➢ how it agrees and implements the appropriate systems and procedures, including due diligence requirements, in the light of its risk assessment; ➢ how it monitors and, as necessary, improves the effectiveness of its systems and procedures; and ➢ the arrangements for reporting to senior management on the operation of its control processes.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 52,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms should document the rationale for any additional due diligence measures it has undertaken (or any it has waived) compared to its standard approach, in view of its risk assessment of a particular customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 52,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Risk management generally is a continuous process, carried out on a dynamic basis.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 52,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms must therefore ensure that their risk management processes for managing money laundering and terrorist financing risks are kept under regular review.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 52,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Periodic assessment should therefore be made of activity in the firm's market place.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 53,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Customers' activities change (without always notifying the firm) and the firm's products and services – and the way these are offered or sold to customers – change.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 53,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "A firm should therefore keep its risk assessment(s) up to date.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 53,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "It is recommended that a firm revisit its assessment at least annually, even if it decides that there is no case for revision.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 53,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms should include details of the assessment, and any resulting changes, in the MLRO's annual report (see paragraphs 3.37 to 3.45).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 53,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Assessment of a jurisdiction as low risk only allows for some easement of the level of due diligence carried out – it is not a complete exemption from the application of CDD measures in respect of customer identification.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 54,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "It does not exempt the firm from carrying out ongoing monitoring of the business relationship with the customer, nor from the need for such other procedures (such as monitoring) as may be necessary to enable a firm to fulfil its responsibilities under the Proceeds of Crime Act 2002.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 54,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "When identifying lower risk jurisdictions, FATF encourages firms to take into consideration country risk factors.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 54,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Countries identified by credible sources, such as mutual evaluation or detailed assessment reports, as having effective AML/CFT systems.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 54,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Countries identified by credible sources as having a low level of corruption or other criminal activity.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 54,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "All EEA countries have undertaken to implement the fourth money laundering directive and all are members of FATF or the relevant FATF style regional body (for Europe, this is MONEYVAL).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 55,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Given the commitment to implement the Fourth Money Laundering Directive, firms may initially presume EEA member states to be low risk; significant variations may however exist in the precise measures that have been taken to transpose the money laundering directive (and its predecessors) into national laws and regulations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 55,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where firms have substantive information which indicates that a presumption of low risk cannot be sustained, either in general or for particular products, they will need to consider whether their procedures should be enhanced to take account of this information.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 55,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "However, unlike the transposition of the money laundering directive by EU Member States, implementation cannot be mandatory, and all members will approach their obligations in different ways, and under different timetables.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 55,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "As a result of due diligence carried out, therefore, for the purposes of determining those jurisdictions which, in the firm's judgement, are low risk, firms may rely, for the purposes of carrying out CDD measures, on other regulated firms situated in such a jurisdiction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 55,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Factors include: Geographical risk factors, Membership of groups that only admit those meeting a certain benchmark, Contextual factors – political stability; level of (endemic) corruption etc, Evidence of relevant (public) criticism of a jurisdiction, including HMT/FATF advisory notices, Independent and public assessment of the jurisdiction's overall AML regime, Need for any assessment to be recent, Implementation standards (including quality and effectiveness of supervision), Incidence of trade with the jurisdiction – need to be proportionate especially where very small.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 56,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Geographical risk factors include: countries identified by credible sources, such as mutual evaluations, detailed assessment reports or published follow-up reports, as not having effective systems to counter money laundering or terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 56,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms should bear in mind that the presence of one or more risk factors may not always indicate that there is a high risk of money laundering or terrorist financing in a particular situation.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 56,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "There are a number of international and regional 'groups' of jurisdictions that admit to membership only those jurisdictions that have demonstrated a commitment to the fight against money laundering and terrorist financing, and which have an appropriate legal and regulatory regime to back up this commitment.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 56,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Where the firm looks to publicly available evidence, it will be important that it has some knowledge of the criteria that were used in making the assessment; the firm cannot rely solely on the fact that such a list has been independently prepared, even if by a respected third party agency.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 57,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "When constructing their internal procedures, therefore, financial sector firms should have regard to the need for additional monitoring procedures for transactions from any country that is listed on these statements of concern.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 57,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Additional monitoring procedures will also be required in respect of correspondent relationships with financial institutions from such countries.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 57,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Such reports lists can provide some useful and relevant evidence – which may or may not be conclusive – on whether or not a particular jurisdiction is likely to be low risk.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 57,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms should bear in mind that mutual evaluation reports are at a 'point in time', and should be interpreted as such.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 57,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In assessing the conclusions of a mutual evaluation report, firms may find it difficult to give appropriate weighting to findings and conclusions in respect of the jurisdiction's compliance with particular Recommendations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 58,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "In respect of any particular jurisdiction, the level and extent of due diligence that needs to be carried out in making a judgment on the level of risk will be influenced by the volume and size of the firm's business with that jurisdiction in relation to the firm's overall business.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 58,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Under certain circumstances, HM Treasury may, pursuant to the Counter-terrorism Act 2008, Schedule 7, issue directions to a firm in relation to customer due diligence; ongoing monitoring; systematic reporting; and limiting or ceasing business.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 58,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The FATF issues periodic announcements about its concerns regarding the lack of comprehensive AML/CTF systems in various jurisdictions.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 59,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Jurisdictions subject to a FATF call on its members and other jurisdictions to apply countermeasures to protect the international financial system from the ongoing and substantial money laundering and terrorist financing (ML/TF) risks emanating from the jurisdiction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 59,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Jurisdictions with strategic AML/CTF deficiencies that have not committed to an action plan developed with the FATF to address key deficiencies.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 59,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The FCA expect firms they supervise for money laundering purposes to consider the impact of these statements on their policies and procedures.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 59,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Does the customer or beneficial owner have links to sectors that are associated with higher corruption risk, such as construction, pharmaceuticals and healthcare, arms trade and defence, extractive industries and public procurement?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 60,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Does the customer or beneficial owner have links to sectors that are associated with higher ML or TF risk, for example certain Money Service Businesses, casinos or dealers in precious metals?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 60,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Does the customer have political connections, for example, are they a Politically Exposed Person (PEP), or is their beneficial owner a PEP?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 60,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Is the customer a legal person subject to enforceable disclosure requirements that ensure that reliable information about the customer's beneficial owner is publicly available, for example public companies listed on stock exchanges that make such disclosure a condition for listing?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 60,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Is the customer a credit or financial institution from a jurisdiction with an effective AML/CTF regime and is it supervised for compliance with local AML/CTF obligations?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 60,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Is the customer a public administration or enterprise from a jurisdiction with low levels of corruption?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Is the customer's or their beneficial owner's background consistent with what the firm knows about their former, current or planned business activity, their business' turnover, the source of funds and the customer's or beneficial owner's source of wealth?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Is the customer a beneficiary of a life insurance policy (that the firm has become aware of) in situations where there may be an increased risk, for example complex products with potential multiple investment accounts or those that allow for early surrender and have a surrender value, or beneficiaries with no obvious links to the policy holder?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Is the customer a third country national who is applying for residence rights in or citizenship of an EEA state in exchange for transfers of capital, purchase of property, government bonds, or investment in corporate entities in that EEA state?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Are there any adverse media reports or other relevant information sources about the customer?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Has the customer, beneficial owner or anyone publicly known to be closely associated with them had their assets frozen due to administrative or criminal proceedings or allegations of terrorism or terrorist financing?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Does the firm know if the customer or beneficial owner has been subject to a suspicious activity report in the past?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 8,
+        "sentence": "Does the firm have any in-house information about the customer's or their beneficial owner's integrity, obtained, for example, in the course of a long-standing business relationship?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 9,
+        "sentence": "Does the customer have legitimate reasons for being unable to provide robust evidence of their identity, perhaps because they are an asylum seeker?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 61,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Does the firm have any doubts about the veracity or accuracy of the customer's or beneficial owner's identity?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Are there indications that the customer might seek to avoid the establishment of a business relationship?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Is the customer's ownership and control structure transparent and does it make sense?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Does the customer issue bearer shares or have nominee shareholders?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Is the customer a legal person or arrangement that could be used as an asset holding vehicle?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Is there a sound reason for changes in the customer's ownership and control structure?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Does the customer request transactions that are complex, unusually or unexpectedly large or have an unusual or unexpected pattern without apparent economic or lawful purpose or a sound commercial rationale?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 8,
+        "sentence": "Does the customer request unnecessary or unreasonable levels of secrecy?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 9,
+        "sentence": "Can the customer's or beneficial owner's source of wealth or source of funds be easily explained, for example through their occupation, inheritance or investments?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 10,
+        "sentence": "Is the customer a non-profit organisation whose activities expose it to particularly high risks of abuse for terrorist financing purposes?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 62,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "To what extent do products or services facilitate or allow anonymity or opaqueness of customer, ownership or beneficiary structures, for example pooled accounts, bearer shares, fiduciary deposits, offshore and certain trusts, or legal entities like foundations that are structured in a way to take advantage of anonymity and dealings with shell companies or companies with nominee shareholders that could be abused for illicit purposes?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 63,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "To what extent is it possible for a third party that is not part of the business relationship to give instructions, e.g. certain correspondent banking relationships?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 63,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where third party payments are foreseen, does the firm know the third party's identity, for example a state benefit authority or a guarantor?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 63,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Or are products and services funded exclusively by fund transfers from the customer's own account at another financial institution that is subject to AML/CTF standards and oversight that are comparable to those required under the UK regime?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 63,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms should consider all relevant information at their disposal concerning ML/TF risks arising from transactions listed in ML Regulation 33 (6)(b)(vii) and consider their exposure to potential high-risk transactions involving these items, as identified through undertaking risk based CDD measures on their customers.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 64,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "A risk-based approach should be adopted in the interpretation of 'related to'.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 64,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Transactions made to and/or from parties in the oil production process, including the sale of oil to exploration companies and refiners should be considered for terrorist financing methodologies.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 64,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Transactions such as those relating to a trade in live firearms or customers involved in the arms trade should be considered.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 64,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "EDD should be considered on transactions involving gold recyclers and jewellers on a risk basis.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 64,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "EDD should be performed on transactions involves CITES items on a risk basis of potential illegal wildlife trafficking (IWT).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 65,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "When identifying the risk associated with the way the customer obtains the products or services they require, firms should consider the risk related to: a) the extent to which the business relationship is conducted on a non-face to face basis; and b) any introducers or intermediaries the firm might use and the nature of their relationship to the firm.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 65,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Is the customer physically present for identification purposes? If they are not, has the firm used a reliable form of non-face to face CDD?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 65,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Has the firm used an electronic identification process that is secure from fraud and misuse and capable of providing an appropriate level of assurance?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 65,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Has the customer been introduced from other parts of the same financial group and if so, to what extent can the firm rely on this introduction as reassurance that the customer will not expose the firm to excessive ML/TF risk?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 65,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "What has the firm done to satisfy itself that the group entity applies CDD measures to UK standards?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 65,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Has the customer been introduced from a third party, for example a bank that is not part of the same group, and is the third party a financial institution or is their main business activity unrelated to financial service provision?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 66,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "What has the firm done to be satisfied that the third party applies CDD measures and keeps records to UK standards and that it is supervised for compliance with comparable AML/CTF obligations in line with UK requirements?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 66,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The third party will provide, immediately upon request, relevant copies of identification and verification data, among others in line with UK requirements?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 66,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The quality of the third party's CDD measures is such that it can be relied upon?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 66,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "To what extent can the firm be satisfied that the agent has obtained enough information so that the firm knows its customer and the level of risk associated with the business relationship?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 66,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "How does this affect the firm's knowledge of the customer and ongoing risk management?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 66,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Are there any indications that the intermediary's level of compliance with applicable AML legislation or regulation is inadequate, for example because the intermediary has been sanctioned for breaches of AML/CTF obligations?",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 66,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 8,
+        "sentence": "Where a third party is based in a high risk third country that the Commission has identified as having strategic deficiencies, firms must not rely on that intermediary.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 66,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms should keep their assessment of ML/TF risk associated with individual business relationships and occasional transactions, as well as the underlying factors, under review to ensure their assessment of ML/TF risk remains up to date and relevant.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms should assess information obtained as part of their ongoing monitoring of the business relationship and consider whether this affects the risk assessment.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms should also ensure that they have systems and controls in place to identify emerging ML/TF risks and that they can assess and, where appropriate, incorporate these in their business-wide and individual risk assessments in a timely manner.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "processes to ensure internal information is reviewed regularly to identify trends and emerging issues, both in relation to individual business relationships and the firm's business",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "ensuring that the firm becomes aware of changes to terror alerts and sanctions regimes as soon as they occur, for example by regularly reviewing terror alerts and looking for sanctions regime updates",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "carefully recording issues throughout the year that could have a bearing on the risk assessment, such as internal suspicious transaction reports, compliance failures and intelligence from front office staff.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 68,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Like the original risk assessments, any update of a risk assessment and adjustment of accompanying CDD measures should be proportionate and commensurate with the ML/TF risk.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 68,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Must carry out prescribed CDD measures for all customers not covered by exemptions",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 69,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Must have systems to deal with identification issues in relation to those who cannot produce the standard evidence",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 69,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Must take a risk-based approach when applying enhanced due diligence to take account of the greater potential for money laundering in higher risk cases, specifically in respect of PEPs and correspondent relationships",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 69,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Must have specific policies in relation to the financially (and socially) excluded",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 69,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "If satisfactory evidence of identity is not obtained, the business relationship must not proceed further",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 69,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Must have some system for keeping customer information up to date",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 69,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "The ML Regulations 2017 (as amended) specify CDD measures that are required to be carried out, and the timing, as well as actions required if CDD measures are not carried out",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 69,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms must determine the extent of their CDD measures and ongoing monitoring on a risk-sensitive basis, depending on the type of customer, business relationship, product or transaction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 70,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "They must be able to demonstrate to their supervisory authority that the extent of their CDD measures and monitoring is appropriate in view of the risks of money laundering and terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 70,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The CDD measures that must be carried out involve: (a) identifying the customer, and verifying his identity; (b) identifying the beneficial owner, where relevant, and verifying his identity; and (c) assessing, and where appropriate obtaining information on, the purpose and intended nature of the business relationship or transaction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 70,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Where the customer or beneficial owner is a legal person (other than a company listed on a regulated market), trust, company, foundation or similar legal arrangement, firms must take reasonable measures to understand the ownership and control structure of that legal person, trust, company, foundation or legal arrangement.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 70,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Working out who is a beneficial owner may not be a straightforward matter.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 70,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "For some business relationships, determined by the firm to present a low degree of risk of ML/TF, simplified due diligence (SDD) may be applied; in the case of higher risk situations, and specifically in relation to PEPs or correspondent relationships with third country respondents, enhanced due diligence (EDD) measures must be applied on a risk sensitive basis.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 70,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms must conduct ongoing monitoring of the business relationship with their customers (section 5.7), including the scrutiny of transactions undertaken throughout the course of the relationship and keeping CDD information up to date.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 71,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The CDD and monitoring obligations on firms under legislation and regulation are designed to make it more difficult for the financial services industry to be used for money laundering or terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 71,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms also need to know who their customers are to guard against fraud, including impersonation fraud, and the risk of committing offences under POCA and the Terrorism Act, relating to money laundering and terrorist financing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 71,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Firms therefore need to carry out customer due diligence, and monitoring, for two broad reasons: to help the firm, at the time due diligence is carried out, to be reasonably satisfied that customers are who they say they are, to know whether they are acting on behalf of another, and that there is no legal barrier (e.g. government sanctions) to providing them with the product or service requested; and to enable the firm to assist law enforcement, by providing available information on customers or activities being investigated.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 71,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "It will, for example, often need to be aware of the nature of the customer's business or activities in order to assess the extent to which his transactions and activity undertaken with or through the firm is consistent with that business.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 71,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "A firm must apply CDD measures when it does any of the following: (a) establishes a business relationship; (b) carries out an occasional transaction; (c) suspects money laundering or terrorist financing; or (d) doubts the veracity of documents or information previously obtained for the purpose of identification or verification.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 72,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The verification of the identity of the customer and, where applicable, the beneficial owner, must, subject to the exceptions referred to below, take place before the establishment of a business relationship or the carrying out of a transaction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 72,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Exception if necessary not to interrupt normal business and there is little risk: In any other case, verification of the identity of the customer, and where there is one, the beneficial owner, may be completed during the establishment of a business relationship if (a) this is necessary not to interrupt the normal conduct of business and (b) there is little risk of money laundering or terrorist financing occurring provided that the verification is completed as soon as practicable after contact is first established.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 72,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The verification of the identity of a customer (or beneficial owner, if there is one) opening an account may take place after the account (including an account which permits transactions in transferable securities) has been opened, provided that there are adequate safeguards in place to ensure that no transactions are carried out by or on behalf of the customer before verification has been completed.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 72,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Where a firm is required to apply CDD measures in the case of a trust, a legal entity (other than a body corporate) or a legal arrangement (other than a trust), and the beneficiaries of that trust, entity or arrangement are designated as a class, or by reference to particular characteristics, the firm must establish and verify the identity of the beneficiary before – any payment is made to the beneficiary, or the beneficiary exercises its vested rights in the trust, entity or legal arrangement.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 72,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Where a firm is unable to apply CDD measures in relation to a customer, the firm (a) must not carry out a transaction through a bank account with or on behalf of the customer; (b) must not establish a business relationship or carry out a transaction with the customer otherwise than through a bank account; (c) must terminate any existing business relationship with the customer; (d) must consider whether it ought to be making a report to the NCA, in accordance with its obligations under POCA and the Terrorism Act.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 73,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms should always consider whether an inability to apply CDD measures is caused by the customer not possessing the 'right' documents or information.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 73,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "If the firm concludes that the circumstances do give reasonable grounds for knowledge or suspicion of money laundering or terrorist financing, a report must be made to the NCA (see Chapter 6).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 73,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The Regulation requires that payment services providers (PSPs) must include certain information in electronic funds transfers and ensure that the information is verified.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 73,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Applying CDD measures involves several steps. The firm is required to verify the identity of customers and, where applicable, beneficial owners.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 74,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The purpose and intended nature of the business relationship must also be assessed, and if appropriate, information on this obtained.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 74,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The firm identifies the customer by obtaining a range of information about him.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 74,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The verification of the identity consists of the firm verifying some of this information against documents or information obtained from a reliable source which is independent of the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 74,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "It should be noted that for AML/CTF purposes, a 'customer' may be wider than the FCA Glossary definition of 'customer'.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 74,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Where, however, there are several parties to a transaction, not all will necessarily be customers.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 75,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "A 'business relationship' is defined in the ML Regulations as a business, professional or commercial relationship between a firm and a customer, which is connected to the business of the firm, and is expected by the firm at the time when contact is established to have an element of duration.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 75,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "An 'occasional transaction' for CDD purposes means: a transfer of funds within the meaning of article 3.918 of the funds transfer regulation exceeding €1,000; or a transaction carried out other than in the course of a business relationship (e.g., a single foreign currency transaction, or an isolated instruction to purchase shares), amounting to €15,000 or more, whether the transaction is executed in a single operation or in several operations which appear to be linked.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 75,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The factors linking transactions to assess whether there is a business relationship are inherent in the characteristics of the transactions – for example, where several payments are made to the same recipient from one or more sources over a short period of time, or where a customer regularly transfers funds to one or more sources.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 75,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "A beneficial owner is normally an individual who ultimately owns or controls the customer or on whose behalf a transaction is being conducted.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 75,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "In respect of private individuals, the customer themself is the beneficial owner, unless there are features of the transaction, or surrounding circumstances, that indicate otherwise.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 75,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "they should make appropriate enquiries where it appears that the customer is not acting on their own behalf.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 76,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The ML Regulations define beneficial owners as individuals either owning or controlling more than 25% of body corporates or partnerships or otherwise owning or controlling the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 76,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "These individuals must be identified, and reasonable measures must be taken to verify their identities.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 76,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "In relation to a trust, the ML Regulations define the beneficial owner as each of: the settlor; the trustees; the beneficiaries, or where the individuals benefiting from the trust have not been determined, the class of persons in whose main interest the trust is set up, or operates; any individual who has control over the trust.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 76,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "The identity of a customer or beneficial owner must be verified on the basis of documents or information obtained from a reliable source which is independent of the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 76,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "The obligation to verify the identity of a beneficial owner, however, is for the firm to take reasonable measures so that it is satisfied",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 76,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "It is up to each firm to consider whether it is appropriate, in light of the money laundering or terrorist financing risk associated with the business relationship, to make use of records of beneficial owners in the public domain, ask their customers for relevant data, require evidence of the beneficial owner's identity on the basis of documents or information obtained from a reliable source which is independent of the customer, or obtain the information in some other way.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 77,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "In low-risk situations, therefore, it may be reasonable for the firm to confirm the beneficial owner's identity based on information supplied by the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 77,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms must apply CDD measures at appropriate times to its existing customers on a risk-sensitive basis.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 77,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Firms must also apply CDD measures to any anonymous accounts, passbooks or anonymous safe-deposit boxes before they are used.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 77,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms must apply CDD measures when they have any legal duty (e.g. ML Regulation 28(3A)) to contact an existing customer to review any information relating to the beneficial ownership of the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 77,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "As risk dictates, therefore, firms must take steps to ensure that they hold appropriate information to demonstrate that they are satisfied that they know all their customers.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 77,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms that do not seriously address risks (including the risk that they have not confirmed the identity of existing customers) are exposing themselves to the possibility of action for breach of the FCA Rules, or of the ML Regulations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 78,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "A firm may hold considerable information in respect of a customer of some years' standing.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 78,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "When a firm acquires the business and customers of another firm, either as a whole, or as a portfolio, it is not necessary for the identity of all existing customers to be re-verified, provided that: all underlying customer records are acquired with the business; or a warranty is given by the acquired firm, or by the vendor where a portfolio of customers or business has been acquired, that the identities of its customers have been verified.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 78,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "It is, however, important that the acquiring firm's due diligence enquiries include some sample testing in order to confirm that the customer identification procedures previously followed by the acquired firm (or by the vendor, in relation to a portfolio) have been carried out in accordance with UK requirements.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 78,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "A firm must understand the purpose and intended nature of the business relationship or transaction to assess whether the proposed business relationship is in line with the firm's expectation and to provide the firm with a meaningful basis for ongoing monitoring.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 78,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Depending on the firm's risk assessment of the situation, carried out in accordance with the guidance set out in Chapter 4, information that might be relevant may include some or all of the following: nature and details of the business/occupation/employment; record of changes of address; the expected source and origin of the funds to be used in the relationship; the origin of the initial and ongoing source(s) of wealth and funds (particularly within a private banking or wealth management relationship); copies of recent and current financial statements; the various relationships between signatories and with underlying beneficial owners; the anticipated level and nature of the activity that is to be undertaken through the relationship.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 79,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Having a lower money laundering and/or terrorist financing risk for identification and verification purposes does not automatically mean that the same customer is lower risk for all types of CDD measures, in particular for ongoing monitoring of transactions.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 79,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "When assessing the money laundering and terrorist financing risks relating to types of customers, countries or geographic areas, and particular products, services, transactions or delivery channels risk, firms should take into account risk variables relating to those risk categories.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 79,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Documents or information obtained for the purposes of applying CDD measures, held about customers, must be kept up to date.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 79,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Once the identity of a customer has been satisfactorily verified, there is no obligation to re-verify identity (unless doubts arise as to the veracity or adequacy of the evidence previously obtained for the purposes of customer identification); as risk dictates, however, firms must take steps to ensure that they hold appropriate up-to-date information on their customers.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 79,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The identity of an individual has a number of principal aspects: i.e., their given name (which of course may change), supported by date of birth.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 80,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Knowledge of an individual's residential address is also central to being reasonably satisfied that the customer is who they say they are, perhaps especially for customers with more common names.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 80,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The identity of a customer who is not a private individual is a combination of its constitution, its business, and its legal form and its ownership and control structure.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 80,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The ML Regulations require that customer due diligence must be carried out on the basis of documents or information obtained from a reliable source which is independent of the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 80,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Evidence of identity can be obtained in a number of forms.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 80,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Evidence of identity can also be obtained by means of a digital identification process.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 80,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Firms should therefore document steps taken in this regard.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 80,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "An appropriate record of the steps taken, and copies of, or references to, the evidence obtained to identify the customer must be kept.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 81,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Documentation purporting to offer evidence of identity may emanate from a number of sources.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 81,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms should recognise that some documents are more easily forged or counterfeited than others.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 81,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "If suspicions are raised in relation to any document offered, firms should take whatever practical and proportionate steps are available to establish whether the document offered has been reported as lost or stolen.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 81,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms may choose to use electronic/digital identity checks where this is possible, either on their own or in conjunction with documentary evidence.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 81,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Firms should understand the basis upon which any particular source is established and whether, and if so how, its compliance with specific criteria, and performance are monitored.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 81,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Electronic data sources can provide a wide range of confirmatory material without directly involving the customer, although the customer's permission may be required for the firm to have access to a particular source.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 82,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Some sources focus on using primary identity documents, sometimes using biometric data.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 82,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "In using an electronic source or digital identity to verify a customer's identity, firms should ensure that they are able to demonstrate that they have both verified that the customer (or beneficial owner) exists, and satisfied themselves that the applicant seeking the business relationship is, in fact, that customer (or beneficial owner).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 82,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The use of biometric information is one way of achieving the latter confirmation, as is the use of private information or codes that incontrovertibly link the potential customer (or beneficial owner) to the electronic/digital identity information.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 82,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Such organisations use databases of both positive and negative information, and many also access high-risk alerts that utilise specific data sources to identify high-risk conditions, for example, known identity frauds or inclusion on a PEPs or sanctions list, or known criminality.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 82,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Positive information (relating to full name, current address, date of birth) can prove that an individual exists, but some can offer a higher degree of confidence than others.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 82,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Some electronic sources or digital identity schemes specify criteria-driven levels of assurance or scored levels of verification that are established through the accumulation of specific pieces of identity information.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 82,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Such information should include data from more robust sources - where an individual has to prove their identity, or address, in some way in order to be included, as opposed to others where no such proof is required.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 83,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The information maintained should be kept up to date, and the organisation's verification – or re-verification - of different aspects of it should not be older than an agreed period.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 83,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Negative information includes lists of individuals known to have committed fraud, including identity fraud, and registers of deceased persons.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 83,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "For an electronic/digital check to provide satisfactory evidence of identity on its own, it must use data from multiple sources, and across time, or incorporate qualitative checks that assess the strength of the information supplied, or be done through an organisation which meets the criteria in paragraphs 5.3.51-5.3.52.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 83,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Before using an organisation for digital identities, electronic or digital identity verification, or trust services, firms should be satisfied that information supplied by the provider is considered to be sufficiently extensive, reliable, accurate, independent of the customer, and capable of providing an appropriate level of assurance that the person claiming a particular identity is in fact that person.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 83,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "its published standards, or those of the scheme under which it is accredited or certified, require its verified data or information to be kept up to date, or maintained within defined periods of re-verification",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 84,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "it has transparent processes that enable the firm to know what checks were carried out, what the results of these checks were, and what they mean in terms of how much certainty they give as to the identity of the subject",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 84,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "an organisation should have processes that allow the enquirer to capture and store the information they used to verify an identity, and/or return a level of assurance that can be stored by the enquirer as evidence of the organisations' verification processes",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 84,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Such sanctions normally include a comprehensive freeze of funds and economic resources, together with a prohibition on making funds or economic resources available to the designated target",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 84,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "A Consolidated List of all targets to whom financial sanctions apply is maintained by OFSI, and includes all individuals and entities that are subject to financial sanctions in the UK",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 84,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "To reduce the risk of breaching obligations under financial sanctions regimes, firms are likely to focus their resources on areas of their business that carry a greater likelihood of involvement with targets, or their agents.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 85,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms need to have some means of monitoring payment instructions to ensure that proposed payments to targets or their agents are not made.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 85,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Under certain circumstances, HM Treasury may issue directions to a firm in relation to customer due diligence; ongoing monitoring; systematic reporting; and limiting or ceasing business.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 85,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Under the Immigration Act 2014, a bank or building society must not open a current account for a person who is in the UK but does not have leave to enter or remain in the UK.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 85,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "These immigration checks must also be carried out on existing personal current accounts on a quarterly basis and Home Office notified of a disqualified person's account or application for an account.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 85,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Normal CDD measures must still be applied to the customer once his immigration status has been checked.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 86,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms must not enter into, or continue, a correspondent relationship with a shell bank.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 86,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms must take appropriate measures to ensure that it does not enter into or continue a correspondent relationship with a bank that is known to allow its accounts to be used by a shell bank.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 86,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Firms carrying on business in the UK must not set up an anonymous account, an anonymous passbook, or an anonymous safe-deposit box for any new or existing customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 86,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "All firms carrying on business in the UK must apply CDD measures to all existing anonymous accounts, passbooks and safe-deposit boxes before such accounts, passbooks or safe-deposit boxes are used in any way.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 86,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Firms should pay special attention to any money laundering or terrorist financing threat that may arise from products or transactions that may favour anonymity and take measures, if needed, to prevent their use for money laundering or terrorist financing purposes.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 86,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Depending on the circumstances relating to the customer, the product and the nature and purpose of the proposed relationship, firms may also need to apply the following guidance to identifying, and verifying the identity of, beneficial owners, and to other relevant individuals associated with the relationship or transaction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 86,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The firm should obtain the following information in relation to the private individual: full name, residential address, date of birth",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 87,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Verification of the information obtained must be based on reliable sources, independent of the customer – which might either be a document or documents produced by the customer, or electronically by the firm, or by a combination of both.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 87,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where business is conducted face-to-face, firms should see originals of any documents involved in the verification.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 87,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "If documentary evidence of an individual's identity is to provide a high level of confidence, it will typically have been issued by a government department or agency, or by a court or local authority that has checked the existence and characteristics of the persons concerned.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 87,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "If identity is to be verified from documents, this should be based on: Either a government-issued document which incorporates: the customer's full name and photograph, and either his residential address or his date of birth.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 87,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "For face-to-face verification, production of a valid passport or photocard driving licence (so long as the photograph is in date) should enable most individuals to meet the identification requirement for AML/CTF purposes.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 88,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The firm's risk-based procedures may dictate additional checks for the management of credit and fraud risk, or may restrict the use of certain options, e.g., restricting the acceptability of National Identity Cards in face-to-face business in the UK to cards issued only by EEA member states and Switzerland.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 88,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "For customers who cannot provide the standard evidence, other documents may be appropriate.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 88,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Some consideration should be given as to whether the documents relied upon are forgeries or counterfeits.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 88,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "In addition, if they are in a foreign language, appropriate steps should be taken to be reasonably satisfied that the documents in fact provide evidence of the customer's identity.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 88,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "When using an electronic source or digital identity to verify a customer's identity, firms should ensure that they are able to demonstrate that they have both verified that the customer exists, and satisfied themselves that the individual seeking the business relationship is, in fact, that customer (or beneficial owner).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 89,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Electronic verification may be carried out by the firm either direct, using as its basis the customer's full name, address and date of birth, or through an organisation which has been considered per the criteria in paragraphs 5.3.51 and 5.3.52.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 89,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "For verification purposes, a firm may approach an electronic source ot digital identity provider of its own choosing, or the potential customer may elect to offer the firm access to an electronic/digital source that they have already registered with, and which has already accumulated verified evidence of identity, and which has been considered per the criteria in paragraphs 5.3.51 and 5.3.52.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 89,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Some digital identity or electronic sources service providers focus on using primary identity documents, sometimes using biometric data.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 89,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms should ensure that they understand the basis of the system they use, in order to be satisfied that the sources of the underlying data reflect the guidance in paragraphs 5.3.46-5.3.50, and cumulatively meet an appropriate level of confirmation in relation to the risk assessed in the relationship.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 89,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The extent of verification in respect of non face-to-face customers will depend on the nature and characteristics of the product or service requested and the assessed money laundering risk presented by the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 90,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Additional measures would also include assessing the possibility that the customer is deliberately avoiding face-to-face contact.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 90,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where identity is verified electronically, copy documents are used, or the customer is not physically present, a firm should apply an additional verification check to manage the risk of impersonation fraud.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 90,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "The additional verification check may consist of robust anti-fraud checks that the firm routinely undertakes as part of its existing procedures, or may include requiring the first payment to be carried out through an account in the customer's name with a UK or EU regulated credit institution, or an assessed low risk jurisdiction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 90,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "The source(s) of information used to verify that an individual exists may be different from those sources used to verify that the potential customer is in fact that individual.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 91,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "If, however, the customer, and/or the product or delivery channel, is assessed to present a higher money laundering or terrorist financing risk – whether because of the nature of the customer, or their business, or its location, or because of the product features available – the firm will need to decide whether it should require additional identity information to be provided, and/or whether to verify additional aspects of identity.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 91,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where the result of the standard verification check gives rise to concern or uncertainty over identity, or other risk considerations apply, so the number of matches that will be required to be reasonably satisfied as to the individual's identity will increase.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 91,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "For higher risk customers, the need to have additional information needs to be balanced against the possibility of instituting enhanced monitoring.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 91,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "In the case of an estate of a deceased person in the course of administration, the beneficial owner is o in England and Wales and Northern Ireland, the executor, original or by representation, or administrator for the time being of a deceased person; and o in Scotland, the executor for the purposes of the Executors (Scotland) Act 190022.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 92,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "In circumstances where an account is opened or taken over by executors or administrators for the purpose of winding up the estate of a deceased person, firms may accept the court documents granting probate or letters of administration as evidence of authority of those personal representatives.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 92,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Lawyers and accountants acting in the course of their business as regulated firms, who are not named as executors/administrators, can be verified by reference to their practising certificates, or to an appropriate professional register.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 92,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "When a person deals with assets under a power of attorney, that person is also a customer of the firm.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 92,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Consequently, the identity of holders of powers of attorney should be verified, in addition to that of the donor.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 92,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "In the case of a joint and several power of attorney, the identity of the person acting separately may be verified on its own, without the need to verify the identity of all persons when they are not acting jointly.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 92,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Other than where the donor or grantor of a power of attorney is an existing customer of the firm, their identity must be verified.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 92,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Under certain conditions, where the money laundering or terrorist financing risk in a product is considered to be at its lowest, a payment drawn on an account with a UK or EU regulated credit institution, or with one from an assessed low risk jurisdiction, and which is in the sole or joint name of the customer, may satisfy the standard identification requirement.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 93,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Whilst the payment may be made between accounts with regulated firms or by cheque or debit card, the accepting firm must be able to confirm that the payment (by whatever method) is from a bank or building society account in the sole or joint name(s) of the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 93,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Firms will need to be able to demonstrate why they considered it to be reasonable to have regard to the source of funds as evidence in a particular instance.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 93,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "If a firm proposing to rely on the source of funds has reasonable grounds for believing that the identity of the customer has not been verified by the firm on which the payment has been drawn, it should not permit the source of funds to be used as evidence, and should verify the customer's identity in line with the appropriate standard requirement.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 93,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "If a firm has reason to suspect the motives behind a particular transaction, or believes that the business is being structured to avoid the standard",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 93,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Part II, Sector 8: Non-life providers of investment fund products provides additional guidance to investment fund managers in respect of customers whose identity may not need to be verified until the time of redemption.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 94,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Some customers may not be able to produce identification information equivalent to the standard.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 94,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "The firm will therefore need an approach that compensates for the difficulties that such customers may face in providing the standard evidence of identity.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 94,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "As a first step, before concluding that a customer cannot produce evidence of identity, firms will have established that the guidance on initial identity checks for private individuals set out in paragraphs 5.3.71 to 5.3.107 cannot reasonably be applied in view of the circumstances of the relevant customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 94,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "The guidance at paragraph 5.3.75 does not require that in all cases a customer's address should be verified – the standard verification is verification of name and a choice between verifying address or date of birth.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 94,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Guidance on verifying the identity of most categories of customers who cannot provide the standard evidence is given in Part II, Sector 1: Retail banking.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 94,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "A firm should satisfy itself (for example, on the basis of documentary medical evidence) that the gender transfer of a customer is genuine (as with a change of name).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 95,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "When opening accounts for students or other young people, the standard identification requirement should be followed as far as possible.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 95,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where the standard requirement would not be relevant, however, or where the customer cannot satisfactorily meet this, other evidence could be obtained by obtaining appropriate confirmation(s) from the applicant's workplace, school, college, university or care institution.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 95,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Any confirmatory letter should be on appropriately headed notepaper; in assessing the strength of such confirmation, firms should have regard to the period of existence of the educational or other institution involved, and whether it is subject to some form of regulatory oversight.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 95,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "All international students undergo rigorous checks by the immigration services at home and abroad in order to be satisfied as to their identity.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 95,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Applicants must meet the requirements of the Student Immigration Rules and must provide documentation which demonstrates that they intend to study, and have been accepted, on a course of study at a bona fide institution.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 96,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "In cases where the adult opening the account or establishing the relationship does not already have an existing relationship with the firm, the identity of that adult should be verified and, in addition, the firm should see one of the following documents (or similar documents issued in other jurisdictions) in the name of the child.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 96,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "A proportionate and risk-based approach will be needed to determine whether the evidence available gives reasonable confidence as to the identity of a customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 96,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Where a firm has concluded that it should treat a customer as financially excluded for the purposes of customer identification, and the customer is identified by means other than standard evidence, the reasons for doing so should be documented.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 96,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Some financially excluded persons may represent a higher risk of money laundering regardless of whether they provide standard or non-standard tokens to confirm their identity, e.g. a passport holder who qualifies only for a basic account on credit grounds.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 96,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Firms may wish to consider whether enhanced due diligence (see section 5.5) or monitoring (see section 5.7) of the size and expected volume of transactions would be useful in respect of some financially excluded categories, based on the firm's own experience of their operation.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 96,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "In other cases, where the available evidence of identity is limited, and the firm judges that the individual cannot reasonably be expected to provide more, but that the business relationship should nevertheless go ahead, it should consider instituting enhanced monitoring arrangements over the customer's transactions and activity (see section 5.7).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 96,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Where an applicant produces non-standard or incomplete documentation, staff should not cite the ML Regulations (or other regulation relating to the prevention of money laundering and/or terrorist financing) as an excuse for not opening an account without giving proper consideration to the evidence available, referring up the line for advice as necessary.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 97,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Depending on the nature of the entity, a relationship or transaction with a customer who is not a private individual may be entered into in the customer's own name, or in that of specific individuals or other entities on its behalf.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 97,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Where the customer is a legal person, company, trust, foundation, or similar legal arrangement, reasonable measures must be taken to understand the ownership and control structure of the entity.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 97,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "In deciding who the beneficial owner is in relation to a customer who is not a private individual, the firm's objective must be to know who has ownership or control over the funds which form or otherwise relate to the relationship, and/or form the controlling mind and/or management of any legal entity involved in the funds.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 97,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Verifying the identity of the beneficial owner(s) will be carried out on a risk-based approach, following the guidance in paragraphs 5.3.8 to 5.3.16, and will take account of the number of individuals, the nature and distribution of their interests in the entity and the nature and extent of any business, contractual or family relationship between them.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 97,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Certain other information about the entity should be obtained as a standard requirement.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 97,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 7,
+        "sentence": "Thereafter, on the basis of the money laundering/terrorist financing risk assessed in the customer/product/delivery channel combination, a firm should decide the extent to which the identity of the entity should be verified.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 97,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Firms must obtain proof of registration or an excerpt of the register of the company, unregistered company, the limited liability partnership as the case may be, or the registrar in the case of an eligible Scottish partnership, before establishing a business relationship (with UK entities).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 98,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "The information required relates to persons of significant control (PSC) as per the PSC registers and may be obtained from the customer, Companies House, or a third party provider.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 98,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "If the firm finds a discrepancy between information relating to the beneficial ownership of the company which it collects as above, and information which becomes available to it whilst carrying out its duties under the ML Regulations (during its onboarding process), the discrepancy must be reported to Companies House.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 98,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Beneficial ownership in this context means a person of significant control (PSC) per the information held in the PSC register and not as defined in the ML Regulations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 98,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "A discrepancy itself does not prohibit the onboarding of a customer – the nature and relevance of the discrepancy may be assessed by firms with their CDD process and risk-based approach during onboarding, and considering whether there are reasonable grounds for suspicion.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 98,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Where an entity is known to be linked to a PEP (as a result of the PEP being a beneficial owner of the entity), or to a jurisdiction assessed as carrying a higher money laundering/terrorist financing risk, it is likely that this will put the entity into a higher risk category, and that enhanced due diligence measures should therefore be applied (see sections 5.5 and 5.7).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 98,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "This section provides guidance on verifying the identity of a range of non-personal entities, as follows:",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 99,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "In determining whether a business relationship presents a low degree of risk of ML/TF, and therefore the extent to which it is appropriate to apply SDD measures, a firm must take into account, inter alia, whether the customer is a credit institution or a financial institution which is subject to the requirements in the ML Regulations.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 99,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "In their determination of the low degree of risk, firms must also take into account whether the country where the customer is resident, established or registered, or in which it operates, is the UK or an assessed low risk jurisdiction.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 99,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "If the firm determines that the situation in relation to another regulated financial services firm presents a low degree of ML/TF risk, simplified due diligence may be applied (see section 5.4).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 99,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "When applying SDD measures firms must continue to comply with the requirements of Regulation 28 of the ML Regulations although the extent, timing or type of measures undertaken may be adjusted to reflect its determination per 5.3.135.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 99,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 6,
+        "sentence": "Firms must continue to monitor business relationships and transactions to detect unusual or suspicious transactions.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 99,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "Customers which are subject to the ML Regulations or equivalent, but which are not regulated in the UK or an assessed low risk jurisdiction as a financial services business, should be treated, for AML/CTF purposes, according to their legal form: for example, as private companies, in accordance with the guidance set out in paragraphs 5.3.163 to 5.3.176; or if partnerships, by confirming their regulated status through reference to the current membership directory of the relevant professional association (for example, law society or accountancy body).",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 100,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "Firms should take appropriate steps to be reasonably satisfied that the person the firm is dealing with is properly authorised by the customer.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 100,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 3,
+        "sentence": "Some consideration should be given as to whether documents relied upon are forgeries or counterfeits.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 100,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 4,
+        "sentence": "Firms that are subject to the ML Regulations, and, which hold client money in pooled accounts (whether in a bank account or through a securities holding), are in principle obliged to verify the identities of their clients.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 100,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    },
+    {
+        "sentence_number": 5,
+        "sentence": "Firms should also be satisfied that the customer applies robust and risk-sensitive CDD measures to their own clients and their clients' beneficial owners.",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 100,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf"
+    }
+]

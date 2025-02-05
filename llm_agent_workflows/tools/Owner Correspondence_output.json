@@ -1,0 +1,23 @@
+[
+    {
+        "sentence_number": 1,
+        "sentence": "I am well aware that my transactions have been flagged, but this level of scrutiny is nothing more than hara",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 1,
+        "pdf_name": "Owner Correspondence.pdf"
+    },
+    {
+        "sentence_number": 2,
+        "sentence": "As for our beneficial ownership structure, we have already taken the necessary steps to ensure that past is",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 1,
+        "pdf_name": "Owner Correspondence.pdf"
+    },
+    {
+        "sentence_number": 1,
+        "sentence": "John Doe Managing Director Phantom Enterprises 123 Shadow Lane, Darkwood, DW 45678 john.doe@example.com +1 (555) 789-1234",
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 2,
+        "pdf_name": "Owner Correspondence.pdf"
+    }
+]
