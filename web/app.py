@@ -195,8 +195,6 @@ def get_ops_details(ops_id):
 @jwt_required()
 def get_kyc_list():
     username = get_jwt_identity()  # ✅ Now returns only a string
-    print("Current User:", username)
-
     if username not in users:
         return jsonify({"error": "User not found"}), 404
     ops_id = users[username]["id"]
@@ -223,6 +221,7 @@ def get_kyc_list():
     return jsonify(result), 200
 
 @app.route('/policies', methods=['GET'])
+@jwt_required()
 def get_policies_list():
     try:
         return jsonify(Policy.query.all())
@@ -230,6 +229,7 @@ def get_policies_list():
         return jsonify({'error': str(e)}), 500
 
 @app.route('/clients', methods=['GET'])
+@jwt_required()
 def get_clients_list():
     try:
         return jsonify(Client.query.all())
@@ -237,16 +237,21 @@ def get_clients_list():
         return jsonify({'error': str(e)}), 500
 
 @app.route('/triggerKyc', methods=['POST'])
+@jwt_required()
 def trigger_kyc():
     data = request.get_json()
 
-    if not data or 'client_id' not in data or 'ops_id' not in data or 'policy_id' not in data:
+    if not data or 'client_id' not in data or 'policy_id' not in data:
         return jsonify({'error': 'Missing required fields'}), 400
+    username = get_jwt_identity()
+    if username not in users:
+        return jsonify({"error": "User not found"}), 404
+    ops_id = users[username]["id"]
 
     try:
         new_kyc = KycProcess(
             client_id=data['client_id'],
-            ops_id=data['ops_id'],
+            ops_id=ops_id,
             policy_id=data['policy_id'],
             initiation_timestamp=datetime.now(),
             overall_status='NEW'
