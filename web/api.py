@@ -181,7 +181,7 @@ def get_clients_list():
 async def run_process(*args):
     print('Starting process')
     process = await asyncio.create_subprocess_exec(
-        'python', *args
+        'python3', *args
     )
     print('Process PID started:', process.pid)
 
@@ -286,6 +286,9 @@ def upload_document():
 
                     db.session.add(new_policy)
                     db.session.commit()
+                    asyncio.run(run_process(app.config['POLICY_RUN'],
+                                     '--policy_id', str(new_policy.policy_id)))
+
              except Exception as e:
                   db.session.rollback()
 
