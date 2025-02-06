@@ -103,11 +103,13 @@ def main():
                 action_result = list_crew_results[i][1]
                 try:
                     if action_result == '{"action_detected": False}' or action_result == '{"action_detected": false}':
-                        pass
+                        continue
                     else:
                         SectionOutput.model_validate_json(action_result)
                         dict_result = json.loads(action_result)
                         variables = agent_extract_variables._analyze_quote_and_action(dict_result['action'], dict_result['quote'], variables_options)
+                        if not variables:
+                            continue
                         dict_result.update(variables)
                         sentences[i].pop("sentence")
                         sentences[i].update(dict_result)
