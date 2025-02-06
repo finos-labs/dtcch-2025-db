@@ -2,9 +2,8 @@ import multiprocessing
 import time
 
 import sys
-sys.path.append('../../llm_agent_workflows/')
+sys.path.append('../llm_agent_workflows/')
 sys.path.append("../")
-sys.path.append("../..")
 
 def worker_function(uid, files):
     print("Processing files for", uid, files)
