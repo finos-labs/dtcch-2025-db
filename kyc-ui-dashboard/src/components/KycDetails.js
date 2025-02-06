@@ -297,9 +297,9 @@ const KycDetails = () => {
       {/* Modal Component */}
       {isModalOpen && selectedRequest && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-[80%] max-w-3xl">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-[1000px] h-[500px] overflow-auto">
             <h3 className="text-xl font-semibold mb-4 text-center">
-              KYC Request Details
+              Action Details
             </h3>
 
             {/* Table */}
