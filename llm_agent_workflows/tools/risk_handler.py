@@ -43,12 +43,3 @@ class RiskHandler:
             kyc_process_insert_risks(risk_assessment, kyc_id)
         except ValidationError as e:
             print(e)
-            
-        
-
-
-
-        # TODO: insert into data base
-        ##kyc_process_insert_risks(kyc_id)
-        # insert risk_client into kyc_process table,using kyc_id: int
-
