@@ -51,8 +51,7 @@ CREATE TABLE actions (
     data_point VARCHAR(255),
     action_description TEXT,
     client_evidence_file_path TEXT,
-    client_evidence_summary TEXT,
-    evidence_id INT,
+    uuid TEXT,
     PRIMARY KEY (kyc_id, data_point),
     FOREIGN KEY (kyc_id) REFERENCES kyc_process(kyc_id) ON DELETE CASCADE
 );
