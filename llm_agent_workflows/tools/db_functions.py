@@ -102,7 +102,7 @@ def kyc_process_check_status_actions(uuid: str) -> int:
     actions_from_kyc_process = session.query(Actions).filter_by(kyc_id=action.kyc_id).all()
     all_done = all(action.latest_action_activity == "DONE" for action in actions_from_kyc_process)
     if all_done:
-        session.query(KycProcess).filter_by(kyc_id=action.kyc_id).update({KycProcess.status: "DONE"})
+        session.query(KycProcess).filter_by(kyc_id=action.kyc_id).update({KycProcess.overall_status: "DONE"})
         print(f"Updated kyc_process status to DONE for kyc_id: {action.kyc_id}")
         try:
            session.commit()
