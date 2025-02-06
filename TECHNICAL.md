@@ -78,7 +78,7 @@ From relevant policy documents we want to extract data to end up with a set of K
     2. Public -> [[Roadmap Stage 2 - Planned Features](#stage-2---planned-features)]: To be able to check Public Sources for publicly availible documnetation. 
     3. Client -> Provided by users via email
     - Two types of **integrations**:
-        1. Internal tools (DB)
+        1. Internal tools (DB) 
         2. Ask client via email (Automated)
     - [[Roadmap Stage 2 - Planned Features](#stage-2---planned-features)] - **Reiteration for extra Data Points**: Check for additional variables that may become apparent only after checking initital evidence (e.g. requested full name and passport as evidence, after passport uploaded check the eventual actions that apply to that specific country and ask for more data).
 3. **Identify risks** by interpreting correpsonding client information the to the datapoint. 
@@ -118,12 +118,26 @@ In this section, we outline the structure of the data used within the system. Th
 
 
 ## Components
-List and explain the major components or modules of the system. Each component can be linked to its implementation in the codebase.
+The system consists of the following major components, which ahve already been implemented.
 
-### Example:
-- **.. Module**: Handles user ..
-- **...**: Integrates ...
-- **Email Service**: Sends ...
+1. **Database Layer**
+   - Manages all database interactions using PostgreSQL.
+   - Utilizes an ORM (e.g., SQLAlchemy) for efficient data handling.
+   - Key models: `Client`, `KYC Ops`, `KYC Process`,`Actions`, `Policy`
+
+2. **Agents**
+    - Policy Agent: A crew of agents that are responsible for extracting KYC-related actions and data points from policy documents, structuring them into a standardised format, verifying and enhancing data templates, and saving the output.
+    - KYC Process Agent: A crew of agents are responsible for automating evidence collection for KYC background checks, prioritizing internal data sources, integrating client-provided information, identifying risks based on client data, and generating risk reports with summaries and matrices.
+
+3. **Web Backend**
+    -  Feature: Email service 
+    - 
+
+4. **Frontend - KYC UI Dashboard, Admin Policy UI, Client Document UI**:
+    - Handles all frontend of the KYC Operations dashboard, enabling KYC OPS to interact with the process. For instance, uploading policy documents and viewing risk assessment. 
+    - React.JS as frontend framework. 
+    - Flask a lightweight framework to connected with backend.
+
 
 ## Feature Roadmap
 Here are the key features that are implemented in Stage 1 and planned for Stage 2. 
@@ -131,9 +145,12 @@ Here are the key features that are implemented in Stage 1 and planned for Stage 
 ### Stage 1 - Implemented Features:
 - **Policy Document Uploading**: A policy document can be uploaded by KYC Operations and is stored in the database. 
 - **Policy Document Processing**: The uploaded policy document is processed with the LLM according to the steps listed in [KYC Policy Procedure](#kyc-policy-procedure). Namely document to Sections, to Actions, To Data Points to Variables.
-- **Client Docuemnt Processing**: A policy document can be uploaded by Clients via email and is stored in the database. 
-- **Risk Assessment**: A risk assessment with the LLM is made based on mapping the client information and actions from the policy document. 
+- **Client Docuemnt Processing**: A client document can be uploaded by Clients via email and is stored in the database. 
+- **Client Document Processing**: Client douments are read, processsed with OCR and stored in the database. 
+- **Risk Assessment**: A risk assessment with the LLM is made based on mapping the client information and handed evidence with actions from the policy document. 
 - **KYC Ops UI:** A functional interface allowing KYC Operations and Clients to upload policy documents, view processing results, and interact with the system.
+- **Admin Policy UI:** Upload the policy 
+- **Client Evidence UI:** Link is recieved via email,a dn document is uploaded on this UI. 
 
 
 Following the successful implementation of Stage 1, we have outlined a set of additional features for Stage 2 to further enhance functionality and performance. These planned features have been stipulated in the [Project Structure](#the-structure-consists-of-two-processes) and aim to build on the existing foundation, addressing key improvements and expanding capabilities. 

@@ -65,11 +65,26 @@ AI KYC AGENT has two flows which act as a comprehensive KYC Agent. The first flo
 
 Make sure you have Python 3.10 or later installed on your system.
 
-To install the required dependencies, run:
+To install the required for frontend dependencies, naviagte to the directory and install requirements:
 
 ```shell
-pip install requirements.txt
+cd kyc-ui-dashboard
 ```
+
+```shell
+pip install -r requirements.txt
+```
+
+To install the required for backend dependencies, naviiagte to the directory and install requirements:
+```shell
+cd ..
+cd llm_agent_workflows
+```
+
+```shell
+pip install -r requirements.txt
+```
+
 
 ### 2. Running Your AI KYC AGENT
 
