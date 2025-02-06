@@ -13,7 +13,7 @@ class AgentRiskAssessment(Agent):
         self.backstory = ""
         self.bedrock_client = bedrock_client or self._init_bedrock_client()
 
-    def _analyze_page(self, page_content: Dict[str, Union[str, List[str]]], page_num: int) -> Dict[str, str]:
+    def risk_asse(self, page_content: Dict[str, Union[str, List[str]]], page_num: int) -> Dict[str, str]:
         """Analyze a page using AWS Bedrock."""
         # Prepare the prompt
         prompt = f"""Analyze the following page {page_num} content and provide:
