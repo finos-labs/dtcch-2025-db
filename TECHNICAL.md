@@ -32,10 +32,8 @@ This documentation serves as a guide for engineers, developers, and contributors
 - [Data Structure](#data-structure)  
 - [Components](#components)  
 - [Feature Roadmap](#feature-roadmap)  
-- [How to Deploy](#how-to-deploy)  
 - [Contributing to the Project](#contributing-to-the-project)  
-  - [How to Contribute](#how-to-contribute)  
-  - [Code Review Process](#code-review-process) 
+  - [How to Deploy](#how-to-deploy)  
 - [DCO to sign commits](#using-dco-to-sign-your-commits)
 
 
@@ -131,7 +129,7 @@ The system consists of the following major components, which ahve already been i
 
 3. **Web Backend**
     -  Feature: Email service 
-    - 
+    - When evidence is required from the client, an email is sent with a link to the UI to upload the requested document. The provided document is will be considered as evidence and is automatically processed. It can be then used in the KYC Ops Process.
 
 4. **Frontend - KYC UI Dashboard, Admin Policy UI, Client Document UI**:
     - Handles all frontend of the KYC Operations dashboard, enabling KYC OPS to interact with the process. For instance, uploading policy documents and viewing risk assessment. 
@@ -162,6 +160,14 @@ Following the successful implementation of Stage 1, we have outlined a set of ad
 - **Obtain Public Evidence**: As a second priority to internal data, before clients are asked for data it should be able to check Public Sources for publicly availible documnetation.  
 - **Reiteration for extra Data Points**: A check for additional variables that may become apparent only after checking initital evidence (e.g. requested full name and passport as evidence, after passport uploaded check the eventual actions that apply to that specific country and ask for more data).
 
+
+
+---
+
+# Contributing to the Project
+
+If you are interested in contributing, here's a guide to get started:
+
 ## How to Deploy
 Provide instructions for setting up and deploying the application in a local or production environment.
 
@@ -171,52 +177,7 @@ Provide instructions for setting up and deploying the application in a local or 
     git clone https://github.com/yourusername/repository-name.git
     ```
 2. Install dependencies: 
-    ```bash
-    npm install
-    ```
-3. Set up environment variables as needed.
-4. Run the application locally:
-    ```bash
-    npm start
-    ```
-5. For production deployment:
-    - Dockerize the application
-    - Use CI/CD pipelines for auto-deployment to AWS, Azure, etc.
-
----
-
-# Contributing to the Project
-
-If you are interested in contributing, here's a guide to get started:
-
-## How Features Were Implemented
-Provide a summary or technical overview of how features were built. This section can include the methodology, any frameworks used, testing approaches, and decisions made during implementation.
-
-### Example:
-- **Feature 1**: Brief explanation of the feature, the components it touches, and the reasoning behind implementation choices.
-- **Feature 2**: Same as above.
-
-## How to Contribute
-1. Fork the repository.
-2. Clone your fork:
-    ```bash
-    git clone https://github.com/yourusername/repository-name.git
-    ```
-3. Create a new branch for your feature:
-    ```bash
-    git checkout -b feature/your-feature
-    ```
-4. Implement the feature and write tests.
-5. Run all tests to ensure everything works.
-6. Push the changes to your fork:
-    ```bash
-    git push origin feature/your-feature
-    ```
-7. Create a pull request describing the changes.
-
-## Code Review Process
-Explain the process for code reviews, including any guidelines or checks that need to be followed.
-
+    - As listed in the [README](./README.md#getting-started).
 
 ## Using DCO to sign your commits
 

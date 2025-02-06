@@ -63,7 +63,7 @@ AI KYC AGENT has two flows which act as a comprehensive KYC Agent. The first flo
 
 ### 1. Installation
 
-Make sure you have Python 3.10 or later installed on your system.
+Make sure you have Python 3.10 or later installed on your system, as well as a Postgress instance. 
 
 To install the required for frontend dependencies, naviagte to the directory and install requirements:
 
@@ -85,10 +85,43 @@ cd llm_agent_workflows
 pip install -r requirements.txt
 ```
 
+Install Pytesseract, follow the steps listed in [Pytesseract README](./README_pytesseract.md).
 
-### 2. Running Your AI KYC AGENT
+Create the tables to store all your objects by running the folloing script [Database Schemas](./database/ddl.sql).
 
->TODO: add commands how to run it locally or in cloud
+For the email web backend run the folloing script [Database Schemas](./web-backend/schema.sql).
+
+### 2. Setting your environmet 
+
+Ensure you're in the maion directory and copy and fill in your own corresponding environment variables.
+
+```bash
+cp .env.template .env
+```
+
+Fill in the config.py from the web backend. 
+```bash
+cd web-backend
+config.py 
+```
+
+
+### 3. Running Your AI KYC AGENT
+
+1. Run the frontend:
+
+    ```bash
+    cd kyc-ui-dashboard
+    npm run start
+    ```
+
+2. Run the email service 
+
+    ```bash
+    cd web-backend
+    python run.py
+    ```
+
 
 # Functionality
 
