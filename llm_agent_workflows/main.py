@@ -9,6 +9,7 @@ from tools.pdf_handler_type import PDFHandlerType
 import json
 import argparse
 import fitz
+from pathlib import Path
 import time
 import os
 
@@ -55,18 +56,6 @@ def main():
         verbose=False
     )
 
-    # TODO: here we should call a function like this:
-    # pdf_handler.some_function(pdf_policy_path) -> filename: str, processed_policy_sections: List(ProcessedPolicySection)
-    # where:
-    # class ProcessedPolicySection():
-    #   policy_num: int
-    #   labels: List[str]   ## NOT SURE if needed, probably not
-    #   section: str        ## Must be something like: Senior management of any enterprise is responsible for managing its business effectively. Certain obligations are placed on all firms subject to the ML Regulations, POCA and the Terrorism Act and under the UK financial sanctions regimes - fulfilling these responsibilities falls to senior management as a whole. These obligations are summarised in Appendix II.
-    # Then we loop through every processed_policy_sections, and we extract from the sections the single sentences
-    # Inside this loop we also loop through all the sentences, like we do in the following code
-    # The final result will be a big json file with the filename of the policy as a field and then a "actions" field, which will contain each action with variables and a reference to the section of the policy
-    
-    # example of processed section, provided by agent form Matthew
     try:
         print(f"Opening PDF file: {pdf_path}")
         doc = fitz.open(pdf_path)
@@ -81,23 +70,48 @@ def main():
             pages_to_process = range(start - 1, min(end, total_pages))
         else:
             pages_to_process = [p - 1 for p in pages if 1 <= p <= total_pages]
+        result = []
         for page_num in pages_to_process:
             print(f"Processing page {page_num + 1}")
             page = doc[page_num]
-            
             # Extract text from the page
             page_text = page.get_text()
             if not page_text.strip():
                 print(f"No text found on page {page_num + 1}")
                 continue
-
             # Analyze the page content
-            sentences = self._analyze_page_with_llm(page_text, page_num + 1)
+            sentences = policyHandler._analyze_page_with_llm(page_text, page_num + 1)
             
             # Add metadata to each sentence
-            for sentence in sentences:
-                sentence["pdf_name"] = pdf_name
-                all_sentences.append(sentence)
+            for i in range(len(sentences)):
+                sentences[i]["pdf_name"] = pdf_name
+                # validate_data_point = []
+                sentence = sentences[i]["sentence"]
+                task_action_to_data_point = agent_kyc_review_policy.task_actions_to_data_points(previous_task=sentence)
+                tasks = [task_action_to_data_point]
+                print("\nStarting Content Creation Workflow...\n")
+                crew_results = crew.execute_tasks(tasks)
+                list_crew_results = list(crew_results.items())
+                action_result = list_crew_results[i][1]
+                try:
+                    if action_result == '{"action_detected": False}' or action_result == '{"action_detected": false}':
+                        pass
+                    else:
+                        SectionOutput.model_validate_json(action_result)
+                        dict_result = json.loads(action_result)
+                        variables = agent_extract_variables._analyze_quote_and_action(dict_result['action'], dict_result['quote'], variables_options)
+                        dict_result.update(variables)
+                        # validate_data_point.append(dict_result)
+                        sentences[i].pop("sentence")
+                        sentences[i].update(dict_result)
+                except ValidationError as e:
+                    print(e)
+
+                # print(json.dumps(validate_data_point))
+                
+            result.append(sentences)
+        print(json.dumps(result)) 
+
     except Exception as e:
             print(f"Error processing PDF: {str(e)}")
             import traceback
@@ -106,36 +120,8 @@ def main():
     section = ["Standard identification procedures will usually apply.",#
                "In some cases, the firm holding the existing account may be willing to confirm the identity of the account holder to the new firm, and to provide evidence of the identification checks carried out. ",
                "Care will need to be exercised by the receiving firm to be satisfied that the previous verification procedures provide an appropriate level of assurance for the new account, which may have different risk characteristics from the one held with the other firm."]
+
     
-
-    # Declaration of tasks
-    #task_section_to_action = agent_kyc_review_policy.task_section_to_actions(section)
-    #task_action_to_data_point = agent_kyc_review_policy.task_actions_to_data_points(previous_task=section)
-
-    # Define tasks with dependencies
-
-    validate_data_point = []
-    for i in range(len(section)):
-        sect = section[i]
-        task_action_to_data_point = agent_kyc_review_policy.task_actions_to_data_points(previous_task=sect)
-        tasks = [task_action_to_data_point]
-        print("\nStarting Content Creation Workflow...\n")
-        results = crew.execute_tasks(tasks)
-        list_results = list(results.items())
-        result = list_results[i][1]
-        try:
-            if result == '{"action_detected": False}' or result == '{"action_detected": false}':
-                pass
-            else:
-                SectionOutput.model_validate_json(result)
-                dict_result = json.loads(result)
-                variables = agent_extract_variables._analyze_quote_and_action(dict_result['action'], dict_result['quote'], variables_options)
-                dict_result.update(variables)
-                validate_data_point.append(dict_result)
-        except ValidationError as e:
-            print(e)
-
-    print(json.dumps(validate_data_point))
 
     # TODO: do this outside the for loop we will add, adding to the json the filename
     # if vars.output_path is None:
