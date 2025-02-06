@@ -43,9 +43,12 @@ class KycProcess(Base):
 # Table: actions (Composite Primary Key)
 class Actions(Base):
     __tablename__ = "actions"
-    
+
+    # Composite Primary Key
     kyc_id = Column(Integer, ForeignKey("kyc_process.kyc_id", ondelete="CASCADE"), primary_key=True)
     data_point = Column(String(255), primary_key=True)
+
+    # Other columns
     latest_action_activity = Column(String(50), nullable=False)
     business_type = Column(ARRAY(Text))
     due_diligence_level = Column(ARRAY(Text))
@@ -58,9 +61,6 @@ class Actions(Base):
     action_description = Column(Text)
     client_evidence_file_path = Column(Text)
     client_evidence_summary = Column(Text)
-
-    # Relationships
-    kyc_process = relationship("KycProcess", backref="actions")
 
 # Table: action_data_point
 class ActionDataPoint(Base):

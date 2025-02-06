@@ -1,10 +1,15 @@
 import os
 import json
 
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from dotenv import load_dotenv
-from alchemy_models import Actions, KycProcess
+from sqlalchemy.exc import IntegrityError
+
+from .alchemy_models import Actions, Policy, Client
+
+
+import json
 
 load_dotenv()
 
@@ -21,13 +26,11 @@ SessionLocal = sessionmaker(bind=engine)
 session = SessionLocal()
 
 # Function to insert data into kyc_ops table
-def update_action_in_progress(payload):
-    
-    entry_json_obj = json.loads(payload)
-    
-    for row in entry_json_obj:
+def update_action_in_progress(payload, kyc_id):
+
+    for row in payload:
         db_entry = Actions(
-            kyc_id = 1,
+            kyc_id = kyc_id,
             data_point = row['data_point'],
             latest_action_activity = "",
             business_type = row['business_type'],
@@ -40,9 +43,36 @@ def update_action_in_progress(payload):
             client_evidence_source = row['client_evidence'],
             action_description = row['action']            
         )
-        session.add(db_entry)
-    session.commit()
-    print(f"Added output action info to the database.")
+        if row['action_detected'] and row['type_of_sentence'] == 'KYC Profile Relevant':
+            session.add(db_entry)
+
+    try:
+        session.commit()
+        print(f"Added output action info to the database.")
+    except IntegrityError:
+        session.rollback()
+        print(f"Skipping duplicate entry: {kyc_id}")
+
+def fetch_policy_file_path(policy_id):
+    file_path = session.query(Policy).filter_by(policy_id=policy_id).first().policy_file_path
+    return file_path
+
+def fetch_client_data_file_path(client_id):
+    file_path = session.query(Client).filter_by(client_id=client_id).first().client_info_file_path
+    return file_path
+
+def fetch_all_data_points_variables(kyc_id):
+    kyc_records = session.query(Actions).filter_by(kyc_id=kyc_id).all()
+    data_points_variables = []
+    for kyc_record in kyc_records:
+        variable_dict = {
+            "role": kyc_record.role,
+            "due_diligence_level": kyc_record.due_diligence_level,
+            "business_type": kyc_record.business_type,
+            "entity_type": kyc_record.entity_type
+        }
+        data_points_variables.append((kyc_record.data_point, variable_dict))
+    return data_points_variables
 
 def actions_insert_processed_evidence(evidence, kyc_id, data_point):
     try:
@@ -99,4 +129,7 @@ payload = """[
 ]
 """
 
-update_action_in_progress(payload)
+# update_action_in_progress(payload)
+# fetch_policy_file_path(1)
+# fetch_client_data_file_path(1)
+# fetch_all_data_points(1)
