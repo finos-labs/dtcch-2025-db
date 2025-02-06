@@ -87,7 +87,7 @@ To create a new project, run the following CLI (Command Line Interface) command:
 This command creates a new project folder with the following structure:
 
 ```
-my_project/
+dtcch-2025-db /
 ├── .gitignore
 ├── pyproject.toml
 ├── README.md
