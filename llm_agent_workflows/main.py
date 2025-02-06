@@ -27,11 +27,12 @@ def main():
     parser.add_argument('--kyc_id', '-kycid', required=True, help='Current process kyc ID')
     parser.add_argument('--policy_id', '-pid', required=True, help='ID of the policy to be processed')
     parser.add_argument('--client_id', '-cid', required=True, help='ID of the client to be processed')
-    parser.add_argument('--pages', '-pg', help='Page range (e.g., "1-20" or "1,2,3")')
+    parser.add_argument('--pages', '-pg', required=False, default='67', help='Page range (e.g., "1-20" or "1,2,3")')
     parser.add_argument('--variable_references_path', '-v',
-                       required=True,
+                       required=False,
+                       default='./llm_agent_workflows/tools/input/variables_reference',
                        help='Path to the directory containing CSV files, one for each variable with possible values')
-    parser.add_argument('--output_path', '-o',
+    parser.add_argument('--output_path', '-o', required=False, default = '.',
                        help='Output JSON file path (default: ./output/<policy_filename>_policy_TIMESTAMP.json)')
     args = parser.parse_args()
 
