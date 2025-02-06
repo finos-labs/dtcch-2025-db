@@ -75,7 +75,7 @@ From relevant policy documents we want to extract data to end up with a set of K
 1. Background check with **X policy for Y client** (triggered by KYC-ops) 
 2. Obtain **Evidence**. Sources ordered by priority:
     1. Internal -> From database with API
-    2. Public -> Mocked 
+    2. Public -> [[Roadmap Stage 2 - Planned Features](#stage-2---planned-features)]: To be able to check Public Sources for publicly availible documnetation. 
     3. Client -> Provided by users via email
     - Two types of **integrations**:
         1. Internal tools (DB)
@@ -138,6 +138,7 @@ Following the successful implementation of Stage 1, we have outlined a set of ad
 - **Human Reiteration Loop**: An admin should be added in the loop to supervise the steps. This can be modeled an accept/refuse UI button after each step 1-4. We need to decide what action the user can take in case they refuse. Current options are:
     - Change of prompt
     - Change of generated outputs (which will always be in xlsx format)
+- **Obtain Public Evidence**: As a second priority to internal data, before clients are asked for data it should be able to check Public Sources for publicly availible documnetation.  
 - **Reiteration for extra Data Points**: A check for additional variables that may become apparent only after checking initital evidence (e.g. requested full name and passport as evidence, after passport uploaded check the eventual actions that apply to that specific country and ask for more data).
 
 ## How to Deploy
