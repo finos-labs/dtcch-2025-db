@@ -3,8 +3,8 @@ from crew import Crew
 from pydantic import BaseModel, ConfigDict
 
 from agents.agent_kyc_background_check_specialist import AgentKYCBackgroundCheckOps
-from llm_agent_workflows.tools import EvidenceHandler, RiskHandler
-from tools.db_functions import fetch_all_data_points_variables, fetch_client_data_file_path
+from tools import EvidenceHandler, RiskHandler
+from tools.db_functions import fetch_all_data_points_variables, update_action_in_progress, fetch_client_data_file_path, fetch_processed_policy_json
 
 
 class SectionOutput(BaseModel):
@@ -21,6 +21,12 @@ def main():
     parser.add_argument('--client_id', '-cid', required=True, help='ID of the client to be processed')
     parser.add_argument('--policy_id', '-pid', required=True, help='ID of the policy to be processed')
     args = parser.parse_args()
+    
+    #Reading policy JSON
+    process_policy_dict = fetch_processed_policy_json(args.policy_id)
+    
+    #Adding process policy JSON to actions table
+    update_action_in_progress(process_policy_dict, args.kyc_id)
 
     ############ Agent Ops Workflow 2 Begins
     client_data_file_path = fetch_client_data_file_path(client_id=args.client_id)
