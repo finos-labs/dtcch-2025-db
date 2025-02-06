@@ -40,7 +40,7 @@ const Dashboard = () => {
         ]);
 
         setUser(userResponse.data);
-        const sortedData = kycResponse.data.sort((a, b) => a.kyc_id - b.kyc_id); // Sort ascending initially
+        const sortedData = response.data.sort((a, b) => a.kyc_id - b.kyc_id); // Sort ascending initially
         setKycRequests(sortedData || []);
       } catch (err) {
         console.error("Error fetching data:", err);
