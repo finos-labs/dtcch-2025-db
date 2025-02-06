@@ -1,0 +1,63 @@
+**Client KYC Profile**
+
+### **1. Basic Identification Information**
+- **Full Name:** The Arsenal Football Club Ltd
+- **Date of Incorporation:** 1st December 1886
+- **Country of Incorporation:** United Kingdom
+- **Company Registration Number:** 87654321
+- **Government-Issued ID Type:** Company Registration Certificate
+- **Registration Number:** Y12345678
+
+### **2. Contact Details**
+- **Registered Office Address:** Emirates Stadium, Hornsey Road, London, N7 7AJ, UK
+- **Trading Address:** Emirates Stadium, Hornsey Road, London, N7 7AJ, UK
+- **Phone Number:** +44 20 7619 5003
+- **Email Address:** info@arsenal.co.uk
+- **Website:** www.arsenal.com
+
+### **3. Financial Information**
+- **Source of Funds:** Ticket sales, sponsorships, broadcasting rights, and merchandising
+- **Source of Wealth:** Club revenue and investments
+- **Annual Revenue:** £400 million
+- **Expected Transaction Volume & Value:** High (£20 million - £100 million per month)
+- **Bank Account Details:**
+  - **Bank Name:** HSBC UK
+  - **IBAN:** GB33HBUK12345678901234
+  - **SWIFT Code:** HBUKGB4B
+  - **Account Number:** 9876543210
+- **Tax Residency:** United Kingdom
+
+### **4. Business / Employment Details**
+- **Business Type:** Professional Football Club
+- **Industry:** Sports & Entertainment
+- **Nature of Business:** Professional Football Operations
+- **Ultimate Beneficial Owners (UBOs):** Shareholders and Investors
+- **Shareholding Structure:** Majority owned by investors and corporate stakeholders
+- **Politically Exposed Person (PEP) Status:** No
+
+### **5. Risk & Compliance Information**
+- **Politically Exposed Person (PEP) Status:** No
+- **Sanctions / Watchlist Screening Results:** No matches found
+- **AML (Anti-Money Laundering) Risk Assessment:** Low
+- **Adverse Media Checks:** No adverse reports
+- **Past Criminal / Fraudulent History:** None
+- **Previous KYC Status & Reviews:** Last updated in 2023
+- **Client Risk Rating:** Low
+
+### **6. Supporting Documents**
+- **Government-Issued ID Document:** Company Registration Certificate (Scanned Copy Available)
+- **Proof of Address:** Utility Bill (Dated within last 3 months)
+- **Proof of Income / Wealth:** Financial Statements and Tax Returns
+- **Business Registration Certificate:** Available
+- **Memorandum & Articles of Association:** Available
+- **UBO Declaration Form:** Available
+- **Bank Reference Letter:** Available upon request
+
+### **7. Additional Information (For Enhanced Due Diligence, If Required)**
+- **Business Partners & Key Suppliers:** Various sponsors and commercial partners
+- **Geographic Locations of Business Operations:** United Kingdom
+- **Cross-Border Transactions:** Yes, for player transfers and international sponsorships
+- **Customer & Supplier Information:** Football fans, sponsors, and corporate partners
+- **Cryptocurrency Involvement:** No
+- **Additional Verification Documents:** None required at this time
+
