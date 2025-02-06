@@ -47,6 +47,7 @@ const Dashboard = () => {
 
         setUser(userResponse.data);
         const sortedData = kycResponse.data.sort((a, b) => a.kyc_id - b.kyc_id); // Sort ascending initially
+        console.log(sortedData);
         setKycRequests(sortedData || []);
       } catch (err) {
         console.error("Error fetching data:", err);
@@ -268,12 +269,12 @@ const Dashboard = () => {
                     className={`border p-3 font-semibold ${
                       request.status === "COMPLETED"
                         ? "text-green-500"
-                        : request.status === "INPROGRESS"
+                        : request.status === "IN PROGRESS"
                         ? "text-yellow-500"
                         : "text-blue-500"
                     }`}
                   >
-                    {request.overall_status}
+                    {request.status}
                   </td>
                 </tr>
               ))

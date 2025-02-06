@@ -194,7 +194,7 @@ const DocumentUpload = () => {
           <table className="w-full table-auto border-collapse shadow-lg">
             <thead>
               <tr className="bg-gray-200 text-gray-700">
-                <th className="px-6 py-4 border-b text-left">#</th>
+                <th className="px-6 py-4 border-b text-left">Policy ID</th>
                 <th className="px-6 py-4 border-b text-left">Document Type</th>
                 <th className="px-6 py-4 border-b text-left">Policy Name</th>
                 <th className="px-6 py-4 border-b text-left">Policy Version</th>
@@ -205,7 +205,7 @@ const DocumentUpload = () => {
             <tbody>
               {documents.map((fileData, index) => (
                 <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 border-b">{index + 1}</td>
+                  <td className="px-6 py-4 border-b">{fileData.policy_id}</td>
                   <td className="px-6 py-4 border-b">
                     {fileData.documentType || "Policy"}
                   </td>

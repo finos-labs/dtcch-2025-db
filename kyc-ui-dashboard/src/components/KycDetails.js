@@ -81,10 +81,8 @@ const KycDetails = () => {
     );
   }
 
-  const statuses = ["New", "In progress", "Completed"];
-  const currentMilestoneIndex = statuses.indexOf(
-    capitalizeFirstLetter(kycDetail.status) || ""
-  );
+  const statuses = ["NOT STARTED", "IN PROGRESS", "COMPLETED"];
+  const currentMilestoneIndex = statuses.indexOf(kycDetail.status);
 
   // Open modal
   const handleRowClick = (request) => {
@@ -120,6 +118,7 @@ const KycDetails = () => {
             <span className="text-gray-500 font-semibold">🔍 KYC ID:</span>
             <span className="text-gray-700">{kycDetail?.kyc_id || "N/A"}</span>
           </div>
+
           {/* Client Name */}
           <div className="flex items-center space-x-3">
             <span className="text-gray-500 font-semibold">👤 Client Name:</span>
@@ -146,37 +145,53 @@ const KycDetails = () => {
             </span>
           </div>
 
-          {/* Status */}
-          <div className="flex items-center space-x-3 col-span-1 md:col-span-2">
+          {/* Risk */}
+          <div className="flex items-center space-x-3">
             <span className="text-gray-500 font-semibold">🚦 Risk:</span>
             <span
               className={`px-3 py-1 rounded-lg text-white text-sm font-semibold
-          ${
-            kycDetail?.risk_tier === "Low"
-              ? "bg-green-500"
-              : kycDetail?.risk_tier === "Medium"
-              ? "bg-yellow-500"
-              : "bg-red-500"
-          }
-        `}
+        ${
+          kycDetail?.risk_tier === "Low"
+            ? "bg-green-500"
+            : kycDetail?.risk_tier === "Medium"
+            ? "bg-yellow-500"
+            : "bg-red-500"
+        }
+      `}
             >
               {kycDetail?.risk_tier || "N/A"}
             </span>
           </div>
+
+          {/* AFC Status */}
+          <div className="flex items-center space-x-3">
+            <span className="text-gray-500 font-semibold">🛡️ AFC Status:</span>
+            <span
+              className={`px-3 py-1 rounded-lg text-white text-sm font-semibold
+        ${
+          kycDetail?.afc_status === "Cleared"
+            ? "bg-green-500"
+            : kycDetail?.afc_status === "Under Review"
+            ? "bg-yellow-500"
+            : "bg-gray-500"
+        }
+      `}
+            >
+              {kycDetail?.afc_status || "N/A"}
+            </span>
+          </div>
+
           {/* Risk Summary Paragraph */}
           <div className="col-span-2 mt-4">
             <p className="text-gray-700 text-sm">
-              <strong>Risk Summary:</strong> kycDetail.risk_assessment_summary
+              <strong>Risk Summary:</strong>{" "}
+              {kycDetail?.risk_assessment_summary || "N/A"}
             </p>
           </div>
         </div>
 
         {/* KYC Progress Bar */}
         <div className="mt-6">
-          <h3 className="text-lg font-semibold mb-4 text-center">
-            KYC Progress
-          </h3>
-
           {/* Progress Bar Wrapper */}
           <div className="relative flex items-center w-full">
             {/* Full Progress Line (Gray Background) */}
@@ -250,11 +265,14 @@ const KycDetails = () => {
       </div>
 
       {/* Retrigger KYC Button */}
-      <div className="mt-6 flex justify-between">
+      <div className="mt-6 flex justify-end space-x-4">
         <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
           Retrigger KYC
         </button>
-        <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+        <button className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+          Approve
+        </button>
+        <button className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600">
           Escalate to AFC
         </button>
       </div>
