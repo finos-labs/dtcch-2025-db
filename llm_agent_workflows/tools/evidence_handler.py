@@ -2,7 +2,7 @@ import pytesseract
 from PIL import Image
 
 from agents.agent_evidence_process import AgentEvidence
-from db_functions import insert_processed_evidence
+from db_functions import actions_insert_processed_evidence
 
 class EvidenceHandler:
 
@@ -29,7 +29,7 @@ class EvidenceHandler:
         cleaned_text = self.agent_evidence._evidence_clean(text_extracted_ocr)
         print ("Cleaned Text:", cleaned_text)
         # TODO: validate if is string
-        insert_processed_evidence(cleaned_text)
+        actions_insert_processed_evidence(cleaned_text)
 
     def process_evidence(self, image_path: str, kyc_id: int, data_point: str):
         """Process extracted text evidence and insert into the database."""

@@ -66,9 +66,9 @@ def actions_fetch_processed_evidence(evidence, kyc_id, data_point):
     updated_action = session.query(Actions).filter(kyc_id=kyc_id, data_point=data_point).first()
     print(f"Updated Evidence Summary: {updated_action.client_evidence_summary}")
 
-def kyc_process_insert_risks(risk_tier, risk_summary, kyc_id):
+def kyc_process_insert_risks(risk_assessment, kyc_id):
     try:
-        session.query(KycProcess).filter(kyc_id=kyc_id).update({KycProcess.risk_tier:risk_tier, KycProcess.risk_assessment_summary:risk_summary})
+        session.query(KycProcess).filter(kyc_id=kyc_id).update({KycProcess.risk_tier:risk_assessment["risk_tier"], KycProcess.risk_assessment:risk_assessment["risk_summary"]})
         session.commit()
         print ("Inserted Evidence extract in the database.")
     except Exception as e:

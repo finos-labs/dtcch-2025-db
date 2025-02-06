@@ -1,6 +1,15 @@
 import pandas as pd
-from agents.agent_risk_assessment import AgentRiskAssessment
+import json
 
+from pydantic import BaseModel, ValidationError, ConfigDict
+
+from agents.agent_risk_assessment import AgentRiskAssessment
+#from db_functions import kyc_process_insert_risks
+
+class RiskAssessment(BaseModel):
+    model_config = ConfigDict(strict=True)
+    risk_tier: str
+    risk_summary: str
 
 class RiskHandler:
 
@@ -8,9 +17,10 @@ class RiskHandler:
         """Initialize the risk handler."""
         self.agent_risk = AgentRiskAssessment()
 
-    def extract_client_formation(self, kyc_id: int) -> str:
+    def extract_client_formation(self, kyc_id: int, data_point: str) -> str:
         # TODO: Pulkit call the db client table to extract the client information TBD
-        return "client_and background_check_information"
+        dummy_client_and_background_check_information = "John Smith is a 42-year-old entrepreneur originally from London, currently residing in Dubai. He holds British citizenship and possesses a valid UAE residency visa. His primary source of income comes from his investment firm, which specializes in real estate and international trade. John has multiple bank accounts in the UK and UAE and frequently conducts high-value transactions, particularly in foreign currencies. His identification documents include a valid British passport and an Emirates ID. He maintains an active phone number registered in the UAE and uses an official business email for communications. His proof of address includes recent utility bills and a tenancy contract for his Dubai residence. John has no known political exposure but has business dealings in high-risk jurisdictions, which require enhanced due diligence."
+        return dummy_client_and_background_check_information
 
     def risk_csv_read(self, path: str) -> str:
         df = pd.read_csv(path)
@@ -19,14 +29,22 @@ class RiskHandler:
     def risk_assessment(self, path_risk: str, kyc_id: int, data_point: str):
         """Process extracted text evidence and perform risk assessment."""
 
-        client_profile = self.extract_client_formation(kyc_id)
+        client_complete_profile = self.extract_client_formation(kyc_id, data_point)
         risks = self.risk_csv_read(path_risk)
-        # Perform risk assessment based on risks and complete profile
-        risk_client = self.agent_risk._risk_assessment(risks, client_profile)
 
-        # TODO: add validation of the json (alessio)
+        # Perform risk assessment based on risks and complete profile
+        risk_assessment_string = self.agent_risk._risk_assessment(risks, client_complete_profile)
+        try:
+            RiskAssessment.model_validate_json(risk_assessment_string)
+            risk_assessment = json.loads(risk_assessment_string)
+            print("Successfully validated the risk assessment:", risk_assessment)
+            #kyc_process_insert_risks(risk_assessment, kyc_id)
+        except ValidationError as e:
+            print(e)
+
 
 
         # TODO: insert into data base
+        ##kyc_process_insert_risks(kyc_id)
         # insert risk_client into kyc_process table,using kyc_id: int
 
