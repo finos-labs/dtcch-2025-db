@@ -1,9 +1,12 @@
+import os
+import json
+
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from dotenv import load_dotenv
-import os
-from .alchemy_models import Actions, Policy, Client
 from sqlalchemy.exc import IntegrityError
+
+from alchemy_models import Actions, Policy, Client, KycProcess
 
 
 import json
@@ -24,7 +27,7 @@ session = SessionLocal()
 
 # Function to insert data into kyc_ops table
 def update_action_in_progress(payload, kyc_id):
-        
+
     for row in payload:
         db_entry = Actions(
             kyc_id = kyc_id,
@@ -42,14 +45,14 @@ def update_action_in_progress(payload, kyc_id):
         )
         if row['action_detected'] and row['type_of_sentence'] == 'KYC Profile Relevant':
             session.add(db_entry)
-    
+
     try:
         session.commit()
         print(f"Added output action info to the database.")
     except IntegrityError:
         session.rollback()
         print(f"Skipping duplicate entry: {kyc_id}")
-    
+
 def fetch_policy_file_path(policy_id):
     file_path = session.query(Policy).filter_by(policy_id=policy_id).first().policy_file_path
     return file_path
@@ -70,6 +73,24 @@ def fetch_all_data_points_variables(kyc_id):
         }
         data_points_variables.append((kyc_record.data_point, variable_dict))
     return data_points_variables
+
+def actions_insert_processed_evidence(evidence, kyc_id, data_point):
+    try:
+        session.query(Actions).filter_by(kyc_id=kyc_id, data_point=data_point).update({Actions.client_evidence_summary:evidence})
+        session.commit()
+        print ("Inserted Evidence extract in the database.")
+    except Exception as e:
+        print(f"Error inserting evidence in the database: {str(e)}")
+        session.rollback()
+
+def kyc_process_insert_risks(risk_assessment, kyc_id):
+    try:
+        session.query(KycProcess).filter_by(kyc_id=kyc_id).update({KycProcess.risk_tier:risk_assessment["risk_tier"], KycProcess.risk_assessment_summary:risk_assessment["risk_summary"]})
+        session.commit()
+        print ("Inserted Evidence extract in the database.")
+    except Exception as e:
+        print(f"Error inserting evidence in the database: {str(e)}")
+        session.rollback()
 
 # Example usage
 payload = """[

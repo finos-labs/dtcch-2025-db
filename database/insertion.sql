@@ -46,7 +46,6 @@ INSERT INTO policy (policy_name, policy_version, policy_file_path) VALUES
 INSERT INTO kyc_process (client_id, ops_id, policy_id, initiation_timestamp, overall_status) VALUES
 (2, 2, 1, '2024-02-05 10:30:00', 'In Progress'),
 (2, 3, 1, '2024-02-04 15:45:00', 'Completed'),
-(3, 2, 1, '2024-02-03 09:20:00', 'Pending'),
 (4, 5, 1, '2024-02-02 14:10:00', 'In Progress'),
 (5, 4, 1, '2024-02-01 08:05:00', 'Completed');
 

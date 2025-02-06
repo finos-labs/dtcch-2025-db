@@ -34,6 +34,8 @@ class KycProcess(Base):
     initiation_timestamp = Column(TIMESTAMP, default=func.current_timestamp())
     overall_status = Column(String(50), nullable=False)
     policy_id = Column(Integer, ForeignKey("policy.policy_id", ondelete="CASCADE"), nullable=False)
+    risk_assessment_summary = Column(Text)
+    risk_tier = Column(String(100))
 
     client = relationship("Client", backref="kyc_processes")
     ops = relationship("KycOps", backref="kyc_processes")
@@ -57,6 +59,8 @@ class Actions(Base):
     external_evidence_source = Column(ARRAY(Text))
     client_evidence_source = Column(ARRAY(Text))
     action_description = Column(Text)
+    client_evidence_file_path = Column(Text)
+    client_evidence_summary = Column(Text)
 
 # Table: action_data_point
 class ActionDataPoint(Base):
