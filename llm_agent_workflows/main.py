@@ -5,8 +5,10 @@ from pdfplumber import PDF
 from pydantic import BaseModel, ConfigDict, ValidationError
 from tools.variables_extractor import VariablesExtractor
 from agents.agent_extract_variables import AgentExtractVariables
+from tools.pdf_handler_type import PDFHandlerType
 import json
 import argparse
+import fitz
 import time
 import os
 
@@ -19,6 +21,8 @@ class SectionOutput(BaseModel):
 
 def main():
     parser = argparse.ArgumentParser(description='Extract KYC variables with AWS Bedrock analysis')
+    parser.add_argument('--policy_pdf', '-p', required=True, help='Path to the PDF file')
+    parser.add_argument('--pages', '-pg', help='Page range (e.g., "1-20" or "1,2,3")')
     parser.add_argument('--variable_references_path', '-v',
                        required=True,
                        help='Path to the directory containing CSV files, one for each variable with possible values')
@@ -30,10 +34,21 @@ def main():
     load_dotenv()
 
     variables_options = VariablesExtractor().extract_variable_values(args.variable_references_path)
+    policyHandler = PDFHandlerType()
     agent_kyc_review_policy = AgentKYCReviewPolicy()
     agent_extract_variables = AgentExtractVariables()
+    pdf_path = args.policy_pdf
 
-    # Create a crew with these agents
+    # Parse page range if provided
+    pages = None
+    if args.pages:
+        if '-' in args.pages:
+            start, end = map(int, args.pages.split('-'))
+            pages = (start, end)
+        else:
+            pages = [int(p) for p in args.pages.split(',')]
+
+    # Create a crew with the kyc review policy agent
     crew = Crew(
         agents=[agent_kyc_review_policy],
         max_iterations=1,  # Agents will iterate through tasks twice
@@ -52,6 +67,42 @@ def main():
     # The final result will be a big json file with the filename of the policy as a field and then a "actions" field, which will contain each action with variables and a reference to the section of the policy
     
     # example of processed section, provided by agent form Matthew
+    try:
+        print(f"Opening PDF file: {pdf_path}")
+        doc = fitz.open(pdf_path)
+        pdf_name = Path(pdf_path).name
+        total_pages = len(doc)
+        print(f"Total pages in PDF: {total_pages}")
+        # Determine which pages to process
+        if pages is None:
+            pages_to_process = range(total_pages)
+        elif isinstance(pages, tuple):
+            start, end = pages
+            pages_to_process = range(start - 1, min(end, total_pages))
+        else:
+            pages_to_process = [p - 1 for p in pages if 1 <= p <= total_pages]
+        for page_num in pages_to_process:
+            print(f"Processing page {page_num + 1}")
+            page = doc[page_num]
+            
+            # Extract text from the page
+            page_text = page.get_text()
+            if not page_text.strip():
+                print(f"No text found on page {page_num + 1}")
+                continue
+
+            # Analyze the page content
+            sentences = self._analyze_page_with_llm(page_text, page_num + 1)
+            
+            # Add metadata to each sentence
+            for sentence in sentences:
+                sentence["pdf_name"] = pdf_name
+                all_sentences.append(sentence)
+    except Exception as e:
+            print(f"Error processing PDF: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            
     section = ["Standard identification procedures will usually apply.",#
                "In some cases, the firm holding the existing account may be willing to confirm the identity of the account holder to the new firm, and to provide evidence of the identification checks carried out. ",
                "Care will need to be exercised by the receiving firm to be satisfied that the previous verification procedures provide an appropriate level of assurance for the new account, which may have different risk characteristics from the one held with the other firm."]
