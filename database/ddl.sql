@@ -17,7 +17,8 @@ CREATE TABLE policy (
     policy_id SERIAL PRIMARY KEY,
     policy_name VARCHAR(255) NOT NULL,
     policy_version VARCHAR(50) NOT NULL,
-    policy_file_path VARCHAR(255) NOT NULL
+    policy_file_path VARCHAR(255) NOT NULL,
+    processed_policy_json TEXT
 );
 
 -- Table: kyc_process

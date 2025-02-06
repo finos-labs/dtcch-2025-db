@@ -91,6 +91,16 @@ def kyc_process_insert_risks(risk_assessment, kyc_id):
     except Exception as e:
         print(f"Error inserting evidence in the database: {str(e)}")
         session.rollback()
+        
+def store_processed_policy_json(policy_id, result):
+
+    session.query(Policy).filter_by(policy_id=policy_id).update({Policy.processed_policy_json:json.dumps(result)})
+    try:
+        session.commit()
+        print(f"Added processed policy to database {policy_id}.")
+    except IntegrityError:
+        session.rollback()
+        print(f"Skipping adding processed policy {policy_id}")
 
 # Example usage
 payload = """[

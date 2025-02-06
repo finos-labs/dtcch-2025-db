@@ -1,5 +1,5 @@
 INSERT INTO client (client_name, client_info_file_path) VALUES 
-('AFC Bournemouth Limited', '/path/to/client/file'),
+('AFC Bournemouth Limited', './llm_agent_workflows/client_documents/1.txt'),
 ('The Arsenal Football Club Ltd', '/path/to/client/file'),
 ('Aston Villa FC Limited', '/path/to/client/file'),
 ('Brentford FC Limited', '/path/to/client/file'),
@@ -40,7 +40,7 @@ INSERT INTO kyc_ops (ops_name, ops_designation) VALUES
 ('Harper King', 'Analyst');
 
 INSERT INTO policy (policy_name, policy_version, policy_file_path) VALUES 
-('JMLSG Part One June 2020 (amended July 2022)', 'v1', '/some/path.pdf'),
+('JMLSG Part One June 2020 (amended July 2022)', 'v1', './llm_agent_workflows/examples_pdf/JMLSG-Guidance-Part-I_July-2022.pdf'),
 ('JMLSG Part Two June 2020 (amended July 2022)', 'v2', '/some/path2.pdf');
 
 INSERT INTO kyc_process (client_id, ops_id, policy_id, initiation_timestamp, overall_status) VALUES

@@ -11,7 +11,7 @@ from agents.agent_extract_variables import AgentExtractVariables
 from agents.agent_kyc_review_policy import AgentKYCReviewPolicy
 from tools.variables_extractor import VariablesExtractor
 from tools.pdf_handler_type import PDFHandlerType
-from tools.db_functions import fetch_policy_file_path
+from tools.db_functions import fetch_policy_file_path, store_processed_policy_json
 
 
 class SectionOutput(BaseModel):
@@ -128,8 +128,10 @@ def main():
     # os.makedirs(os.path.dirname(output_path), exist_ok=True)
     # with open(output_path, 'w') as output_file:
     #     json.dump(result, output_file)
-    # TODO: insert json into databse under processed_policy
-    #update_action_in_progress(result, self.kyc_id)
+    
+    # Inserting json into databse under processed_policy
+    
+    store_processed_policy_json(policy_id=args.policy_id,result=result)
 
 if __name__ == "__main__":
     main()
