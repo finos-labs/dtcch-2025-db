@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Multiple Documents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .upload-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .upload-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .upload-container input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .upload-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .upload-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="upload-container">
+        <h2>Upload KYC Documents</h2>
+        <form action="../upload" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="uid">
+
+            <div id="Bank statement" style="display: none">
+                <h2>Bank statement</h2>
+                <input type="file" name="Bank statement" multiple>
+            </div>
+            <div id="Constitutional document" style="display: none">
+                <h2>Constitutional document</h2>
+                <input type="file" name="Constitutional document" multiple>
+            </div>
+            <div id="Council tax letter" style="display: none">
+                <h2>Council tax letter</h2>
+                <input type="file" name="Council tax letter" multiple>
+            </div>
+            <div id="Document from independent lawyer or accountant" style="display: none">
+                <h2>Document from independent lawyer or accountant</h2>
+                <input type="file" name="Document from independent lawyer or accountant" multiple>
+            </div>
+            <div id="Document issued by public sector or local authority" style="display: none">
+                <h2>Document issued by public sector or local authority</h2>
+                <input type="file" name="Document issued by public sectoror local authority" multiple>
+            </div>
+            <div id="Directors list" style="display: none">
+                <h2>Directors list</h2>
+                <input type="file" name="Directors list" multiple>
+            </div>
+            <div id="Driving licence" style="display: none">
+                <h2>Driving licence</h2>
+                <input type="file" name="Driving licence" multiple>
+            </div>
+            <div id="Government Issued photo ID" style="display: none">
+                <h2>Government Issued photo ID</h2>
+                <input type="file" name="Government Issued photo ID" multiple>
+            </div>
+            <div id="Passport" style="display: none">
+                <h2>Passport</h2>
+                <input type="file" name="Passport" multiple>
+            </div>
+            <div id="Notarised Ownership chart" style="display: none">
+                <h2>Notarised Ownership chart</h2>
+                <input type="file" name="Notarised Ownership chart" multiple>
+            </div>
+            <div id="Utility Bill" style="display: none">
+                <h2>Utility Bill</h2>
+                <input type="file" name="UtilityBill" multiple>
+            </div>
+
+
+            <input type="submit" value="Upload Documents">
+        </form>
+    </div>
+
+<script lang="javascript">
+    // Function to extract a specific parameter from the URL
+    const getParameterFromUrl = function (paramName) {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get(paramName);
+    };
+
+    const paramValue = getParameterFromUrl('uid');
+    console.log(paramValue); // Outputs the value of 'param1' from the URL
+    const form = document.querySelector('form'); // Select the form element
+    form.elements["uid"].value = paramValue;
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../request_doc_types/'+paramValue, true);
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            data.forEach(elementId => {
+                const element = document.getElementById(elementId);
+                console.info(elementId);
+                if (element) {
+                    console.info("!!!");
+                    element.style.display = "";
+                }
+            });
+        } else {
+            console.error('Error fetching data:', xhr.statusText);
+        }
+    };
+    xhr.onerror = function() {
+        console.error('Request failed');
+    };
+    xhr.send();
+</script>
+</body>
+</html>

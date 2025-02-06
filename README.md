@@ -2,10 +2,28 @@
 
 # FINOS DTCC Hackathon 
 
+### Disclaimer
+
+This repository contains an experimental AI-powered KYC (Know Your Customer) agent developed as part of a hackathon project. It is intended solely as a technology showcase and does not represent or reflect any actual KYC processes, policies, or compliance requirements of any organization, financial institution, or regulatory body.
+
+This project is provided as-is, without any warranties or guarantees regarding accuracy, security, or compliance with legal and regulatory frameworks. It should not be used in any production environment or relied upon for real-world identity verification or fraud prevention.
+
+By using this repository, you acknowledge that:
+
+This project is for demonstration and educational purposes only.
+The authors, contributors, and maintainers are not responsible for any misuse, legal implications, or consequences arising from its use.
+It is your responsibility to ensure compliance with applicable laws and regulations before implementing any KYC-related solutions.
+For any concerns or inquiries, please refer to the repository's license terms and contribution guidelines.
+
 
 <div align="center">
 
+<div align="center">
+
+## Project Name
 # **AI KYC AGENT**
+  
+KYC Agent: Automate Routine work of KYC process
 
 🔎 **AI KYC AGENT**: An innovative AI-powered KYC agent that streamlines KYC processes, reduces costs, and enhances compliance. The financial industry is increasingly reliant on Know Your Customer (KYC) processes to mitigate risk and comply with regulations. This provides an alernative to traditional KYC methods which are often manual, time-consuming, and prone to errors. 
 
@@ -150,11 +168,3 @@ Copyright 2025 FINOS
 Distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 SPDX-License-Identifier: [Apache-2.0](https://spdx.org/licenses/Apache-2.0)
-
-
-
-
-
-
-
-

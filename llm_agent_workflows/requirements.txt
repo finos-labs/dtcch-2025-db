@@ -1,0 +1,9 @@
+boto3>=1.28.0
+python-dotenv>=0.19.0
+PyMuPDF>=1.23.0  # for PDF processing (provides fitz module)
+Pillow>=10.0.0   # for image processing
+dataclasses>=0.6
+sqlalchemy==2.0.37
+psycopg2_binary==2.9.10
+pydantic==2.10.6
+pdfplumber==0.11.5
