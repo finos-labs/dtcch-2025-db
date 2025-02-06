@@ -1,5 +1,5 @@
-import logging
-from flask import request, jsonify
+import os
+from flask import request, jsonify, send_from_directory
 from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity
 )
@@ -7,9 +7,6 @@ from flask_bcrypt import Bcrypt
 
 from data import *
 from app import app, db
-
-logging.basicConfig()
-logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
@@ -236,3 +233,89 @@ def actions_list(kyc_id):
         return jsonify(Actions.query.filter(Actions.kyc_id == kyc_id).all())
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
+# API to handle document upload
+@app.route('/uploadDocument', methods=['POST'])
+def upload_document():
+    # Check if the post request has the file part
+    if 'file' not in request.files:
+        return jsonify({"error": "No file part"}), 400
+
+    file = request.files['file']
+
+    if file.filename == '':
+        return jsonify({"error": "No selected file"}), 400
+
+    # Check if file is allowed
+    if file and allowed_file(file.filename):
+        document_type = request.form.get('documentType')
+        policy_name = request.form.get('policyName')
+        policy_version = request.form.get('policyVersion')
+
+        # Generate unique filename and save the file
+        filename = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+        file.save(filename)
+
+        # save policy document
+        if document_type == "Policy":
+             try:
+                    new_policy = Policy(
+                            policy_name=policy_name,
+                            policy_version=policy_version,
+                            policy_file_path=file.filename
+                            )
+
+                    db.session.add(new_policy)
+                    db.session.commit()
+             except Exception as e:
+                  db.session.rollback()
+
+        # Return response with the file path and other details
+        response_data = {
+            'policy_file_path': filename,
+            'document_type': document_type,
+            'policy_name': policy_name if policy_name else "N/A",
+            'policy_version': policy_version if policy_version else "N/A"
+        }
+
+        return jsonify(response_data), 200
+    else:
+        return jsonify({"error": "File type not allowed"}), 400
+
+# API to retrieve all documents
+@app.route('/getDocuments', methods=['GET'])
+def get_documents():
+    try:
+        # List all files in the uploads directory
+        documents = []
+        for filename in os.listdir(app.config['UPLOAD_FOLDER']):
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            if os.path.isfile(file_path):
+                # Retrieve additional document info if available (e.g., document type, policy info)
+                documents.append({
+                    'fileName': filename,
+                    'filePath': file_path
+                })
+        return jsonify(documents), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+# API to view a document (send the document to frontend)
+@app.route('/viewDocument', methods=['GET'])
+def view_document():
+    filename = request.args.get('filename')
+
+    if not filename:
+        return jsonify({"error": "Filename is required"}), 400
+
+    # Check if the file exists
+    file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    if os.path.exists(file_path):
+        # Send the file to the frontend for viewing
+        return send_from_directory(app.config['UPLOAD_FOLDER'], filename), 200
+    else:
+        return jsonify({"error": "File not found"}), 404
+
