@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import IntegrityError
 
-from .alchemy_models import Actions, Policy, Client
+from alchemy_models import Actions, Policy, Client, KycProcess
 
 
 import json
@@ -76,29 +76,16 @@ def fetch_all_data_points_variables(kyc_id):
 
 def actions_insert_processed_evidence(evidence, kyc_id, data_point):
     try:
-        session.query(Actions).filter(kyc_id=kyc_id, data_point=data_point).update({Actions.client_evidence_summary:evidence})
+        session.query(Actions).filter_by(kyc_id=kyc_id, data_point=data_point).update({Actions.client_evidence_summary:evidence})
         session.commit()
         print ("Inserted Evidence extract in the database.")
     except Exception as e:
         print(f"Error inserting evidence in the database: {str(e)}")
         session.rollback()
-
-def actions_fetch_processed_evidence(evidence, kyc_id, data_point):
-    try:
-        session.query(Actions).filter(kyc_id=kyc_id, data_point=data_point).update({Actions.client_evidence_summary:evidence})
-        session.commit()
-        print ("Inserted Evidence extract in the database.")
-    except Exception as e:
-        print(f"Error inserting evidence in the database: {str(e)}")
-        session.rollback()
-
-    # Verifying the update (optional)
-    updated_action = session.query(Actions).filter(kyc_id=kyc_id, data_point=data_point).first()
-    print(f"Updated Evidence Summary: {updated_action.client_evidence_summary}")
 
 def kyc_process_insert_risks(risk_assessment, kyc_id):
     try:
-        session.query(KycProcess).filter(kyc_id=kyc_id).update({KycProcess.risk_tier:risk_assessment["risk_tier"], KycProcess.risk_assessment:risk_assessment["risk_summary"]})
+        session.query(KycProcess).filter_by(kyc_id=kyc_id).update({KycProcess.risk_tier:risk_assessment["risk_tier"], KycProcess.risk_assessment_summary:risk_assessment["risk_summary"]})
         session.commit()
         print ("Inserted Evidence extract in the database.")
     except Exception as e:
