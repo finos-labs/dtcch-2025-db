@@ -1,88 +1,137 @@
 from dotenv import load_dotenv
 from crew import Task, Crew
-from agents.agent_sections_to_actions import AgentSectionsToActions
-from agents.agent_actions_to_data_point import AgentActionsToDataPoints
+from agents.agent_kyc_review_policy import AgentKYCReviewPolicy
+from pdfplumber import PDF
+from pydantic import BaseModel, ConfigDict, ValidationError
+from tools.variables_extractor import VariablesExtractor
+from agents.agent_extract_variables import AgentExtractVariables
+from tools.pdf_handler_type import PDFHandlerType
+import json
+import argparse
+import fitz
+from pathlib import Path
+import time
+import os
 
-
+class SectionOutput(BaseModel):
+    model_config = ConfigDict(strict=True)
+    quote: str
+    action_detected: bool
+    action: str
+    data_point: str
 
 def main():
+    parser = argparse.ArgumentParser(description='Extract KYC variables with AWS Bedrock analysis')
+    parser.add_argument('--policy_pdf', '-p', required=True, help='Path to the PDF file')
+    parser.add_argument('--pages', '-pg', help='Page range (e.g., "1-20" or "1,2,3")')
+    parser.add_argument('--variable_references_path', '-v',
+                       required=True,
+                       help='Path to the directory containing CSV files, one for each variable with possible values')
+    parser.add_argument('--output', '-o',
+                       help='Output JSON file path (default: ./output/processed_policy_TIMESTAMP.json)')
+    args = parser.parse_args()
+
     # Load environment variables
     load_dotenv()
 
-    agent_sections_to_actions = AgentSectionsToActions()
-    agent_action_to_data_points = AgentActionsToDataPoints()
+    variables_options = VariablesExtractor().extract_variable_values(args.variable_references_path)
+    policyHandler = PDFHandlerType()
+    agent_kyc_review_policy = AgentKYCReviewPolicy()
+    agent_extract_variables = AgentExtractVariables()
+    pdf_path = args.policy_pdf
 
-    # Create a crew with these agents
+    # Parse page range if provided
+    pages = None
+    if args.pages:
+        if '-' in args.pages:
+            start, end = map(int, args.pages.split('-'))
+            pages = (start, end)
+        else:
+            pages = [int(p) for p in args.pages.split(',')]
+
+    # Create a crew with the kyc review policy agent
     crew = Crew(
-        agents=[agent_sections_to_actions, agent_action_to_data_points],
+        agents=[agent_kyc_review_policy],
         max_iterations=1,  # Agents will iterate through tasks twice
-        verbose=True
+        verbose=False
     )
-    
-    # Define tasks with dependencies
-    tasks = [
-        Task(
-            description=f"""
-        You are an expert in KYC (Know Your Customer) compliance and data mapping. 
-        Your task is to analyze a given text and determine whether it contains a KYC action. 
-        If it does, extract the corresponding data point required for compliance.
-        
-        Below are the steps you need to follow:
-        1. Analyze the input text carefully. The input may or may not contain a KYC-related action. If the text does not contain a clear action, respond with "No Action Detected"
-        2. Identify if the text describes an action related to KYC. KYC actions usually involve identifying, verifying, confirming, conducting screening, or assigning roles.
-        3. Extract the corresponding KYC data point. The data point is the key piece of information that must be collected to complete the action. Common data points include: "First name", "Last name", "Role", "Residential Address", "Screening Result", "UBO Role", etc
-        4. Format your response in the following structure:
-        {{
-        "quote": <Complete original document line from which you extract the action>
-        "action_detected": true,
-        "action": "<Extracted KYC Action>",
-        "data_point": "<Corresponding Data Point>"
-        }}
-        If no action is found, return:
-        {{
-        "action_detected": false
-        }}
-        5. Please only and only output a single json string with all the results together in one json and nothing else so that it can be parsed.
-        
-        Please do it for below piece of texts individually:
-        1. Identify the Natural Person Client Senior Manager's residential address
-        2. Add Ultimate Beneficial Owner role to Client Senior Manager with Significant control
-        3. Verify the last name of any Natural Person Client Senior Managers (CSMs)
-        4. JVMA is a company that has a big client base
-        """,
-            agent_role="kyc_analyst",
-            expected_output="To know the data points from actions for KYC",
-            context=f"""
-            Below are some examples where first we have the action and then the data point after the comma for your understanding:
-            Create Natural Person Client Senior Manager profile for identified Client Senior Managers, Natural Person Client Senior Manager Role
-            Identify the first name of any Natural Person Client Senior Managers (CSMs), First name
-            Identify the middle name of any Natural Person Client Senior Managers (CSMs), Middle name
-            Verify the middle name of any Natural Person Client Senior Managers (CSMs), Middle name
-            Identify the last name of any Natural Person Client Senior Managers (CSMs), Last name
-            Verify the last name of any Natural Person Client Senior Managers (CSMs), Last name
-            Identify the Natural Person Client Senior Manager's role at the client?, Role
-            Conduct screening on the Natural Person Client Senior Manager, Screening Result
-            Has a Client Senior Manager been identified as a Relative or Close Associate of a Politically Exposed Person?, RCA Flag
-            Confirm if a Client Senior Manager have significant control of the client, Significant control
-            Confirm if KYC Ops agree with ACO assessment of Client Senior Manager's Significant control, Significant control KYC Ops agreement
-            Add Ultimate Beneficial Owner role to Client Senior Manager with Significant control, UBO role
-            """,
-            dependencies=[]
-        )
-    ]
+
+    try:
+        print(f"Opening PDF file: {pdf_path}")
+        doc = fitz.open(pdf_path)
+        pdf_name = Path(pdf_path).name
+        total_pages = len(doc)
+        print(f"Total pages in PDF: {total_pages}")
+        # Determine which pages to process
+        if pages is None:
+            pages_to_process = range(total_pages)
+        elif isinstance(pages, tuple):
+            start, end = pages
+            pages_to_process = range(start - 1, min(end, total_pages))
+        else:
+            pages_to_process = [p - 1 for p in pages if 1 <= p <= total_pages]
+        result = []
+        for page_num in pages_to_process:
+            print(f"Processing page {page_num + 1}")
+            page = doc[page_num]
+            # Extract text from the page
+            page_text = page.get_text()
+            if not page_text.strip():
+                print(f"No text found on page {page_num + 1}")
+                continue
+            # Analyze the page content
+            sentences = policyHandler._analyze_page_with_llm(page_text, page_num + 1)
+            
+            # Add metadata to each sentence
+            for i in range(len(sentences)):
+                sentences[i]["pdf_name"] = pdf_name
+                # validate_data_point = []
+                sentence = sentences[i]["sentence"]
+                task_action_to_data_point = agent_kyc_review_policy.task_actions_to_data_points(previous_task=sentence)
+                tasks = [task_action_to_data_point]
+                print("\nStarting Content Creation Workflow...\n")
+                crew_results = crew.execute_tasks(tasks)
+                list_crew_results = list(crew_results.items())
+                action_result = list_crew_results[i][1]
+                try:
+                    if action_result == '{"action_detected": False}' or action_result == '{"action_detected": false}':
+                        pass
+                    else:
+                        SectionOutput.model_validate_json(action_result)
+                        dict_result = json.loads(action_result)
+                        variables = agent_extract_variables._analyze_quote_and_action(dict_result['action'], dict_result['quote'], variables_options)
+                        dict_result.update(variables)
+                        # validate_data_point.append(dict_result)
+                        sentences[i].pop("sentence")
+                        sentences[i].update(dict_result)
+                except ValidationError as e:
+                    print(e)
+
+                # print(json.dumps(validate_data_point))
+                
+            result.append(sentences)
+        print(json.dumps(result)) 
+
+    except Exception as e:
+            print(f"Error processing PDF: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            
+    section = ["Standard identification procedures will usually apply.",#
+               "In some cases, the firm holding the existing account may be willing to confirm the identity of the account holder to the new firm, and to provide evidence of the identification checks carried out. ",
+               "Care will need to be exercised by the receiving firm to be satisfied that the previous verification procedures provide an appropriate level of assurance for the new account, which may have different risk characteristics from the one held with the other firm."]
 
     
-    # Execute the workflow
-    print("\nStarting Content Creation Workflow...\n")
-    results = crew.execute_tasks(tasks)
 
+    # TODO: do this outside the for loop we will add, adding to the json the filename
+    # if vars.output_path is None:
+    #         timestamp = time.strftime('%Y%m%d_%H%M%S')
+    #         output_path = f"./output/processed_policy_{timestamp}.json"
+    # # Create output directory if it doesn't exist
+    # os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    # with open(output_path, 'w') as output_file:
+    #     json.dump(validate_data_point, output_file)
     
-    # Print final results
-    print("\nWorkflow Complete! Final Results:")
-    for task, result in results.items():
-        print(f"\nTask: {task}")
-        print(f"Result: {result}\n")
-        print("-" * 80)
 
 if __name__ == "__main__":
     main()

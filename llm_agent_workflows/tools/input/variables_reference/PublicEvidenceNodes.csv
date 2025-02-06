@@ -1,0 +1,41 @@
+PEUID,document,type
+PEUID1,Act or law,Public
+PEUID11,Credit Reference Agency,Public
+PEUID12,Financial Services register extract,Public
+PEUID13,Financial Statements,Public
+PEUID14,Foundation's website,Public
+PEUID15,Fund prospectus,Public
+PEUID16,Google Street Maps,Public
+PEUID17,Government website,Public
+PEUID18,HMRC,Public
+PEUID19,ICC International Maritime Bureau,Public
+PEUID20,International Forum of Sovereign Wealth Funds website,Public
+PEUID21,Internet searches,Public
+PEUID22,Local Authority contact,Public
+PEUID23,Local confirmation of broker dealer activity,Public
+PEUID24,Local experts,Public
+PEUID25,Offering Memorandum or prospectus,Public
+PEUID26,Pension Tax Scheme Reference number,Public
+PEUID27,Professional body's register,Public
+PEUID28,Register of charities,Public
+PEUID29,Regulated Exchange website,Public
+PEUID3,Articles from national and international news outlets,Public
+PEUID30,Regulator's Website Screenshot,Public
+PEUID31,Scottish Charity Register,Public
+PEUID32,Shipping lines website,Public
+PEUID33,Social Media profile,Public
+PEUID34,Sovereign Wealth Fund website,Public
+PEUID35,Third party database,Public
+PEUID36,Third party's professional register,Public
+PEUID37,Trace client's IP Address,Public
+PEUID38,Transparency International website,Public
+PEUID39,Trust Deed,Public
+PEUID4,Audited Annual report,Public
+PEUID40,UCAS database of students,Public
+PEUID41,UK Border Agency Register,Public
+PEUID42,Wolfsberg Questionnaire,Public
+PEUID5,Charities register,Public
+PEUID6,Charity Commission,Public
+PEUID7,Commercial Registery Extract,Public
+PEUID8,Company's website,Public
+PEUID9,Constitutional document,Public

@@ -8,6 +8,7 @@ class Task:
     expected_output: str
     context: str = ""
     dependencies: List[str] = None  # List of task IDs that must be completed first
+    validation_type: str = None
     
     def __post_init__(self):
         if self.dependencies is None:

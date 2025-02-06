@@ -1,0 +1,105 @@
+[
+    {
+        "quote": "Identify the Natural Person Client Senior Manager's residential address",
+        "action_detected": true,
+        "action": "Identify residential address",
+        "data_point": "Residential Address",
+        "role": [
+            "Organisation Senior Management"
+        ],
+        "due_diligence_level": [
+            "Client Due Diligence"
+        ],
+        "business_type": [
+            "All Business Types"
+        ],
+        "entity_type": [
+            "All Organisation Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Google Street Maps",
+            "Internet searches",
+            "Third party database"
+        ],
+        "client_evidence": [
+            "Utility Bill",
+            "Bank statement",
+            "Council tax letter",
+            "Driving licence",
+            "Document issued by public sector or local authority"
+        ]
+    },
+    {
+        "quote": "Add Ultimate Beneficial Owner role to Client Senior Manager with Significant control",
+        "action_detected": true,
+        "action": "Add UBO role",
+        "data_point": "UBO Role",
+        "role": [
+            "Beneficial Owner",
+            "Organisation Senior Management",
+            "Control party"
+        ],
+        "due_diligence_level": [
+            "Client Due Diligence",
+            "Enhanced Due Diligence"
+        ],
+        "business_type": [
+            "Other Business Type"
+        ],
+        "entity_type": [
+            "All Organisation Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Commercial Registery Extract",
+            "Company's website",
+            "Constitutional document"
+        ],
+        "client_evidence": [
+            "Constitutional document",
+            "Document from independent lawyer or accountant",
+            "Directors list",
+            "Notarised Ownership chart"
+        ]
+    },
+    {
+        "quote": "Verify the last name of any Natural Person Client Senior Managers (CSMs)",
+        "action_detected": true,
+        "action": "Verify last name",
+        "data_point": "Last name",
+        "role": [
+            "Organisation Senior Management"
+        ],
+        "due_diligence_level": [
+            "Client Due Diligence"
+        ],
+        "business_type": [
+            "All Entity Types"
+        ],
+        "entity_type": [
+            "Private Individual"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Credit Reference Agency",
+            "Internet searches",
+            "Third party database"
+        ],
+        "client_evidence": [
+            "Government Issued photo ID",
+            "Driving licence",
+            "Passport"
+        ]
+    },
+    {
+        "quote": "JVMA is a company that has a big client base",
+        "action_detected": false
+    }
+]
