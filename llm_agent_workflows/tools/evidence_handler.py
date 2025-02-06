@@ -2,7 +2,6 @@ import pytesseract
 from PIL import Image
 
 from agents.agent_evidence_process import AgentEvidence
-from tools import RiskHandler
 from .db_functions import actions_insert_processed_evidence, kyc_process_check_status_actions
 
 RISK_PATH = "tools/input/risks/risks.csv"
@@ -44,6 +43,8 @@ class EvidenceHandler:
 
         # the evidence will process the image and extract the text and insert it in the db
         if kyc_process_id:
+            from tools import RiskHandler
+
             risk_handler = RiskHandler()
             risk_handler.risk_assessment(RISK_PATH, kyc_process_id)
 
