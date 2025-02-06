@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import IntegrityError
 
-from alchemy_models import Actions, Policy, Client, KycProcess
+from .alchemy_models import Actions, Policy, Client, KycProcess
 
 
 import json

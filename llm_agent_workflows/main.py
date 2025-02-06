@@ -14,6 +14,8 @@ import fitz
 from pathlib import Path
 import os
 import time
+from .tools.evidence_handler import EvidenceHandler
+from .tools.risk_handler import RiskHandler
 
 class SectionOutput(BaseModel):
     model_config = ConfigDict(strict=True)
@@ -23,6 +25,20 @@ class SectionOutput(BaseModel):
     data_point: str
 
 def main():
+    RISK_PATH = "llm_agent_workflows/tools/input/risks/risks.csv"
+    evidence_handler = EvidenceHandler()
+    risk_handler = RiskHandler()
+
+    # TODO: this will be passed when this is triggered
+    kyc_id = 2
+    data_point = "Transaction Monitoring"
+    image_path = "llm_agent_workflows/tools/input/examples_evidence/evidence_driving_licence.jpeg"
+
+    # the evidence will process the image and extract the text and insert it in the db
+    evidence_handler.process_evidence(image_path, kyc_id, data_point)
+    risk_handler.risk_assessment(RISK_PATH, kyc_id, data_point)
+
+    """
     parser = argparse.ArgumentParser(description='Extract KYC variables with AWS Bedrock analysis')
     parser.add_argument('--kyc_id', '-kycid', required=True, help='Current process kyc ID')
     parser.add_argument('--policy_id', '-pid', required=True, help='ID of the policy to be processed')
@@ -164,7 +180,7 @@ def main():
     print("\nStarting background check...\n")
     results = crew_ops.execute_tasks([background_check_task])
     pass
-    
+    """
 
 if __name__ == "__main__":
     main()
