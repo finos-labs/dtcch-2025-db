@@ -28,8 +28,7 @@ class EvidenceHandler:
 
         cleaned_text = self.agent_evidence._evidence_clean(text_extracted_ocr)
         print ("Cleaned Text:", cleaned_text)
-        # TODO: validate if is string
-        actions_insert_processed_evidence(cleaned_text)
+        actions_insert_processed_evidence(cleaned_text, kyc_id, data_point)
 
     def process_evidence(self, image_path: str, kyc_id: int, data_point: str):
         """Process extracted text evidence and insert into the database."""
