@@ -1,9 +1,11 @@
+import os
+import json
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
-import os
 from alchemy_models import Actions
-import json
+
 
 load_dotenv()
 
@@ -42,6 +44,28 @@ def update_action_in_progress(payload):
         session.add(db_entry)
     session.commit()
     print(f"Added output action info to the database.")
+
+def insert_processed_evidence(evidence, kyc_id, data_point):
+    try:
+        session.query(Actions).filter(kyc_id=kyc_id, data_point=data_point).update({Actions.client_evidence_summary:evidence})
+        session.commit()
+        print ("Inserted Evidence extract in the database.")
+    except Exception as e:
+        print(f"Error inserting evidence in the database: {str(e)}")
+        session.rollback()
+
+def fetch_processed_evidence(evidence, kyc_id, data_point):
+    try:
+        session.query(Actions).filter(kyc_id=kyc_id, data_point=data_point).update({Actions.client_evidence_summary:evidence})
+        session.commit()
+        print ("Inserted Evidence extract in the database.")
+    except Exception as e:
+        print(f"Error inserting evidence in the database: {str(e)}")
+        session.rollback()
+
+    # Verifying the update (optional)
+    updated_action = session.query(Actions).filter(kyc_id=kyc_id, data_point=data_point).first()
+    print(f"Updated Evidence Summary: {updated_action.client_evidence_summary}")
 
 # Example usage
 payload = """[

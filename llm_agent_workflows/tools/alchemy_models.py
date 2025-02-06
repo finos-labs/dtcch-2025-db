@@ -54,7 +54,9 @@ class Actions(Base):
     external_evidence_source = Column(ARRAY(Text))
     client_evidence_source = Column(ARRAY(Text))
     action_description = Column(Text)
-    
+    client_evidence_file_path = Column(Text)
+    client_evidence_summary = Column(Text)
+
     # Relationships
     kyc_process = relationship("KycProcess", backref="actions")
 

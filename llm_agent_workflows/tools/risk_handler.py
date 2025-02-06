@@ -9,13 +9,12 @@ class RiskHandler:
         self.agent_risk = AgentRiskAssessment()
 
     def extract_client_formation(self, kyc_id: int) -> str:
-        # TODO: call the db client table to extract the client information TBD
-        pass
+        # TODO: Pulkit call the db client table to extract the client information TBD
+        return "client_and background_check_information"
 
     def risk_csv_read(self, path: str) -> str:
-        # TODO: read csv under risk/risks.csv
         df = pd.read_csv(path)
-        print (df)
+        return df.to_json(orient='records')
 
     def risk_assessment(self, path_risk: str, kyc_id: int, data_point: str):
         """Process extracted text evidence and perform risk assessment."""
