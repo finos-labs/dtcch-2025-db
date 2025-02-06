@@ -54,7 +54,7 @@ def main():
     # Starting background check workflow
     print("\nStarting background check...\n")
     results = crew_ops.execute_tasks([background_check_task])
-    pass
+    result_json = list(results.values())[0]
 
     RISK_PATH = "tools/input/risks/risks.csv"
     evidence_handler = EvidenceHandler()
