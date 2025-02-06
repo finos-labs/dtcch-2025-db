@@ -117,7 +117,7 @@ def main():
                     continue
                 final_processed_sentence = process_action(sentences[i], action_result, variables_options, agent_extract_variables)
                 result.append(final_processed_sentence)
-                print("-------------------------")
+            print("-------------------------")
 
     except Exception as e:
             print(f"Error processing PDF: {str(e)}")
