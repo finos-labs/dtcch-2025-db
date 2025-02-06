@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { loginUser } from "./api";
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
@@ -7,15 +8,14 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-
-    // Simulate a simple login check (replace with real authentication)
-    if (username === 'admin' && password === 'password') {
-      // Redirect to the dashboard after successful login
-      navigate('/dashboard');
-    } else {
-      setError('Invalid credentials, please try again.');
+    try {
+      const response = await loginUser({ username, password });
+      localStorage.setItem("token", response.data.access_token);
+      navigate("/dashboard"); // Redirect to dashboard
+    } catch (err) {
+      setError("Invalid username or password");
     }
   };
 
