@@ -45,13 +45,15 @@ def update_action_in_progress(payload, kyc_id):
         )
         if row['action_detected'] and row['type_of_sentence'] == 'KYC Profile Relevant':
             session.add(db_entry)
+            
+        try:
+            session.commit()
+            print(f"Added output action info to the database.")
+        except IntegrityError:
+            session.rollback()
+            print(f"Skipping duplicate entry kyc id: {kyc_id}")
 
-    try:
-        session.commit()
-        print(f"Added output action info to the database.")
-    except IntegrityError:
-        session.rollback()
-        print(f"Skipping duplicate entry: {kyc_id}")
+
 
 def fetch_policy_file_path(policy_id):
     file_path = session.query(Policy).filter_by(policy_id=policy_id).first().policy_file_path
@@ -101,7 +103,11 @@ def store_processed_policy_json(policy_id, result):
     except IntegrityError:
         session.rollback()
         print(f"Skipping adding processed policy {policy_id}")
+        
+def fetch_processed_policy_json(policy_id):
 
+    policy_json = session.query(Policy).filter_by(policy_id=policy_id).first().processed_policy_json
+    return json.loads(policy_json)
 # Example usage
 payload = """[
     {
