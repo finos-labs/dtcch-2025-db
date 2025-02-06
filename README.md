@@ -153,8 +153,20 @@ This diagram illustrates the current level of autonomy in the KYC landscape. As 
 ![AI KYC Agent Autonomy pyramid](images/autonomy.png)
 
 # Examples 
-A demo of the AI KYC AGENT use case is provided below:
-> TODO: add gif / video
+Below are some screenshots of the user interface (UI), illustrating key features and the overall design of the application.
+The login page:
+![LoginPage](screenshot/1.%20login.png)
+The landing page, where you can be directed to eitehr the KYC Ops Dashboard, ot the admin document upload:
+![LandingPage](screenshot/2.%20landing_page.png)
+The dashboard of KYC Ops, where a client can be selected from:
+![Dashbaord](screenshot/3.%20dashboard.png)
+The KYC details for a specific client, where a specific action can be selected:
+![KYCDetails](screenshot/5.%20kyc_details.png)
+The specific action details: 
+![ActionDetails](screenshot/6.%20action_details.png)
+The admin document upload page: 
+![AdminDocumentUpload](screenshot/7.%20admin_document_upload.png)
+
 
 
 # Contribution
