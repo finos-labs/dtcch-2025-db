@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { UploadDocument, getPolicies } from "./api";
 import { API_ENDPOINTS } from "./../config";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const DocumentUpload = () => {
   // Set the default document type to 'policy'
@@ -12,11 +13,12 @@ const DocumentUpload = () => {
   const [policyVersion, setPolicyVersion] = useState("");
   const [file, setFile] = useState(null);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
         const [policiesData] = await Promise.all([getPolicies()]);
-        console.log(policiesData);
         setDocuments(policiesData);
       } catch (err) {
         setError("Error fetching documents");
@@ -62,11 +64,9 @@ const DocumentUpload = () => {
     const formData = new FormData();
     formData.append("file", file);
     formData.append("documentType", documentType);
-
     formData.append("policyName", policyName);
     formData.append("policyVersion", policyVersion);
 
-    console.log(documentType, policyName, policyVersion, "submitting data");
     try {
       const response = await axios.post(
         `${API_ENDPOINTS.BASE_URL}/uploadDocument`,
@@ -76,7 +76,6 @@ const DocumentUpload = () => {
         }
       );
 
-      console.log("response received", response);
       // Add the uploaded file info to the state
       setDocuments([
         ...documents,
@@ -117,31 +116,42 @@ const DocumentUpload = () => {
     }
   };
 
+  const handleLogout = () => {
+    // Add logic to logout the user, like clearing tokens or redirecting to login
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <h2 className="text-2xl font-bold mb-4">Upload Document</h2>
+      {/* Header */}
+      <header className="flex justify-between items-center rounded-lg mb-6">
+        <h1 className="text-2xl font-bold block">Document Upload</h1>
+        <button
+          onClick={handleLogout}
+          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg"
+        >
+          Logout
+        </button>
+      </header>
 
       {/* Upload Form */}
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-lg shadow-md mb-6"
-      >
-        {/* Document Type Selection */}
-        <div className="mb-4">
-          <label className="block text-sm font-semibold">Document Type</label>
-          <select
-            name="documentType"
-            value={documentType}
-            onChange={handleInputChange}
-            className="w-full p-2 border rounded-lg"
-          >
-            <option value="policy">Policy</option>
-          </select>
-        </div>
+      <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+        <form onSubmit={handleSubmit}>
+          {/* Document Type Selection */}
+          <div className="mb-4">
+            <label className="block text-sm font-semibold">Document Type</label>
+            <select
+              name="documentType"
+              value={documentType}
+              onChange={handleInputChange}
+              className="w-full p-2 border rounded-lg"
+            >
+              <option value="policy">Policy</option>
+            </select>
+          </div>
 
-        {/* Additional Fields for Policy */}
-
-        <>
+          {/* Additional Fields for Policy */}
           <div className="mb-4">
             <label className="block text-sm font-semibold">Policy Name</label>
             <input
@@ -167,25 +177,25 @@ const DocumentUpload = () => {
               required
             />
           </div>
-        </>
 
-        <div className="mb-4">
-          <label className="block text-sm font-semibold">Upload File</label>
-          <input
-            type="file"
-            onChange={handleFileChange}
-            className="w-full p-2 border rounded-lg"
-            required
-          />
-        </div>
+          <div className="mb-4">
+            <label className="block text-sm font-semibold">Upload File</label>
+            <input
+              type="file"
+              onChange={handleFileChange}
+              className="w-full p-2 border rounded-lg"
+              required
+            />
+          </div>
 
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
-        >
-          Upload
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+          >
+            Upload
+          </button>
+        </form>
+      </div>
 
       {/* Display Uploaded Files */}
       {documents.length > 0 && (
@@ -194,7 +204,7 @@ const DocumentUpload = () => {
           <table className="w-full table-auto border-collapse shadow-lg">
             <thead>
               <tr className="bg-gray-200 text-gray-700">
-                <th className="px-6 py-4 border-b text-left">#</th>
+                <th className="px-6 py-4 border-b text-left">Policy ID</th>
                 <th className="px-6 py-4 border-b text-left">Document Type</th>
                 <th className="px-6 py-4 border-b text-left">Policy Name</th>
                 <th className="px-6 py-4 border-b text-left">Policy Version</th>
@@ -205,7 +215,7 @@ const DocumentUpload = () => {
             <tbody>
               {documents.map((fileData, index) => (
                 <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 border-b">{index + 1}</td>
+                  <td className="px-6 py-4 border-b">{fileData.policy_id}</td>
                   <td className="px-6 py-4 border-b">
                     {fileData.documentType || "Policy"}
                   </td>

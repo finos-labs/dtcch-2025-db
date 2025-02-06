@@ -22,7 +22,7 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h1 className="text-2xl font-semibold mb-4">KYC Dashboard</h1>
+        <h1 className="text-2xl font-semibold mb-4">KYC Agent</h1>
         <form onSubmit={handleLogin}>
           <div className="mb-4">
             <label htmlFor="username" className="block text-gray-700">

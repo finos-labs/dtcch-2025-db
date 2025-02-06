@@ -242,7 +242,9 @@ const Dashboard = () => {
               <th className="border p-3">Status</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody
+            className="overflow-y-scroll max-h-60" // Set fixed height and scroll
+          >
             {filteredRequests.length > 0 ? (
               filteredRequests.map((request, index) => (
                 <tr
@@ -268,12 +270,12 @@ const Dashboard = () => {
                     className={`border p-3 font-semibold ${
                       request.status === "COMPLETED"
                         ? "text-green-500"
-                        : request.status === "INPROGRESS"
+                        : request.status === "IN PROGRESS"
                         ? "text-yellow-500"
                         : "text-blue-500"
                     }`}
                   >
-                    {request.overall_status}
+                    {request.status}
                   </td>
                 </tr>
               ))
@@ -288,12 +290,15 @@ const Dashboard = () => {
         </table>
 
         {/* Trigger KYC Button */}
-        <button
-          onClick={handleOpenModal}
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-        >
-          Trigger KYC
-        </button>
+        <div className="mt-8 flex justify-end items-center space-x-4">
+          <span className="text-lg">Trigger KYC Process → </span>
+          <button
+            onClick={handleOpenModal}
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          >
+            Start KYC
+          </button>
+        </div>
 
         {/* Modal */}
         {isModalOpen && (
