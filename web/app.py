@@ -22,17 +22,6 @@ app.config["JWT_SECRET_KEY"] = "supersecretkey"  # Change this in production
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 
-# Simulated user database
-users = {
-    "admin": {
-        "id": 1,
-        "password": bcrypt.generate_password_hash("password").decode("utf-8"),
-        "email": "john@example.com",
-        "department": "Compliance",
-        "avatar": "https://i.pravatar.cc/100"
-    }
-}
-
 # Folder to save uploaded files
 UPLOAD_FOLDER = '/home/ubuntu/data/kyc/uploads'
 if not os.path.exists(UPLOAD_FOLDER):
