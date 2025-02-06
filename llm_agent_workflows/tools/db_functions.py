@@ -40,7 +40,10 @@ def update_action_in_progress(payload, kyc_id):
             internal_evidence_source = row['internal_evidence'],
             external_evidence_source = row['public_evidence'],
             client_evidence_source = row['client_evidence'],
-            action_description = row['action']            
+            action_description = row['action'],
+            client_evidence_file_path="",
+            client_evidence_summary="",
+            uuid=""            
         )
         if row['action_detected'] and row['type_of_sentence'] == 'KYC Profile Relevant':
             session.add(db_entry)
@@ -99,7 +102,7 @@ def kyc_process_check_status_actions(uuid: str) -> int:
     actions_from_kyc_process = session.query(Actions).filter_by(kyc_id=action.kyc_id).all()
     all_done = all(action.latest_action_activity == "DONE" for action in actions_from_kyc_process)
     if all_done:
-        session.query(KycProcess).filter_by(kyc_id=action.kyc_id).update({KycProcess.status: "DONE"})
+        session.query(KycProcess).filter_by(kyc_id=action.kyc_id).update({KycProcess.overall_status: "DONE"})
         print(f"Updated kyc_process status to DONE for kyc_id: {action.kyc_id}")
         try:
            session.commit()
@@ -126,6 +129,7 @@ def fetch_processed_policy_json(policy_id):
 
     policy_json = session.query(Policy).filter_by(policy_id=policy_id).first().processed_policy_json
     return json.loads(policy_json)
+
 # Example usage
 payload = """[
     {

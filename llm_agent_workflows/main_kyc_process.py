@@ -1,9 +1,11 @@
 import argparse
 from crew import Crew
 from pydantic import BaseModel, ConfigDict
+import uuid
 
 from agents.agent_kyc_background_check_specialist import AgentKYCBackgroundCheckOps
 from tools.db_functions import fetch_all_data_points_variables, update_action_in_progress, fetch_client_data_file_path, fetch_processed_policy_json
+from tools.trigger_mails import request_docs
 
 
 class SectionOutput(BaseModel):
@@ -54,6 +56,17 @@ def main():
     print("\nStarting background check...\n")
     results = crew_ops.execute_tasks([background_check_task])
     result_json = list(results.values())[0]
+    
+    unique_evidence_id = str(uuid.uuid4())
+    
+    print("\nTriggering client doc request mail...\n")
+    #Requesting docs from clients
+    request_docs(string_id=unique_evidence_id, 
+                 callback_url = "some callback", 
+                 email_text=f"Please upload documents for KYC: https://dtcch-2025-db.sibnick.men/backend2/static/upload.html?uid={unique_evidence_id}",
+                 email="sibnick@gmail.com",
+                 doc_types = ["Passport"]
+                 )
 
 if __name__ == "__main__":
     main()
