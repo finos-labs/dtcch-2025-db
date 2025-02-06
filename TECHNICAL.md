@@ -81,8 +81,7 @@ This section outlines the technologies used throughout the project, including pr
 
 
 ## Functionality Diagrams
-The below diagram that showcase the flow of functionalities and the interaction between different components of the system. This diagram shows the ways in which the KYC Agent can be interacted with
-
+The below diagram that showcase the flow of functionalities and the interaction between different components of the system. This diagram shows the ways in which the KYC Agent can be interacted with. As detailed in the [Solution Structure](#solution-structure) section, there are two flows, each with their own agent. The KYC Policy Procedure Agent is responsible for the first flow, namely the KYC Policy Procedure, which maps the policy documents. The KYC Ops Agent is responsible for the second flow, namely the KYC Ops Process, where the client specific data is managed. The corresponding UIs and stakeholders are also shows in this diagram.
 
 ![KYC Agent Technical Flow](images/technical_flowchart.png)
 
@@ -113,8 +112,8 @@ List and explain the major components or modules of the system. Each component c
 List and describe the key features that are implemented or planned. This will help developers and contributors understand the scope of each feature.
 
 ### Stage 1 - Implemented Features:
-- **User Profile Management**: Users should be able to create, update, and delete profiles.
-- **Admin Dashboard**: Admins should have access to user management, reports, and analytics.
+- **....**: ....
+- **....**: ....
 
 Following the successful implementation of Stage 1, we have outlined a set of additional features for Stage 2 to further enhance functionality and performance. These planned features have been stipulated in the [Project Structure](#the-structure-consists-of-two-processes) and aim to build on the existing foundation, addressing key improvements and expanding capabilities. 
 
@@ -122,6 +121,7 @@ Following the successful implementation of Stage 1, we have outlined a set of ad
 - **Human Reiteration Loop**: An admin should be added in the loop to supervise the steps. This can be modeled an accept/refuse UI button after each step 1-4. We need to decide what action the user can take in case they refuse. Current options are:
     - Change of prompt
     - Change of generated outputs (which will always be in xlsx format)
+- **Reiteration for extra Data Points**: A check for additional variables that may become apparent only after checking initital evidence (e.g. requested full name and passport as evidence, after passport uploaded check the eventual actions that apply to that specific country and ask for more data).
 
 ## How to Deploy
 Provide instructions for setting up and deploying the application in a local or production environment.
