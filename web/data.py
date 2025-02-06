@@ -69,3 +69,4 @@ class Policy(db.Model):
     policy_id: int = db.Column(db.Integer, primary_key=True)
     policy_name: str = db.Column(db.String(255), nullable=False)
     policy_version: str = db.Column(db.String(50), nullable=False)
+    policy_file_path: str = db.Column(db.String(255), nullable=False)
