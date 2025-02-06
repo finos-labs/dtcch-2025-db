@@ -1,5 +1,4 @@
 import os
-import json
 
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
@@ -95,7 +94,7 @@ def kyc_process_insert_risks(risk_assessment, kyc_id:int):
         session.rollback()
 
 
-def kyc_process_check_status_actions(uuid: int) -> int:
+def kyc_process_check_status_actions(uuid: str) -> int:
     action = session.query(Actions).filter_by(uuid=uuid).first()
     actions_from_kyc_process = session.query(Actions).filter_by(kyc_id=action.kyc_id).all()
     all_done = all(action.latest_action_activity == "DONE" for action in actions_from_kyc_process)

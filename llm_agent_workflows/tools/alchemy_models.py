@@ -49,7 +49,7 @@ class Actions(Base):
     # Composite Primary Key
     kyc_id = Column(Integer, ForeignKey("kyc_process.kyc_id", ondelete="CASCADE"), primary_key=True)
     data_point = Column(String(255), primary_key=True)
-    uuid = Column(Integer, primary_key=True, default=uuid.uuid4())
+    uuid = Column(Text, primary_key=True, default=uuid.uuid4())
 
     # Other columns
     latest_action_activity = Column(String(50), nullable=False)
