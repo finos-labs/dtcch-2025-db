@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, ValidationError
 from tools.variables_extractor import VariablesExtractor
 from agents.agent_extract_variables import AgentExtractVariables
 from tools.pdf_handler_type import PDFHandlerType
-#from tools.db_functions import fetch_policy_file_path, fetch_client_data_file_path, update_action_in_progress, fetch_all_data_points_variables
+from tools.db_functions import fetch_policy_file_path, fetch_client_data_file_path, update_action_in_progress, fetch_all_data_points_variables
 import json
 import argparse
 import fitz
