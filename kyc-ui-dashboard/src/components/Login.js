@@ -13,7 +13,7 @@ const LoginPage = () => {
     try {
       const response = await loginUser({ username, password });
       localStorage.setItem("token", response.data.access_token);
-      navigate("/dashboard"); // Redirect to dashboard
+      navigate("/landingPage"); // Redirect to dashboard
     } catch (err) {
       setError("Invalid username or password");
     }

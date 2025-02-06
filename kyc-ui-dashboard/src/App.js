@@ -8,6 +8,7 @@ import {
 import Dashboard from "./components/Dashboard";
 import KycDetails from "./components/KycDetails";
 import LoginPage from "./components/Login";
+import LandingPage from "./components/LandingPage";
 import DocumentUpload from "./components/DocumentUpload";
 
 const App = () => {
@@ -15,8 +16,9 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/kyc/:kycId" element={<KycDetails />} />
+        <Route path="/landingPage" element={<LandingPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/upload" element={<DocumentUpload />} />
+        <Route path="/admin" element={<DocumentUpload />} />
         <Route path="/" element={<LoginPage />} />
       </Routes>
     </Router>

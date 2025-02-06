@@ -81,9 +81,9 @@ const KycDetails = () => {
     );
   }
 
-  const statuses = ["New", "Verification", "Completed"];
+  const statuses = ["New", "In progress", "Completed"];
   const currentMilestoneIndex = statuses.indexOf(
-    capitalizeFirstLetter("Verification") || ""
+    capitalizeFirstLetter(kycDetail.status) || ""
   );
 
   // Open modal
@@ -100,6 +100,15 @@ const KycDetails = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
+      {/* Back to Dashboard Button */}
+      <div className="mb-4">
+        <button
+          onClick={() => navigate("/dashboard")}
+          className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-900"
+        >
+          ← Back to Dashboard
+        </button>
+      </div>
       {/* KYC Details Header */}
       <div className="bg-white p-6 rounded-lg shadow-md mb-6">
         <h2 className="text-2xl font-semibold mb-4">KYC Details</h2>
@@ -139,20 +148,26 @@ const KycDetails = () => {
 
           {/* Status */}
           <div className="flex items-center space-x-3 col-span-1 md:col-span-2">
-            <span className="text-gray-500 font-semibold">🚦 Status:</span>
+            <span className="text-gray-500 font-semibold">🚦 Risk:</span>
             <span
               className={`px-3 py-1 rounded-lg text-white text-sm font-semibold
           ${
-            kycDetail?.status === "Completed"
+            kycDetail?.risk_tier === "Low"
               ? "bg-green-500"
-              : kycDetail?.status === "Verification"
+              : kycDetail?.risk_tier === "Medium"
               ? "bg-yellow-500"
               : "bg-red-500"
           }
         `}
             >
-              {kycDetail?.status || "N/A"}
+              {kycDetail?.risk_tier || "N/A"}
             </span>
+          </div>
+          {/* Risk Summary Paragraph */}
+          <div className="col-span-2 mt-4">
+            <p className="text-gray-700 text-sm">
+              <strong>Risk Summary:</strong> kycDetail.risk_assessment_summary
+            </p>
           </div>
         </div>
 
@@ -235,9 +250,12 @@ const KycDetails = () => {
       </div>
 
       {/* Retrigger KYC Button */}
-      <div className="mt-6 flex justify-left">
+      <div className="mt-6 flex justify-between">
         <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
           Retrigger KYC
+        </button>
+        <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+          Escalate to AFC
         </button>
       </div>
 

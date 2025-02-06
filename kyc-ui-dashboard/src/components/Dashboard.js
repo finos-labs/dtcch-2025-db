@@ -7,6 +7,7 @@ import {
   triggerKyc,
 } from "./api";
 import { useNavigate } from "react-router-dom";
+import appImage from "./../images/favicon.webp"; // Import the image
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
@@ -16,7 +17,12 @@ const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedClient, setSelectedClient] = useState("");
   const [selectedPolicy, setSelectedPolicy] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc"); // "asc" or "desc"
+  const [sortOrder, setSortOrder] = useState({
+    kyc_id: "asc", // Default sort order for KYC ID
+    client_name: "asc", // Default sort order for Client Name
+    policy_name: "asc", // Default sort order for Policy
+    trigger_date: "asc", // Default sort order for Trigger Date
+  });
 
   const [clients, setClients] = useState([]);
   const [policies, setPolicies] = useState([]);
@@ -78,7 +84,11 @@ const Dashboard = () => {
     }
   };
 
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedClient("");
+    setSelectedPolicy("");
+  };
 
   const handleSubmit = async () => {
     if (!selectedClient || !selectedPolicy) {
@@ -93,7 +103,7 @@ const Dashboard = () => {
       };
 
       const response = await triggerKyc(requestData);
-      alert("New Kyc is triggrered !");
+      alert("New KYC triggered!");
       // Add the new KYC request to the state
 
       const kycResponse = await getKycRequests();
@@ -111,44 +121,81 @@ const Dashboard = () => {
     )
   );
 
-  const handleSortById = () => {
-    const sortedData = [...kycRequests].sort((a, b) =>
-      sortOrder === "asc" ? b.kyc_id - a.kyc_id : a.kyc_id - b.kyc_id
-    );
+  const handleSort = (column) => {
+    const newSortOrder = sortOrder[column] === "asc" ? "desc" : "asc";
+    setSortOrder({
+      ...sortOrder,
+      [column]: newSortOrder,
+    });
+
+    const sortedData = [...kycRequests].sort((a, b) => {
+      if (column === "kyc_id") {
+        return newSortOrder === "asc"
+          ? a.kyc_id - b.kyc_id
+          : b.kyc_id - a.kyc_id;
+      }
+      if (column === "client_name") {
+        return newSortOrder === "asc"
+          ? a.client_name.localeCompare(b.client_name)
+          : b.client_name.localeCompare(a.client_name);
+      }
+      if (column === "policy_name") {
+        return newSortOrder === "asc"
+          ? a.policy_name.localeCompare(b.policy_name)
+          : b.policy_name.localeCompare(a.policy_name);
+      }
+      if (column === "trigger_date") {
+        return newSortOrder === "asc"
+          ? new Date(a.trigger_date) - new Date(b.trigger_date)
+          : new Date(b.trigger_date) - new Date(a.trigger_date);
+      }
+      return 0;
+    });
 
     setKycRequests(sortedData);
-    setSortOrder(sortOrder === "asc" ? "desc" : "asc"); // Toggle sort order
   };
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       {/* User Info & Logout */}
       <div className="bg-white p-6 rounded-lg shadow-md flex items-center justify-between mb-6">
-        {user ? (
-          <div className="flex items-center gap-4">
-            <img
-              src={user.avatar || "https://i.pravatar.cc/100"}
-              alt="Avatar"
-              className="w-16 h-16 rounded-full border-2 border-gray-300 shadow-sm"
-            />
-            <div>
-              <h2 className="text-xl font-semibold text-gray-800">
-                {user.name}
-              </h2>
-              <p className="text-gray-500">{user.email}</p>
-              <p className="text-gray-600 font-medium">{user.department}</p>
-            </div>
+        {/* Left Side: AI KYC Agent Text */}
+        <div className="flex items-center">
+          <img src={appImage} alt="AI KYC" className="mr-4 w-20 h-20" />
+          <div className="flex-1">
+            <p className="font-bold text-5xl text-gray-800">AI KYC Agent</p>
           </div>
-        ) : (
-          <p className="text-gray-500">Loading user data...</p>
-        )}
+        </div>
 
-        <button
-          onClick={handleLogout}
-          className="text-red-500 hover:text-red-600 font-semibold px-4 py-2 rounded transition"
-        >
-          Logout
-        </button>
+        {/* Right Side: User Details and Logout Button */}
+        <div className="flex items-center gap-4">
+          {user ? (
+            <>
+              <img
+                src={user.avatar || "https://i.pravatar.cc/100"}
+                alt="Avatar"
+                className="w-16 h-16 rounded-full border-2 border-gray-300 shadow-sm"
+              />
+              <div>
+                <h2 className="text-xl font-semibold text-gray-800">
+                  {user.name}
+                </h2>
+                <p className="text-gray-500">{user.email}</p>
+                <p className="text-gray-600 font-medium">{user.department}</p>
+
+                {/* Logout Button */}
+                <button
+                  onClick={handleLogout}
+                  className="text-blue-500 hover:text-red-600 font-semibold px-4 py-2 rounded transition"
+                >
+                  Logout
+                </button>
+              </div>
+            </>
+          ) : (
+            <p className="text-gray-500">Loading user data...</p>
+          )}
+        </div>
       </div>
 
       {/* Search Input */}
@@ -170,13 +217,28 @@ const Dashboard = () => {
             <tr className="bg-gray-200">
               <th
                 className="px-4 py-2 border cursor-pointer"
-                onClick={handleSortById}
+                onClick={() => handleSort("kyc_id")}
               >
-                KYC ID {sortOrder === "asc" ? "🔼" : "🔽"}
+                KYC ID {sortOrder.kyc_id === "asc" ? "↑" : "↓"}
               </th>
-              <th className="border p-3">Client Name</th>
-              <th className="border p-3">Policy</th>
-              <th className="border p-3">Trigger Date</th>
+              <th
+                className="px-4 py-2 border cursor-pointer"
+                onClick={() => handleSort("client_name")}
+              >
+                Client Name {sortOrder.client_name === "asc" ? "↑" : "↓"}
+              </th>
+              <th
+                className="px-4 py-2 border cursor-pointer"
+                onClick={() => handleSort("policy_name")}
+              >
+                Policy {sortOrder.policy_name === "asc" ? "↑" : "↓"}
+              </th>
+              <th
+                className="px-4 py-2 border cursor-pointer"
+                onClick={() => handleSort("trigger_date")}
+              >
+                Trigger Date {sortOrder.trigger_date === "asc" ? "↑" : "↓"}
+              </th>
               <th className="border p-3">Status</th>
             </tr>
           </thead>
@@ -191,17 +253,27 @@ const Dashboard = () => {
                   <td className="border p-3">{request.kyc_id}</td>
                   <td className="border p-3">{request.client_name}</td>
                   <td className="border p-3">{request.policy_name}</td>
-                  <td className="border p-3">{request.trigger_date}</td>
+                  <td className="border p-3">
+                    {new Date(request.trigger_date).toLocaleDateString(
+                      "en-US",
+                      {
+                        weekday: "long", // e.g., 'Monday'
+                        year: "numeric", // e.g., '2025'
+                        month: "long", // e.g., 'February'
+                        day: "numeric", // e.g., '6'
+                      }
+                    )}
+                  </td>
                   <td
                     className={`border p-3 font-semibold ${
-                      request.status === "Approved"
+                      request.status === "COMPLETED"
                         ? "text-green-500"
-                        : request.status === "Pending"
+                        : request.status === "INPROGRESS"
                         ? "text-yellow-500"
-                        : "text-red-500"
+                        : "text-blue-500"
                     }`}
                   >
-                    {request.status}
+                    {request.overall_status}
                   </td>
                 </tr>
               ))
