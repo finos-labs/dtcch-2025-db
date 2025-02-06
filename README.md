@@ -94,6 +94,7 @@ pip install requirements.txt
 ![KYC Agent Technical Flow](images/technical_flowchart.png)
 
 ## Autonomy diagram
+This diagram illustrates the current level of autonomy in the KYC landscape. As shown below, autonomy is categorized into five levels. It is important to note that most existing KYC tools fall under Level 1 or 2, where KYC Operations drive the process, potentially with AI answering KYC-related questions. This solution aims to achieve Level 4, where an AI Agent can manage the entire process, with KYC Operations providing supervision.
 
 ![AI KYC Agent Autonomy pyramid](images/autonomy.png)
 

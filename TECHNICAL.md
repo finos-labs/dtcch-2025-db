@@ -68,8 +68,8 @@ From relevant policy documents we want to extract data to end up with a set of K
 4. **Output CSV** with section numbers, actions, data points and variables  (should be versioned, at least in the filename)
 5. **Call the backend** POST route to save document in S3 and map them to database
 6. [[Roadmap Stage 2 - Planned Features](#stage-2---planned-features)] - **Human Reiteration Loop** : An admin should be added in the loop to supervise the steps. This can be modeled an **Accept/Refuse** UI button after each step 1-4. We need to decide what action the user can take in case they refuse. Current options are:
-- Change of prompt
-- Change of generated outputs (which will always be in xlsx format)
+    - Change of prompt
+    - Change of generated outputs (which will always be in xlsx format)
 
 ### 2. KYC Ops Process 
 1. Background check with **X policy for Y client** (triggered by KYC-ops) 
@@ -111,7 +111,7 @@ In this section, we outline the structure of the data used within the system. Th
 
 ### Key Data Tables:
 1. **Actions Table**: For each KYC process, there are multiple actions which relate to it. This table contains the Action Description and its corresponding data point. It also contains the latest action activity, correspinding to the evidence sources, Internal, External and Client. It also contains the corresponding variables, which are stored as lists of the values. 
-2. **KYC Process Table**: Tracks all KYC process in place. It maps the KYC Process with the Client ID, Policy ID and Ops ID. It also includes the initiation time stamp and Overall Status of the KYC proces. 
+2. **KYC Process Table**: Tracks all KYC process in place. It maps the KYC Process with the Client ID, Policy ID and Ops ID. It also includes the initiation time stamp and Overall Status of the KYC proces. This also contains the corresponding risk summary and risk tier. 
 3. **KYC Ops Table**: Stores the KYC Operations details, including the ID, Name and Designation. 
 4. **Client Table**: Stores client information, including Client ID, Client Name and the file path of the client. 
 5. **Policy Table**: Stores policy information, including Policy ID, Policy Name, Policy Version and the file path of the policy. 
@@ -126,11 +126,15 @@ List and explain the major components or modules of the system. Each component c
 - **Email Service**: Sends ...
 
 ## Feature Roadmap
-List and describe the key features that are implemented or planned. This will help developers and contributors understand the scope of each feature.
+Here are the key features that are implemented in Stage 1 and planned for Stage 2. 
 
 ### Stage 1 - Implemented Features:
-- **....**: ....
-- **....**: ....
+- **Policy Document Uploading**: A policy document can be uploaded by KYC Operations and is stored in the database. 
+- **Policy Document Processing**: The uploaded policy document is processed with the LLM according to the steps listed in [KYC Policy Procedure](#kyc-policy-procedure). Namely document to Sections, to Actions, To Data Points to Variables.
+- **Client Docuemnt Processing**: A policy document can be uploaded by Clients via email and is stored in the database. 
+- **Risk Assessment**: A risk assessment with the LLM is made based on mapping the client information and actions from the policy document. 
+- **KYC Ops UI:** A functional interface allowing KYC Operations and Clients to upload policy documents, view processing results, and interact with the system.
+
 
 Following the successful implementation of Stage 1, we have outlined a set of additional features for Stage 2 to further enhance functionality and performance. These planned features have been stipulated in the [Project Structure](#the-structure-consists-of-two-processes) and aim to build on the existing foundation, addressing key improvements and expanding capabilities. 
 
