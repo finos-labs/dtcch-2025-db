@@ -7,11 +7,13 @@ from pydantic import BaseModel, ConfigDict, ValidationError
 from tools.variables_extractor import VariablesExtractor
 from agents.agent_extract_variables import AgentExtractVariables
 from tools.pdf_handler_type import PDFHandlerType
-from tools.db_functions import fetch_policy_file_path, fetch_client_data_file_path, update_action_in_progress, fetch_all_data_points
+from tools.db_functions import fetch_policy_file_path, fetch_client_data_file_path, update_action_in_progress, fetch_all_data_points_variables
 import json
 import argparse
 import fitz
 from pathlib import Path
+import os
+import time
 
 class SectionOutput(BaseModel):
     model_config = ConfigDict(strict=True)
@@ -43,8 +45,8 @@ def main():
     client_data_file_path = fetch_client_data_file_path(client_id=args.client_id)
 
     output_path = args.output_path
-    pdf_path = args.policy_pdf
-    pdf_name = Path(pdf_path).name
+    # pdf_path = args.policy_pdf
+    pdf_name = Path(policy_pdf_document_path).name
 
     variables_options = VariablesExtractor().extract_variable_values(args.variable_references_path)
     policyHandler = PDFHandlerType()
@@ -92,7 +94,7 @@ def main():
                 continue
             # Analyze the page content
             sentences = policyHandler._analyze_page_with_llm(page_text, page_num + 1)
-            print("\nStarting Content Creation Workflow...\n")
+            print("\nStarting Client Policy Check Workflow...\n")
             # Add metadata to each sentence
             for i in range(len(sentences)):
                 sentences[i]["pdf_name"] = pdf_name
@@ -122,18 +124,14 @@ def main():
             import traceback
             traceback.print_exc()
             
-    # section = ["Standard identification procedures will usually apply.",#
-    #            "In some cases, the firm holding the existing account may be willing to confirm the identity of the account holder to the new firm, and to provide evidence of the identification checks carried out. ",
-    #            "Care will need to be exercised by the receiving firm to be satisfied that the previous verification procedures provide an appropriate level of assurance for the new account, which may have different risk characteristics from the one held with the other firm."]
-
-    if output_path is None:
-            policy_name, _ = os.path.splitext(pdf_name)
-            timestamp = time.strftime('%Y%m%d_%H%M%S')
-            output_path = f"./output/{policy_name}_processed_{timestamp}.json"
+    # if output_path is None:
+    #         policy_name, _ = os.path.splitext(pdf_name)
+    #         timestamp = time.strftime('%Y%m%d_%H%M%S')
+    #         output_path = f"./output/{policy_name}_processed_{timestamp}.json"
     # Create output directory if it doesn't exist
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, 'w') as output_file:
-        json.dump(result, output_file)
+    # os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    # with open(output_path, 'w') as output_file:
+    #     json.dump(result, output_file)
     
     
     ############ Agent Ops Workflow 2 Begins
@@ -145,14 +143,14 @@ def main():
     with open(client_data_file_path, "r", encoding="utf-8") as file:
         client_internal_data = file.read()
         
-    #Fetch all required data points from database
-    client_required_data_points = fetch_all_data_points(kyc_id=args.kyc_id)
+    #Fetch all required data points and corresponding variables from database
+    client_required_data_points_variables = fetch_all_data_points_variables(kyc_id=args.kyc_id)
     
     agent_kyc_ops = AgentKYCBackgroundCheckOps(client_internal_data=client_internal_data,
-                                client_required_data_points=client_required_data_points)
+                                client_required_data_points_variables=client_required_data_points_variables)
     
     # Create a crew for kyc ops
-    crew = Crew(
+    crew_ops = Crew(
         agents=[agent_kyc_ops],
         max_iterations=1,  # Agents will iterate through tasks twice
         verbose=False
@@ -163,7 +161,8 @@ def main():
     
      # Starting background check workflow
     print("\nStarting background check...\n")
-    results = crew.execute_tasks([background_check_task])
+    results = crew_ops.execute_tasks([background_check_task])
+    pass
     
 
 if __name__ == "__main__":
