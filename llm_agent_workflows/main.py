@@ -27,21 +27,24 @@ def main():
     parser.add_argument('--variable_references_path', '-v',
                        required=True,
                        help='Path to the directory containing CSV files, one for each variable with possible values')
-    parser.add_argument('--output', '-o',
-                       help='Output JSON file path (default: ./output/processed_policy_TIMESTAMP.json)')
+    parser.add_argument('--output_path', '-o',
+                       help='Output JSON file path (default: ./output/<policy_filename>_policy_TIMESTAMP.json)')
     args = parser.parse_args()
 
     # Load environment variables
     load_dotenv()
 
+    output_path = args.output_path
+    pdf_path = args.policy_pdf
+    pdf_name = Path(pdf_path).name
+
     variables_options = VariablesExtractor().extract_variable_values(args.variable_references_path)
     policyHandler = PDFHandlerType()
     agent_kyc_review_policy = AgentKYCReviewPolicy()
     agent_extract_variables = AgentExtractVariables()
-    pdf_path = args.policy_pdf
 
-    # Parse page range if provided
     pages = None
+
     if args.pages:
         if '-' in args.pages:
             start, end = map(int, args.pages.split('-'))
@@ -49,17 +52,17 @@ def main():
         else:
             pages = [int(p) for p in args.pages.split(',')]
 
-    # Create a crew with the kyc review policy agent
     crew = Crew(
         agents=[agent_kyc_review_policy],
         max_iterations=1,  # Agents will iterate through tasks twice
         verbose=False
     )
 
+    result = []
+
     try:
         print(f"Opening PDF file: {pdf_path}")
         doc = fitz.open(pdf_path)
-        pdf_name = Path(pdf_path).name
         total_pages = len(doc)
         print(f"Total pages in PDF: {total_pages}")
         # Determine which pages to process
@@ -70,7 +73,6 @@ def main():
             pages_to_process = range(start - 1, min(end, total_pages))
         else:
             pages_to_process = [p - 1 for p in pages if 1 <= p <= total_pages]
-        result = []
         for page_num in pages_to_process:
             print(f"Processing page {page_num + 1}")
             page = doc[page_num]
@@ -85,7 +87,6 @@ def main():
             # Add metadata to each sentence
             for i in range(len(sentences)):
                 sentences[i]["pdf_name"] = pdf_name
-                # validate_data_point = []
                 sentence = sentences[i]["sentence"]
                 task_action_to_data_point = agent_kyc_review_policy.task_actions_to_data_points(previous_task=sentence)
                 tasks = [task_action_to_data_point]
@@ -101,36 +102,25 @@ def main():
                         dict_result = json.loads(action_result)
                         variables = agent_extract_variables._analyze_quote_and_action(dict_result['action'], dict_result['quote'], variables_options)
                         dict_result.update(variables)
-                        # validate_data_point.append(dict_result)
                         sentences[i].pop("sentence")
                         sentences[i].update(dict_result)
+                        result.append(sentences[i])
                 except ValidationError as e:
                     print(e)
-
-                # print(json.dumps(validate_data_point))
-                
-            result.append(sentences)
-        print(json.dumps(result)) 
 
     except Exception as e:
             print(f"Error processing PDF: {str(e)}")
             import traceback
             traceback.print_exc()
-            
-    section = ["Standard identification procedures will usually apply.",#
-               "In some cases, the firm holding the existing account may be willing to confirm the identity of the account holder to the new firm, and to provide evidence of the identification checks carried out. ",
-               "Care will need to be exercised by the receiving firm to be satisfied that the previous verification procedures provide an appropriate level of assurance for the new account, which may have different risk characteristics from the one held with the other firm."]
 
-    
-
-    # TODO: do this outside the for loop we will add, adding to the json the filename
-    # if vars.output_path is None:
-    #         timestamp = time.strftime('%Y%m%d_%H%M%S')
-    #         output_path = f"./output/processed_policy_{timestamp}.json"
-    # # Create output directory if it doesn't exist
-    # os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    # with open(output_path, 'w') as output_file:
-    #     json.dump(validate_data_point, output_file)
+    if output_path is None:
+            policy_name, _ = os.path.splitext(pdf_name)
+            timestamp = time.strftime('%Y%m%d_%H%M%S')
+            output_path = f"./output/{policy_name}_processed_{timestamp}.json"
+    # Create output directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, 'w') as output_file:
+        json.dump(result, output_file)
     
 
 if __name__ == "__main__":
