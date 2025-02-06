@@ -1,3 +1,4 @@
+import uuid
 from sqlalchemy import Column, Integer, String, Text, ForeignKey, TIMESTAMP, func, ARRAY
 from sqlalchemy.orm import relationship, declarative_base
 
@@ -48,6 +49,7 @@ class Actions(Base):
     # Composite Primary Key
     kyc_id = Column(Integer, ForeignKey("kyc_process.kyc_id", ondelete="CASCADE"), primary_key=True)
     data_point = Column(String(255), primary_key=True)
+    id = Column(String(36), primary_key=True, default=uuid.uuid4())
 
     # Other columns
     latest_action_activity = Column(String(50), nullable=False)
