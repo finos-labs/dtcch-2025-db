@@ -74,9 +74,9 @@ def fetch_all_data_points_variables(kyc_id):
         data_points_variables.append((kyc_record.data_point, variable_dict))
     return data_points_variables
 
-def actions_insert_processed_evidence(evidence, kyc_id, data_point):
+def actions_insert_processed_evidence(evidence, uuid):
     try:
-        session.query(Actions).filter_by(kyc_id=kyc_id, data_point=data_point).update({Actions.client_evidence_summary:evidence})
+        session.query(Actions).filter_by(uuid=uuid).update({Actions.client_evidence_summary:evidence})
         session.commit()
         print ("Inserted Evidence extract in the database.")
     except Exception as e:

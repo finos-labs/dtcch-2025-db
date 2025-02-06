@@ -11,7 +11,7 @@ def worker_function(uid, files):
     e = EvidenceHandler()
     for type, files in files.items():
         for file in files:
-            e.process_evidence(file, "", uid)
+            e.process_evidence(file, uid)
             return
 
 

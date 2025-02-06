@@ -23,15 +23,15 @@ class EvidenceHandler:
         print("Extracted Text:", text)
         return text
 
-    def _data_clean_and_insert_in_db(self, text_extracted_ocr: str, kyc_id: int, data_point: str):
+    def _data_clean_and_insert_in_db(self, text_extracted_ocr: str, uuid: str):
         """Clean and format extracted text and insert into the database."""
 
         cleaned_text = self.agent_evidence._evidence_clean(text_extracted_ocr)
         print ("Cleaned Text:", cleaned_text)
-        actions_insert_processed_evidence(cleaned_text, kyc_id, data_point)
+        actions_insert_processed_evidence(cleaned_text, uuid)
 
-    def process_evidence(self, image_path: str, kyc_id: int, data_point: str):
+    def process_evidence(self, image_path: str, uuid: str):
         """Process extracted text evidence and insert into the database."""
 
         text_extracted_ocr = self.extract_text_ocr(image_path)
-        self._data_clean_and_insert_in_db(text_extracted_ocr, kyc_id, data_point)
+        self._data_clean_and_insert_in_db(text_extracted_ocr, uuid)
