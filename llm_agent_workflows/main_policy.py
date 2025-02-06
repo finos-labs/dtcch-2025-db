@@ -25,7 +25,7 @@ def main():
 
     parser = argparse.ArgumentParser(description='Extract KYC variables with AWS Bedrock analysis')
     parser.add_argument('--policy_id', '-pid', required=True, help='ID of the policy to be processed')
-    parser.add_argument('--pages', '-pg', required=False, default='67', help='Page range (e.g., "1-20" or "1,2,3")')
+    parser.add_argument('--pages', '-pg', required=False, default='70', help='Page range (e.g., "1-20" or "1,2,3")')
     parser.add_argument('--variable_references_path', '-v',
                        required=False,
                        default='./llm_agent_workflows/tools/input/variables_reference',

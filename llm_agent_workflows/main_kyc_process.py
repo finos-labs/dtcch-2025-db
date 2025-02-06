@@ -53,7 +53,7 @@ def main():
     # Starting background check workflow
     print("\nStarting background check...\n")
     results = crew_ops.execute_tasks([background_check_task])
-    pass
+    result_json = list(results.values())[0]
 
 if __name__ == "__main__":
     main()
