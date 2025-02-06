@@ -95,7 +95,7 @@ def upload_files():
     if len(files) == 0:
         return jsonify({"error": "No files part in the request"}), 400
 
-    uploaded_files = {}
+    uploaded_files = []
     upload_folder = os.path.join(UPLOAD_FOLDER, user_hash)
     if not os.path.exists(upload_folder):
         os.makedirs(upload_folder)
@@ -113,13 +113,13 @@ def upload_files():
                 filename = file.filename
                 file_path = os.path.join(upload_folder, file_type, filename)
                 file.save(file_path)
-                uploaded_files[uploaded_files] = file_path
+                uploaded_files.append(filename)
                 to_process[file_type].append(file_path)
             else:
                 return jsonify({"error": f"File type not allowed: {file.filename}"}), 400
 
     from .data_extractor import process_files
-    process_files(user_hash, uploaded_files)
+    process_files(user_hash, to_process)
     #return jsonify({"message": "Files uploaded successfully", "uploaded_files": uploaded_files}), 200
     return "<h1>Files Uploaded Successfully!</h1>", 200
 
