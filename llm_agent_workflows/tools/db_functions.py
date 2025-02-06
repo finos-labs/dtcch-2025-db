@@ -1,8 +1,9 @@
-import json
 import os
+import json
 
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
-
 from alchemy_models import Actions, KycProcess
 
 load_dotenv()
@@ -11,10 +12,10 @@ load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Create the database engine
-#engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URL)
 
 # Create a session factory
-#SessionLocal = sessionmaker(bind=engine)
+SessionLocal = sessionmaker(bind=engine)
 
 # Create a session
 session = SessionLocal()
