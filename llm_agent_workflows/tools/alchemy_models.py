@@ -64,7 +64,7 @@ class Actions(Base):
     action_description = Column(Text)
     client_evidence_file_path = Column(Text)
     client_evidence_summary = Column(Text)
-    evidence_id = Column(Integer)
+    uuid = Column(Text)
 
 # Table: action_data_point
 class ActionDataPoint(Base):
