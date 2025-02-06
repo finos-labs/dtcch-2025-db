@@ -1,0 +1,63 @@
+**Client KYC Profile**
+
+### **1. Basic Identification Information**
+- **Full Name:** AFC Bournemouth Limited
+- **Date of Incorporation:** 1st July 1899
+- **Country of Incorporation:** United Kingdom
+- **Company Registration Number:** 12345678
+- **Government-Issued ID Type:** Company Registration Certificate
+- **Registration Number:** X98765432
+
+### **2. Contact Details**
+- **Registered Office Address:** Vitality Stadium, Kings Park, Bournemouth, BH7 7AF, UK
+- **Residential Address:** Vitality Stadium, Kings Park, Bournemouth, BH7 7AF, UK
+- **Trading Address:** Vitality Stadium, Kings Park, Bournemouth, BH7 7AF, UK
+- **Phone Number:** +44 20 7946 0123
+- **Email Address:** info@afcb.co.uk
+- **Website:** www.afcb.co.uk
+
+### **3. Financial Information**
+- **Source of Funds:** Ticket sales, sponsorships, and broadcasting rights
+- **Source of Wealth:** Club revenue and investment
+- **Annual Revenue:** £100 million
+- **Expected Transaction Volume & Value:** High (£5 million - £50 million per month)
+- **Bank Account Details:**
+  - **Bank Name:** Barclays Bank
+  - **IBAN:** GB29BARC12345678901234
+  - **SWIFT Code:** BARCGB22
+  - **Account Number:** 5678901234
+- **Tax Residency:** United Kingdom
+
+### **4. Business / Employment Details**
+- **Business Type:** Professional Football Club
+- **Industry:** Sports & Entertainment
+- **Nature of Business:** Professional Football Operations
+- **Ultimate Beneficial Owners (UBOs):** Shareholders and Investors
+- **Shareholding Structure:** Majority owned by investors and club stakeholders
+- **Politically Exposed Person (PEP) Status:** No
+
+### **5. Risk & Compliance Information**
+- **Politically Exposed Person (PEP) Status:** No
+- **Sanctions / Watchlist Screening Results:** No matches found
+- **AML (Anti-Money Laundering) Risk Assessment:** Low
+- **Adverse Media Checks:** No adverse reports
+- **Past Criminal / Fraudulent History:** None
+- **Previous KYC Status & Reviews:** Last updated in 2023
+- **Client Risk Rating:** Low
+
+### **6. Supporting Documents**
+- **Government-Issued ID Document:** Company Registration Certificate (Scanned Copy Available)
+- **Proof of Address:** Utility Bill (Dated within last 3 months)
+- **Proof of Income / Wealth:** Financial Statements and Tax Returns
+- **Business Registration Certificate:** Available
+- **Memorandum & Articles of Association:** Available
+- **UBO Declaration Form:** Available
+- **Bank Reference Letter:** Available upon request
+
+### **7. Additional Information (For Enhanced Due Diligence, If Required)**
+- **Business Partners & Key Suppliers:** Various sponsors and commercial partners
+- **Geographic Locations of Business Operations:** United Kingdom
+- **Cross-Border Transactions:** Yes, for player transfers and international sponsorships
+- **Customer & Supplier Information:** Football fans, sponsors, and corporate partners
+- **Cryptocurrency Involvement:** No
+- **Additional Verification Documents:** None required at this time
