@@ -89,18 +89,18 @@ This command creates a new project folder with the following structure:
 ```
 dtcch-2025-db /
 ├── .gitignore
-├── pyproject.toml
+├── .github
 ├── README.md
 ├── .env
-└── src/
-    └── my_project/
-        ├── __init__.py
-        ├── main.py
-        ├── 
-        ├── 
-        └── config/
-            ├── agents.yaml
-            └── tasks.yaml
+└── database/
+    ├── 
+    ├── 
+    ├── 
+└── web-backend/
+└── web/
+└── kyc-ui-dashboard/
+└── llm_agent_workflows/
+
 ```
 
 
