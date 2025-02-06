@@ -2,8 +2,7 @@ import pytesseract
 from PIL import Image
 
 from agents.agent_evidence_process import AgentEvidence
-from tools import RiskHandler
-from .db_functions import actions_insert_processed_evidence
+from .db_functions import actions_insert_processed_evidence, kyc_process_check_status_actions
 
 RISK_PATH = "tools/input/risks/risks.csv"
 
@@ -32,20 +31,20 @@ class EvidenceHandler:
         cleaned_text = self.agent_evidence._evidence_clean(text_extracted_ocr)
         print ("Cleaned Text:", cleaned_text)
         actions_insert_processed_evidence(cleaned_text, uuid)
-        # TODO: update status of evidence latest_action_activity
 
     def process_evidence(self, image_path: str, uuid: str):
         """Process extracted text evidence and insert into the database."""
 
         text_extracted_ocr = self.extract_text_ocr(image_path)
         self._data_clean_and_insert_in_db(text_extracted_ocr, uuid)
-        # TODO: get kyc_id from action from uuid, then check the status of the kyc_id related actions,
-        #  and if status all done then update kyc_process status to done
 
-        # TODO: then check status of kyc_process status and if done trigger risk assessment
+        # get kyc_id from action from uuid, then check the status of the kyc_id related actions, and if status all done then update kyc_process status to done
+        kyc_process_id = kyc_process_check_status_actions(uuid)
 
-        uuid = 2
         # the evidence will process the image and extract the text and insert it in the db
-        risk_handler = RiskHandler()
-        risk_handler.risk_assessment(RISK_PATH, kyc_id)
+        if kyc_process_id:
+            from tools import RiskHandler
+
+            risk_handler = RiskHandler()
+            risk_handler.risk_assessment(RISK_PATH, kyc_process_id)
 
