@@ -85,7 +85,7 @@ def actions_insert_processed_evidence(evidence, uuid):
         print(f"Error inserting evidence in the database: {str(e)}")
         session.rollback()
 
-def kyc_process_insert_risks(risk_assessment, kyc_id):
+def kyc_process_insert_risks(risk_assessment, kyc_id:int):
     try:
         session.query(KycProcess).filter_by(kyc_id=kyc_id).update({KycProcess.risk_tier:risk_assessment["risk_tier"], KycProcess.risk_assessment_summary:risk_assessment["risk_summary"]})
         session.commit()

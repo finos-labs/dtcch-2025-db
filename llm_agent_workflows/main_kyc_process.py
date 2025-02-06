@@ -3,7 +3,6 @@ from crew import Crew
 from pydantic import BaseModel, ConfigDict
 
 from agents.agent_kyc_background_check_specialist import AgentKYCBackgroundCheckOps
-from tools import EvidenceHandler, RiskHandler
 from tools.db_functions import fetch_all_data_points_variables, update_action_in_progress, fetch_client_data_file_path, fetch_processed_policy_json
 
 
@@ -55,19 +54,6 @@ def main():
     print("\nStarting background check...\n")
     results = crew_ops.execute_tasks([background_check_task])
     pass
-
-    RISK_PATH = "tools/input/risks/risks.csv"
-    evidence_handler = EvidenceHandler()
-    risk_handler = RiskHandler()
-
-    # TODO: this will be passed when this is triggered
-    kyc_id = 2
-    data_point = "Transaction Monitoring"
-    image_path = "tools/input/examples_evidence/evidence_driving_licence.jpeg"
-
-    # the evidence will process the image and extract the text and insert it in the db
-    evidence_handler.process_evidence(image_path, kyc_id, data_point)
-    risk_handler.risk_assessment(RISK_PATH, kyc_id, data_point)
 
 if __name__ == "__main__":
     main()
