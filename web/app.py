@@ -30,7 +30,8 @@ if not os.path.exists(UPLOAD_FOLDER):
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'docx', 'txt', 'jpg', 'png', 'jpeg'}
-app.config['KYC_RUN'] = os.environ.get('KYC_RUN', 'some_script.py')
+app.config['KYC_RUN'] = os.environ.get('KYC_RUN', 'test/kyc_script.py')
+app.config['POLICY_RUN'] = os.environ.get('POLICY_RUN', 'test/policy_script.py')
 
 if __name__ == '__main__':
     from api import *
