@@ -97,12 +97,17 @@ Ensure you're in the maion directory and copy and fill in your own corresponding
 
 ```bash
 cp .env.template .env
+open .env
+```
+Set the backedn endpoint for the frontend:
+```bash
+open kyc-ui-dashboard/src/config.js
 ```
 
 Fill in the config.py from the web backend. 
 ```bash
 cd web-backend
-config.py 
+open config.py 
 ```
 
 
@@ -112,6 +117,7 @@ config.py
 
     ```bash
     cd kyc-ui-dashboard
+    npm install
     npm run start
     ```
 
