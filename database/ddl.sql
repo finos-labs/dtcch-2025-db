@@ -17,7 +17,8 @@ CREATE TABLE policy (
     policy_id SERIAL PRIMARY KEY,
     policy_name VARCHAR(255) NOT NULL,
     policy_version VARCHAR(50) NOT NULL,
-    policy_file_path VARCHAR(255) NOT NULL
+    policy_file_path VARCHAR(255) NOT NULL,
+    processed_policy_json TEXT
 );
 
 -- Table: kyc_process
@@ -51,7 +52,7 @@ CREATE TABLE actions (
     action_description TEXT,
     client_evidence_file_path TEXT,
     client_evidence_summary TEXT,
-    evidence_id INT NOT NULL,
+    evidence_id INT,
     PRIMARY KEY (kyc_id, data_point),
     FOREIGN KEY (kyc_id) REFERENCES kyc_process(kyc_id) ON DELETE CASCADE
 );
