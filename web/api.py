@@ -1,4 +1,5 @@
-import os
+import os, asyncio
+
 from flask import request, jsonify, send_from_directory
 from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity
@@ -153,7 +154,9 @@ def get_kyc_list():
                            client.client_name,
                            policy.policy_name,
                            kyc_process.initiation_timestamp,
-                           kyc_process.overall_status))
+                           kyc_process.overall_status,
+                           kyc_process.risk_assessment_summary,
+                           kyc_process.risk_tier))
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -175,6 +178,13 @@ def get_clients_list():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+async def run_process(*args):
+    print('Starting process')
+    process = await asyncio.create_subprocess_exec(
+        'python', *args
+    )
+    print('Process PID started:', process.pid)
+
 @app.route('/triggerKyc', methods=['POST'])
 @jwt_required()
 def trigger_kyc():
@@ -193,11 +203,15 @@ def trigger_kyc():
             ops_id=ops_id,
             policy_id=data['policy_id'],
             initiation_timestamp=datetime.now(),
-            overall_status='NEW'
+            overall_status='NOT STARTED'
         )
 
         db.session.add(new_kyc)
         db.session.commit()
+        asyncio.run(run_process(app.config['KYC_RUN'],
+                                '--kyc_id',  str(new_kyc.kyc_id),
+                                '--policy_id',  str(new_kyc.policy_id),
+                                '--client_id',  str(new_kyc.client_id)))
     except Exception as e:
         db.session.rollback()
         return jsonify({'error': str(e)}), 500
@@ -222,7 +236,9 @@ def kyc_details(kyc_id):
                            client.client_name,
                            policy.policy_name,
                            kyc_process.initiation_timestamp,
-                           kyc_process.overall_status))
+                           kyc_process.overall_status,
+                           kyc_process.risk_assessment_summary,
+                           kyc_process.risk_tier))
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 

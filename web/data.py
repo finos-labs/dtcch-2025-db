@@ -12,8 +12,8 @@ class Kyc:
     policy_name: str
     trigger_date: datetime
     status: str
-    afc_status: str = 'none'
-    risk_rate: str = 'none'
+    risk_assessment_summary: str
+    risk_tier: str
 
 # Define the REQUEST_FOR_DOCS model
 class RequestForDocs(db.Model):
@@ -36,6 +36,8 @@ class KycProcess(db.Model):
     ops_id = db.Column(db.Integer, db.ForeignKey('kyc_ops.ops_id'), nullable=False)
     initiation_timestamp  = db.Column(db.DateTime, nullable=False)
     overall_status = db.Column(db.String(50), nullable=False)
+    risk_assessment_summary = db.Column(db.Text, nullable=False)
+    risk_tier = db.Column(db.Text, nullable=False)
 
 @dataclass
 class Actions(db.Model):
