@@ -78,7 +78,7 @@ def fetch_all_data_points_variables(kyc_id):
 
 def actions_insert_processed_evidence(evidence, uuid):
     try:
-        session.query(Actions).filter_by(uuid=uuid).update({Actions.client_evidence_summary:evidence})
+        session.query(Actions).filter_by(uuid=uuid).update({Actions.client_evidence_summary:evidence, Actions.latest_action_activity:"DONE"})
         session.commit()
         print ("Inserted Evidence extract in the database.")
     except Exception as e:
@@ -93,7 +93,26 @@ def kyc_process_insert_risks(risk_assessment, kyc_id:int):
     except Exception as e:
         print(f"Error inserting evidence in the database: {str(e)}")
         session.rollback()
-        
+
+
+def kyc_process_check_status_actions(uuid: int) -> int:
+    action = session.query(Actions).filter_by(uuid=uuid).first()
+    actions_from_kyc_process = session.query(Actions).filter_by(kyc_id=action.kyc_id).all()
+    all_done = all(action.latest_action_activity == "DONE" for action in actions_from_kyc_process)
+    if all_done:
+        session.query(KycProcess).filter_by(kyc_id=action.kyc_id).update({KycProcess.status: "DONE"})
+        print(f"Updated kyc_process status to DONE for kyc_id: {action.kyc_id}")
+        try:
+           session.commit()
+           return action.kyc_id
+        except Exception as e:
+            session.rollback()
+            print(f"Error updating kyc_process status: {str(e)}")
+            return 0
+    else:
+        print(f"Not all actions are done for kyc_id: {action.kyc_id}")
+        return 0
+
 def store_processed_policy_json(policy_id, result):
 
     session.query(Policy).filter_by(policy_id=policy_id).update({Policy.processed_policy_json:json.dumps(result)})
