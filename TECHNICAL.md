@@ -32,10 +32,8 @@ This documentation serves as a guide for engineers, developers, and contributors
 - [Data Structure](#data-structure)  
 - [Components](#components)  
 - [Feature Roadmap](#feature-roadmap)  
-- [How to Deploy](#how-to-deploy)  
 - [Contributing to the Project](#contributing-to-the-project)  
-  - [How to Contribute](#how-to-contribute)  
-  - [Code Review Process](#code-review-process) 
+  - [How to Deploy](#how-to-deploy)  
 - [DCO to sign commits](#using-dco-to-sign-your-commits)
 
 
@@ -68,8 +66,8 @@ From relevant policy documents we want to extract data to end up with a set of K
 4. **Output CSV** with section numbers, actions, data points and variables  (should be versioned, at least in the filename)
 5. **Call the backend** POST route to save document in S3 and map them to database
 6. [[Roadmap Stage 2 - Planned Features](#stage-2---planned-features)] - **Human Reiteration Loop** : An admin should be added in the loop to supervise the steps. This can be modeled an **Accept/Refuse** UI button after each step 1-4. We need to decide what action the user can take in case they refuse. Current options are:
-- Change of prompt
-- Change of generated outputs (which will always be in xlsx format)
+    - Change of prompt
+    - Change of generated outputs (which will always be in xlsx format)
 
 ### 2. KYC Ops Process 
 1. Background check with **X policy for Y client** (triggered by KYC-ops) 
@@ -78,7 +76,7 @@ From relevant policy documents we want to extract data to end up with a set of K
     2. Public -> [[Roadmap Stage 2 - Planned Features](#stage-2---planned-features)]: To be able to check Public Sources for publicly availible documnetation. 
     3. Client -> Provided by users via email
     - Two types of **integrations**:
-        1. Internal tools (DB)
+        1. Internal tools (DB) 
         2. Ask client via email (Automated)
     - [[Roadmap Stage 2 - Planned Features](#stage-2---planned-features)] - **Reiteration for extra Data Points**: Check for additional variables that may become apparent only after checking initital evidence (e.g. requested full name and passport as evidence, after passport uploaded check the eventual actions that apply to that specific country and ask for more data).
 3. **Identify risks** by interpreting correpsonding client information the to the datapoint. 
@@ -111,26 +109,47 @@ In this section, we outline the structure of the data used within the system. Th
 
 ### Key Data Tables:
 1. **Actions Table**: For each KYC process, there are multiple actions which relate to it. This table contains the Action Description and its corresponding data point. It also contains the latest action activity, correspinding to the evidence sources, Internal, External and Client. It also contains the corresponding variables, which are stored as lists of the values. 
-2. **KYC Process Table**: Tracks all KYC process in place. It maps the KYC Process with the Client ID, Policy ID and Ops ID. It also includes the initiation time stamp and Overall Status of the KYC proces. 
+2. **KYC Process Table**: Tracks all KYC process in place. It maps the KYC Process with the Client ID, Policy ID and Ops ID. It also includes the initiation time stamp and Overall Status of the KYC proces. This also contains the corresponding risk summary and risk tier. 
 3. **KYC Ops Table**: Stores the KYC Operations details, including the ID, Name and Designation. 
 4. **Client Table**: Stores client information, including Client ID, Client Name and the file path of the client. 
 5. **Policy Table**: Stores policy information, including Policy ID, Policy Name, Policy Version and the file path of the policy. 
 
 
 ## Components
-List and explain the major components or modules of the system. Each component can be linked to its implementation in the codebase.
+The system consists of the following major components, which ahve already been implemented.
 
-### Example:
-- **.. Module**: Handles user ..
-- **...**: Integrates ...
-- **Email Service**: Sends ...
+1. **Database Layer**
+   - Manages all database interactions using PostgreSQL.
+   - Utilizes an ORM (e.g., SQLAlchemy) for efficient data handling.
+   - Key models: `Client`, `KYC Ops`, `KYC Process`,`Actions`, `Policy`
+
+2. **Agents**
+    - Policy Agent: A crew of agents that are responsible for extracting KYC-related actions and data points from policy documents, structuring them into a standardised format, verifying and enhancing data templates, and saving the output.
+    - KYC Process Agent: A crew of agents are responsible for automating evidence collection for KYC background checks, prioritizing internal data sources, integrating client-provided information, identifying risks based on client data, and generating risk reports with summaries and matrices.
+
+3. **Web Backend**
+    -  Feature: Email service 
+    - When evidence is required from the client, an email is sent with a link to the UI to upload the requested document. The provided document is will be considered as evidence and is automatically processed. It can be then used in the KYC Ops Process.
+
+4. **Frontend - KYC UI Dashboard, Admin Policy UI, Client Document UI**:
+    - Handles all frontend of the KYC Operations dashboard, enabling KYC OPS to interact with the process. For instance, uploading policy documents and viewing risk assessment. 
+    - React.JS as frontend framework. 
+    - Flask a lightweight framework to connected with backend.
+
 
 ## Feature Roadmap
-List and describe the key features that are implemented or planned. This will help developers and contributors understand the scope of each feature.
+Here are the key features that are implemented in Stage 1 and planned for Stage 2. 
 
 ### Stage 1 - Implemented Features:
-- **....**: ....
-- **....**: ....
+- **Policy Document Uploading**: A policy document can be uploaded by KYC Operations and is stored in the database. 
+- **Policy Document Processing**: The uploaded policy document is processed with the LLM according to the steps listed in [KYC Policy Procedure](#kyc-policy-procedure). Namely document to Sections, to Actions, To Data Points to Variables.
+- **Client Docuemnt Processing**: A client document can be uploaded by Clients via email and is stored in the database. 
+- **Client Document Processing**: Client douments are read, processsed with OCR and stored in the database. 
+- **Risk Assessment**: A risk assessment with the LLM is made based on mapping the client information and handed evidence with actions from the policy document. 
+- **KYC Ops UI:** A functional interface allowing KYC Operations and Clients to upload policy documents, view processing results, and interact with the system.
+- **Admin Policy UI:** Upload the policy 
+- **Client Evidence UI:** Link is recieved via email,a dn document is uploaded on this UI. 
+
 
 Following the successful implementation of Stage 1, we have outlined a set of additional features for Stage 2 to further enhance functionality and performance. These planned features have been stipulated in the [Project Structure](#the-structure-consists-of-two-processes) and aim to build on the existing foundation, addressing key improvements and expanding capabilities. 
 
@@ -141,6 +160,14 @@ Following the successful implementation of Stage 1, we have outlined a set of ad
 - **Obtain Public Evidence**: As a second priority to internal data, before clients are asked for data it should be able to check Public Sources for publicly availible documnetation.  
 - **Reiteration for extra Data Points**: A check for additional variables that may become apparent only after checking initital evidence (e.g. requested full name and passport as evidence, after passport uploaded check the eventual actions that apply to that specific country and ask for more data).
 
+
+
+---
+
+# Contributing to the Project
+
+If you are interested in contributing, here's a guide to get started:
+
 ## How to Deploy
 Provide instructions for setting up and deploying the application in a local or production environment.
 
@@ -150,52 +177,7 @@ Provide instructions for setting up and deploying the application in a local or 
     git clone https://github.com/yourusername/repository-name.git
     ```
 2. Install dependencies: 
-    ```bash
-    npm install
-    ```
-3. Set up environment variables as needed.
-4. Run the application locally:
-    ```bash
-    npm start
-    ```
-5. For production deployment:
-    - Dockerize the application
-    - Use CI/CD pipelines for auto-deployment to AWS, Azure, etc.
-
----
-
-# Contributing to the Project
-
-If you are interested in contributing, here's a guide to get started:
-
-## How Features Were Implemented
-Provide a summary or technical overview of how features were built. This section can include the methodology, any frameworks used, testing approaches, and decisions made during implementation.
-
-### Example:
-- **Feature 1**: Brief explanation of the feature, the components it touches, and the reasoning behind implementation choices.
-- **Feature 2**: Same as above.
-
-## How to Contribute
-1. Fork the repository.
-2. Clone your fork:
-    ```bash
-    git clone https://github.com/yourusername/repository-name.git
-    ```
-3. Create a new branch for your feature:
-    ```bash
-    git checkout -b feature/your-feature
-    ```
-4. Implement the feature and write tests.
-5. Run all tests to ensure everything works.
-6. Push the changes to your fork:
-    ```bash
-    git push origin feature/your-feature
-    ```
-7. Create a pull request describing the changes.
-
-## Code Review Process
-Explain the process for code reviews, including any guidelines or checks that need to be followed.
-
+    - As listed in the [README](./README.md#getting-started).
 
 ## Using DCO to sign your commits
 

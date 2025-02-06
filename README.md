@@ -63,17 +63,71 @@ AI KYC AGENT has two flows which act as a comprehensive KYC Agent. The first flo
 
 ### 1. Installation
 
-Make sure you have Python 3.10 or later installed on your system.
+Make sure you have Python 3.10 or later installed on your system, as well as a Postgress instance. 
 
-To install the required dependencies, run:
+To install the required for frontend dependencies, naviagte to the directory and install requirements:
 
 ```shell
-pip install requirements.txt
+cd kyc-ui-dashboard
 ```
 
-### 2. Running Your AI KYC AGENT
+```shell
+pip install -r requirements.txt
+```
 
->TODO: add commands how to run it locally or in cloud
+To install the required for backend dependencies, naviiagte to the directory and install requirements:
+```shell
+cd ..
+cd llm_agent_workflows
+```
+
+```shell
+pip install -r requirements.txt
+```
+
+Install Pytesseract, follow the steps listed in [Pytesseract README](./README_pytesseract.md).
+
+Create the tables to store all your objects by running the folloing script [Database Schemas](./database/ddl.sql).
+
+For the email web backend run the folloing script [Database Schemas](./web-backend/schema.sql).
+
+### 2. Setting your environmet 
+
+Ensure you're in the maion directory and copy and fill in your own corresponding environment variables.
+
+```bash
+cp .env.template .env
+open .env
+```
+Set the backedn endpoint for the frontend:
+```bash
+open kyc-ui-dashboard/src/config.js
+```
+
+Fill in the config.py from the web backend. 
+```bash
+cd web-backend
+open config.py 
+```
+
+
+### 3. Running Your AI KYC AGENT
+
+1. Run the frontend:
+
+    ```bash
+    cd kyc-ui-dashboard
+    npm install
+    npm run start
+    ```
+
+2. Run the email service 
+
+    ```bash
+    cd web-backend
+    python run.py
+    ```
+
 
 # Functionality
 
@@ -94,6 +148,7 @@ pip install requirements.txt
 ![KYC Agent Technical Flow](images/technical_flowchart.png)
 
 ## Autonomy diagram
+This diagram illustrates the current level of autonomy in the KYC landscape. As shown below, autonomy is categorized into five levels. It is important to note that most existing KYC tools fall under Level 1 or 2, where KYC Operations drive the process, potentially with AI answering KYC-related questions. This solution aims to achieve Level 4, where an AI Agent can manage the entire process, with KYC Operations providing supervision.
 
 ![AI KYC Agent Autonomy pyramid](images/autonomy.png)
 
