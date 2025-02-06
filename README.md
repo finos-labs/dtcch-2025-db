@@ -4,7 +4,20 @@
 
 
 ## Project Name
-Automate Routine work of KYC process
+KYC Agent: Automate Routine work of KYC process
+
+### Disclaimer
+
+This repository contains an experimental AI-powered KYC (Know Your Customer) agent developed as part of a hackathon project. It is intended solely as a technology showcase and does not represent or reflect any actual KYC processes, policies, or compliance requirements of any organization, financial institution, or regulatory body.
+
+This project is provided as-is, without any warranties or guarantees regarding accuracy, security, or compliance with legal and regulatory frameworks. It should not be used in any production environment or relied upon for real-world identity verification or fraud prevention.
+
+By using this repository, you acknowledge that:
+
+This project is for demonstration and educational purposes only.
+The authors, contributors, and maintainers are not responsible for any misuse, legal implications, or consequences arising from its use.
+It is your responsibility to ensure compliance with applicable laws and regulations before implementing any KYC-related solutions.
+For any concerns or inquiries, please refer to the repository's license terms and contribution guidelines.
 
 ### Project Details
 
