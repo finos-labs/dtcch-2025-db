@@ -1,24 +1,73 @@
 from dotenv import load_dotenv
-from crew import Task, Crew
+from crew import Crew
 from agents.agent_kyc_review_policy import AgentKYCReviewPolicy
-from pdfplumber import PDF
 from pydantic import BaseModel, ConfigDict, ValidationError
 from tools.variables_extractor import VariablesExtractor
 from agents.agent_extract_variables import AgentExtractVariables
-from tools.pdf_handler_type import PDFHandlerType
+from tools.pdf_handler_type import PDFHandlerType, Sentence
 import json
 import argparse
 import fitz
 from pathlib import Path
 import time
 import os
+from typing import List, Dict
 
-class SectionOutput(BaseModel):
+class ActionOutput(BaseModel):
     model_config = ConfigDict(strict=True)
     quote: str
     action_detected: bool
     action: str
     data_point: str
+
+def get_pages_to_process(pages, total_pages):
+    if pages:
+        if '-' in pages:
+            start, end = map(int, pages.split('-'))
+            return range(start - 1, min(end, total_pages))
+        else:
+            pages = [int(p) for p in pages.split(',')]
+            return [p - 1 for p in pages if 1 <= p <= total_pages]
+    else:
+        return range(total_pages)
+
+def process_policy_page(doc: fitz.Document, page_num: int, policy_handler: PDFHandlerType) -> List[Sentence] :
+    print(f"Processing page {page_num + 1}")
+    page = doc[page_num]
+    # Extract text from the page
+    page_text = page.get_text()
+    if not page_text.strip():
+        print(f"No text found on page {page_num + 1}")
+        return None
+    # Analyze the page content
+    return policy_handler._analyze_page_with_llm(page_text, page_num + 1)
+
+def process_sentence(sentence: Sentence, pdf_name: str, agent_kyc_review_policy: AgentKYCReviewPolicy, kyc_reviewer_crew: Crew) -> List[Dict[str, str]]:
+    sentence["pdf_name"] = pdf_name
+    sentence = sentence["sentence"]
+    task_action_to_data_point = agent_kyc_review_policy.task_actions_to_data_points(previous_task=sentence)
+    tasks = [task_action_to_data_point]
+    crew_results = kyc_reviewer_crew.execute_tasks(tasks)
+    return list(crew_results.items())
+
+def convert_crew_output_to_action_output(i: int, crew_output: List[Dict[str, str]]) -> ActionOutput:
+    current_result = crew_output[i][1]
+    try:
+        if current_result == '{"action_detected": False}' or current_result == '{"action_detected": false}':
+            return None
+        else:
+            ActionOutput.model_validate_json(current_result)
+            return json.loads(current_result)
+    except ValidationError as e:
+        print(e)
+        return None
+
+def process_action(sentence: Sentence, action_result: ActionOutput, variables_options: Dict[str, str], agent_extract_variables: AgentExtractVariables) -> Dict[str, str]:
+    extracted_variables = agent_extract_variables._analyze_quote_and_action(action_result['action'], action_result['quote'], variables_options)
+    action_result.update(extracted_variables)
+    sentence.pop("sentence")
+    sentence.update(action_result)
+    return sentence
 
 def main():
     parser = argparse.ArgumentParser(description='Extract KYC variables with AWS Bedrock analysis')
@@ -39,74 +88,36 @@ def main():
     pdf_name = Path(pdf_path).name
 
     variables_options = VariablesExtractor().extract_variable_values(args.variable_references_path)
-    policyHandler = PDFHandlerType()
+    policy_handler = PDFHandlerType()
     agent_kyc_review_policy = AgentKYCReviewPolicy()
     agent_extract_variables = AgentExtractVariables()
 
-    pages = None
-
-    if args.pages:
-        if '-' in args.pages:
-            start, end = map(int, args.pages.split('-'))
-            pages = (start, end)
-        else:
-            pages = [int(p) for p in args.pages.split(',')]
-
-    crew = Crew(
+    kyc_reviewer_crew = Crew(
         agents=[agent_kyc_review_policy],
         max_iterations=1,  # Agents will iterate through tasks twice
         verbose=False
     )
 
     result = []
-
     try:
         print(f"Opening PDF file: {pdf_path}")
         doc = fitz.open(pdf_path)
         total_pages = len(doc)
         print(f"Total pages in PDF: {total_pages}")
-        # Determine which pages to process
-        if pages is None:
-            pages_to_process = range(total_pages)
-        elif isinstance(pages, tuple):
-            start, end = pages
-            pages_to_process = range(start - 1, min(end, total_pages))
-        else:
-            pages_to_process = [p - 1 for p in pages if 1 <= p <= total_pages]
+        pages_to_process = get_pages_to_process(args.pages, total_pages)
         for page_num in pages_to_process:
-            print(f"Processing page {page_num + 1}")
-            page = doc[page_num]
-            # Extract text from the page
-            page_text = page.get_text()
-            if not page_text.strip():
-                print(f"No text found on page {page_num + 1}")
+            sentences = process_policy_page(doc, page_num, policy_handler)
+            if not sentences:
                 continue
-            # Analyze the page content
-            sentences = policyHandler._analyze_page_with_llm(page_text, page_num + 1)
-            
-            # Add metadata to each sentence
             for i in range(len(sentences)):
-                sentences[i]["pdf_name"] = pdf_name
-                sentence = sentences[i]["sentence"]
-                task_action_to_data_point = agent_kyc_review_policy.task_actions_to_data_points(previous_task=sentence)
-                tasks = [task_action_to_data_point]
-                print("\nStarting Content Creation Workflow...\n")
-                crew_results = crew.execute_tasks(tasks)
-                list_crew_results = list(crew_results.items())
-                action_result = list_crew_results[i][1]
-                try:
-                    if action_result == '{"action_detected": False}' or action_result == '{"action_detected": false}':
-                        pass
-                    else:
-                        SectionOutput.model_validate_json(action_result)
-                        dict_result = json.loads(action_result)
-                        variables = agent_extract_variables._analyze_quote_and_action(dict_result['action'], dict_result['quote'], variables_options)
-                        dict_result.update(variables)
-                        sentences[i].pop("sentence")
-                        sentences[i].update(dict_result)
-                        result.append(sentences[i])
-                except ValidationError as e:
-                    print(e)
+                print(f"Processing sentence {i + 1} of page {page_num + 1}")
+                crew_action_from_sentence = process_sentence(sentences[i], pdf_name, agent_kyc_review_policy, kyc_reviewer_crew)
+                action_result = convert_crew_output_to_action_output(i, crew_action_from_sentence)
+                if not action_result:
+                    continue
+                final_processed_sentence = process_action(sentences[i], action_result, variables_options, agent_extract_variables)
+                result.append(final_processed_sentence)
+                print("-------------------------")
 
     except Exception as e:
             print(f"Error processing PDF: {str(e)}")

@@ -1,0 +1,394 @@
+[
+    {
+        "sentence_number": 1,
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf",
+        "quote": "Firms should keep their assessment of ML/TF risk associated with individual business relationships and occasional transactions, as well as the underlying factors, under review to ensure their assessment of ML/TF risk remains up to date and relevant",
+        "action_detected": true,
+        "action": "Review ML/TF risk assessment",
+        "data_point": "Risk Assessment Result",
+        "role": [
+            "Client"
+        ],
+        "due_diligence_level": [
+            "Simplified Due Diligence",
+            "Client Due Diligence",
+            "Enhanced Due Diligence"
+        ],
+        "business_type": [
+            "Other Business Type"
+        ],
+        "entity_type": [
+            "All Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Financial Statements",
+            "Internet searches",
+            "Articles from national and international news outlets",
+            "Third party database"
+        ],
+        "client_evidence": [
+            "AML and CTF policy",
+            "AML and CTF procedure",
+            "AML programme",
+            "Know Your Client policy",
+            "Know Your Client procedure",
+            "AML Questionnaire",
+            "AML/CTF controls audit report",
+            "Anti-Money Laundering policy",
+            "Anti-Money Laundering procedure"
+        ]
+    },
+    {
+        "sentence_number": 2,
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf",
+        "quote": "Firms should assess information obtained as part of their ongoing monitoring of the business relationship and consider whether this affects the risk assessment",
+        "action_detected": true,
+        "action": "Assess information from ongoing monitoring",
+        "data_point": "Risk Assessment Result",
+        "role": [
+            "All party types"
+        ],
+        "due_diligence_level": [
+            "Simplified Due Diligence",
+            "Client Due Diligence",
+            "Enhanced Due Diligence"
+        ],
+        "business_type": [
+            "Invoice Finance",
+            "Payment Service Provider",
+            "Other Business Type",
+            "Syndicated Lending",
+            "Trade Finance",
+            "Correspondent Relationships",
+            "Asset Finance",
+            "Investment Funds",
+            "Investment Management",
+            "Private Equity",
+            "Wholesale Markets",
+            "Credit Unions",
+            "Cryptoassets",
+            "Electronic Money Issuer",
+            "Life insurance",
+            "Consumer credit",
+            "Corporate Finance",
+            "Credit Cards",
+            "Financial Advisors",
+            "Wealth Management",
+            "Life assurance and life-related protection, pension and investment products",
+            "Loans",
+            "Motor Finance",
+            "Pensions Schemes",
+            "Pooled Client Accounts",
+            "Secondary Loan Market"
+        ],
+        "entity_type": [
+            "Trust",
+            "Partnership",
+            "Club or society",
+            "Special Purpose Vehicle",
+            "Pension Fund",
+            "Parent Listed On A Regulated Market",
+            "Listed On A Regulated Market",
+            "Foundation",
+            "Legal Form Similar to Trust",
+            "Other Legal Structure",
+            "All Entity Types",
+            "Private Limited By Shares",
+            "Private Individual",
+            "Government and Supranational",
+            "Fund",
+            "Money Service Business",
+            "Charity",
+            "Sovereign Wealth Funds",
+            "All Organisation Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "All public evidence types"
+        ],
+        "client_evidence": [
+            "All client evidence types"
+        ]
+    },
+    {
+        "sentence_number": 3,
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf",
+        "quote": "Firms should also ensure that they have systems and controls in place to identify emerging ML/TF risks and that they can assess and, where appropriate, incorporate these in their business-wide and individual risk assessments in a timely manner.",
+        "action_detected": true,
+        "action": "Identify emerging ML/TF risks",
+        "data_point": "Risk Assessment Result",
+        "role": [
+            "All roles apply as this is about emerging ML/TF risks that could affect any party"
+        ],
+        "due_diligence_level": [
+            "Simplified Due Diligence",
+            "Client Due Diligence",
+            "Enhanced Due Diligence"
+        ],
+        "business_type": [
+            "All business types apply as this is about emerging ML/TF risks that could affect any business type"
+        ],
+        "entity_type": [
+            "All Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Act or law",
+            "Internet searches",
+            "Articles from national and international news outlets",
+            "Third party database",
+            "Transparency International website"
+        ],
+        "client_evidence": [
+            "AML and CTF policy",
+            "AML and CTF procedure",
+            "Transaction Monitoring policy",
+            "Transaction Monitoring procedure",
+            "AML programme",
+            "AML/CTF controls audit report"
+        ]
+    },
+    {
+        "sentence_number": 4,
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf",
+        "quote": "processes to ensure internal information is reviewed regularly to identify trends and emerging issues, both in relation to individual business relationships and the firm's business",
+        "action_detected": true,
+        "action": "Review internal information",
+        "data_point": "Review Results",
+        "role": [
+            "All Entity Types"
+        ],
+        "due_diligence_level": [
+            "Simplified Due Diligence",
+            "Client Due Diligence",
+            "Enhanced Due Diligence"
+        ],
+        "business_type": [
+            "Other Business Type"
+        ],
+        "entity_type": [
+            "All Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Internet searches",
+            "Articles from national and international news outlets",
+            "Third party database"
+        ],
+        "client_evidence": [
+            "AML and CTF policy",
+            "AML and CTF procedure",
+            "AML programme",
+            "Transaction Monitoring policy",
+            "Transaction Monitoring procedure"
+        ]
+    },
+    {
+        "sentence_number": 5,
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 67,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf",
+        "quote": "ensuring that the firm becomes aware of changes to terror alerts and sanctions regimes as soon as they occur, for example by regularly reviewing terror alerts and looking for sanctions regime updates",
+        "action_detected": true,
+        "action": "Review terror alerts and sanctions regime updates",
+        "data_point": "Screening Result",
+        "role": [
+            "All Entity Types"
+        ],
+        "due_diligence_level": [
+            "Simplified Due Diligence",
+            "Client Due Diligence",
+            "Enhanced Due Diligence"
+        ],
+        "business_type": [
+            "Invoice Finance",
+            "Payment Service Provider",
+            "Other Business Type",
+            "Syndicated Lending",
+            "Trade Finance",
+            "Correspondent Relationships",
+            "Asset Finance",
+            "Investment Funds",
+            "Investment Management",
+            "Private Equity",
+            "Wholesale Markets",
+            "Credit Unions",
+            "Cryptoassets",
+            "Electronic Money Issuer",
+            "Life insurance",
+            "Consumer credit",
+            "Corporate Finance",
+            "Credit Cards",
+            "Financial Advisors",
+            "Wealth Management",
+            "Life assurance and life-related protection, pension and investment products",
+            "Loans",
+            "Motor Finance",
+            "Pensions Schemes",
+            "Pooled Client Accounts",
+            "Secondary Loan Market"
+        ],
+        "entity_type": [
+            "All Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Articles from national and international news outlets",
+            "Government website",
+            "Third party database",
+            "Regulator's Website Screenshot"
+        ],
+        "client_evidence": [
+            "AML and CTF policy",
+            "AML and CTF procedure",
+            "Know Your Client policy",
+            "Know Your Client procedure"
+        ]
+    },
+    {
+        "sentence_number": 1,
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 68,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf",
+        "quote": "Firms should keep their assessment of ML/TF risk associated with individual business relationships and occasional transactions, as well as the underlying factors, under review to ensure their assessment of ML/TF risk remains up to date and relevant",
+        "action_detected": true,
+        "action": "Review ML/TF risk assessment",
+        "data_point": "Risk Assessment Result",
+        "role": [
+            "All Entity Types"
+        ],
+        "due_diligence_level": [
+            "Simplified Due Diligence",
+            "Client Due Diligence",
+            "Enhanced Due Diligence"
+        ],
+        "business_type": [
+            "Invoice Finance",
+            "Payment Service Provider",
+            "Other Business Type",
+            "Syndicated Lending",
+            "Trade Finance",
+            "Correspondent Relationships",
+            "Asset Finance",
+            "Investment Funds",
+            "Investment Management",
+            "Private Equity",
+            "Wholesale Markets",
+            "Credit Unions",
+            "Cryptoassets",
+            "Electronic Money Issuer",
+            "Life insurance",
+            "Consumer credit",
+            "Corporate Finance",
+            "Credit Cards",
+            "Financial Advisors",
+            "Wealth Management",
+            "Life assurance and life-related protection, pension and investment products",
+            "Loans",
+            "Motor Finance",
+            "Pensions Schemes",
+            "Pooled Client Accounts",
+            "Secondary Loan Market"
+        ],
+        "entity_type": [
+            "All Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Third party database",
+            "Financial Statements",
+            "Regulated Exchange website",
+            "Regulator's Website Screenshot"
+        ],
+        "client_evidence": [
+            "AML and CTF policy",
+            "AML and CTF procedure",
+            "Transaction Monitoring policy",
+            "Transaction Monitoring procedure",
+            "Risk Assessment"
+        ]
+    },
+    {
+        "sentence_number": 2,
+        "type_of_sentence": "KYC Profile Relevant",
+        "page_number": 68,
+        "pdf_name": "JMLSG-Guidance-Part-I_July-2022.pdf",
+        "quote": "Firms should assess information obtained as part of their ongoing monitoring of the business relationship and consider whether this affects the risk assessment",
+        "action_detected": true,
+        "action": "Assess information from ongoing monitoring",
+        "data_point": "Risk Assessment Result",
+        "role": [
+            "All Entity Types"
+        ],
+        "due_diligence_level": [
+            "Simplified Due Diligence",
+            "Client Due Diligence",
+            "Enhanced Due Diligence"
+        ],
+        "business_type": [
+            "Invoice Finance",
+            "Payment Service Provider",
+            "Other Business Type",
+            "Syndicated Lending",
+            "Trade Finance",
+            "Correspondent Relationships",
+            "Asset Finance",
+            "Investment Funds",
+            "Investment Management",
+            "Private Equity",
+            "Wholesale Markets",
+            "Credit Unions",
+            "Cryptoassets",
+            "Electronic Money Issuer",
+            "Life insurance",
+            "Consumer credit",
+            "Corporate Finance",
+            "Credit Cards",
+            "Financial Advisors",
+            "Wealth Management",
+            "Life assurance and life-related protection, pension and investment products",
+            "Loans",
+            "Motor Finance",
+            "Pensions Schemes",
+            "Pooled Client Accounts",
+            "Secondary Loan Market"
+        ],
+        "entity_type": [
+            "All Entity Types"
+        ],
+        "internal_evidence": [
+            "internal documents"
+        ],
+        "public_evidence": [
+            "Financial Statements",
+            "Articles from national and international news outlets",
+            "Third party database"
+        ],
+        "client_evidence": [
+            "Transaction Monitoring policy",
+            "Transaction Monitoring procedure",
+            "Transaction documentation"
+        ]
+    }
+]
