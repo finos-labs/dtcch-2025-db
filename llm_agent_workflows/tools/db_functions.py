@@ -25,7 +25,7 @@ session = SessionLocal()
 # Function to insert data into kyc_ops table
 def update_action_in_progress(payload, kyc_id):
         
-    for row in payload[0]:
+    for row in payload:
         db_entry = Actions(
             kyc_id = kyc_id,
             data_point = row['data_point'],
@@ -58,12 +58,18 @@ def fetch_client_data_file_path(client_id):
     file_path = session.query(Client).filter_by(client_id=client_id).first().client_info_file_path
     return file_path
 
-def fetch_all_data_points(kyc_id):
+def fetch_all_data_points_variables(kyc_id):
     kyc_records = session.query(Actions).filter_by(kyc_id=kyc_id).all()
-    data_points = []
+    data_points_variables = []
     for kyc_record in kyc_records:
-        data_points.append(kyc_record.data_point)
-    return data_points
+        variable_dict = {
+            "role": kyc_record.role,
+            "due_diligence_level": kyc_record.due_diligence_level,
+            "business_type": kyc_record.business_type,
+            "entity_type": kyc_record.entity_type
+        }
+        data_points_variables.append((kyc_record.data_point, variable_dict))
+    return data_points_variables
 
 # Example usage
 payload = """[
