@@ -238,7 +238,7 @@ const KycDetails = () => {
                 className="px-4 py-2 border cursor-pointer"
                 onClick={handleSortById}
               >
-                Action ID {sortOrder === "asc" ? "🔼" : "🔽"}
+                Policy Quote {sortOrder === "asc" ? "↑" : "↓"}
               </th>
               <th className="px-4 py-2 border">Data Point</th>
               <th className="px-4 py-2 border">Status</th>
@@ -252,9 +252,11 @@ const KycDetails = () => {
                 className="hover:bg-gray-100 cursor-pointer"
                 onClick={() => handleRowClick(action)}
               >
-                <td className="px-4 py-2 border">{action.action_id}</td>
+                <td className="px-4 py-2 border">{action.policy_quote}</td>
                 <td className="px-4 py-2 border">{action.data_point}</td>
-                <td className="px-4 py-2 border">{action.status}</td>
+                <td className="px-4 py-2 border">
+                  {action.latest_action_activity}
+                </td>
                 <td className="px-4 py-2 border">
                   {action.action_description}
                 </td>
@@ -266,13 +268,28 @@ const KycDetails = () => {
 
       {/* Retrigger KYC Button */}
       <div className="mt-6 flex justify-end space-x-4">
-        <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+        <button
+          className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+          onClick={() =>
+            alert("This functionality will be included in a future phase")
+          }
+        >
           Retrigger KYC
         </button>
-        <button className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+        <button
+          className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+          onClick={() =>
+            alert("This functionality will be included in a future phase")
+          }
+        >
           Approve
         </button>
-        <button className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600">
+        <button
+          className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600"
+          onClick={() =>
+            alert("This functionality will be included in a future phase")
+          }
+        >
           Escalate to AFC
         </button>
       </div>
