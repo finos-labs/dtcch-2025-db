@@ -7,7 +7,8 @@ const api = axios.create({
 });
 
 // Add Authorization token to requests
-api.interceptors.request.use((config) => {  const token = localStorage.getItem("token");
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -24,7 +25,7 @@ export const getUserInfo = async () => {
 
 export const getKycRequests = async () => {
   const token = localStorage.getItem("token");
-  
+
   return axios.get(`${API_ENDPOINTS.BASE_URL}/getKycList`, {
     headers: { Authorization: `Bearer ${token}` },
   });
@@ -32,18 +33,18 @@ export const getKycRequests = async () => {
 
 export const getClients = async () => {
   const token = localStorage.getItem("token");
-  
+
   const response = await fetch(`${API_ENDPOINTS.BASE_URL}/clients`, {
     headers: { Authorization: `Bearer ${token}` },
   });
-  console.log(response)
+  console.log(response);
   if (!response.ok) throw new Error("Failed to fetch clients");
   return response.json();
 };
 
 export const getPolicies = async () => {
   const token = localStorage.getItem("token");
-  
+
   const response = await fetch(`${API_ENDPOINTS.BASE_URL}/policies`, {
     headers: { Authorization: `Bearer ${token}` },
   });
@@ -51,13 +52,12 @@ export const getPolicies = async () => {
   return response.json();
 };
 
-
 export const triggerKyc = async (requestData) => {
   const token = localStorage.getItem("token");
 
   try {
-    console.log('trigger kyc for ', requestData)
-     const response = await axios.post(
+    console.log("trigger kyc for ", requestData);
+    const response = await axios.post(
       `${API_ENDPOINTS.BASE_URL}/triggerKyc`,
       requestData,
       {
@@ -70,14 +70,17 @@ export const triggerKyc = async (requestData) => {
 
     return response.data;
   } catch (error) {
-    console.error("Error triggering KYC:", error.response?.data || error.message);
+    console.error(
+      "Error triggering KYC:",
+      error.response?.data || error.message
+    );
     throw error.response?.data || error.message;
   }
 };
 
 export const getKycDetail = async (kycId) => {
   const token = localStorage.getItem("token");
-  
+
   const response = await fetch(`${API_ENDPOINTS.BASE_URL}/kyc/${kycId}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
@@ -87,10 +90,25 @@ export const getKycDetail = async (kycId) => {
 
 export const getActionsList = async (kycId) => {
   const token = localStorage.getItem("token");
-  
-  const response = await fetch(`${API_ENDPOINTS.BASE_URL}/actionsList/${kycId}`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
+
+  const response = await fetch(
+    `${API_ENDPOINTS.BASE_URL}/actionsList/${kycId}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
   if (!response.ok) throw new Error("Failed to fetch getActionsList");
   return response.json();
+};
+
+export const UploadDocument = async (formData) => {
+  const response = await axios.post(
+    `${API_ENDPOINTS.BASE_URL}/uploadDocument`,
+    formData,
+    {
+      headers: { "Content-Type": "multipart/form-data" },
+    }
+  );
+  if (!response.ok) throw new Error("Upload failed");
+  return response;
 };

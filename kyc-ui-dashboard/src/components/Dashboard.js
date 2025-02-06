@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getUserInfo, getKycRequests, getClients, getPolicies, triggerKyc } from "./api";
+import {
+  getUserInfo,
+  getKycRequests,
+  getClients,
+  getPolicies,
+  triggerKyc,
+} from "./api";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
@@ -11,7 +17,6 @@ const Dashboard = () => {
   const [selectedClient, setSelectedClient] = useState("");
   const [selectedPolicy, setSelectedPolicy] = useState("");
   const [sortOrder, setSortOrder] = useState("asc"); // "asc" or "desc"
-
 
   const [clients, setClients] = useState([]);
   const [policies, setPolicies] = useState([]);
@@ -59,41 +64,38 @@ const Dashboard = () => {
 
   const handleOpenModal = async () => {
     try {
-      
       const [clientsData, policiesData] = await Promise.all([
-      getClients(),
-      getPolicies(),
-    ]);
+        getClients(),
+        getPolicies(),
+      ]);
 
-    setClients(clientsData);
-    setPolicies(policiesData);
+      setClients(clientsData);
+      setPolicies(policiesData);
 
       setIsModalOpen(true); // Open modal after fetching data
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
-  
+
   const handleCloseModal = () => setIsModalOpen(false);
 
   const handleSubmit = async () => {
-
     if (!selectedClient || !selectedPolicy) {
       alert("Please select a client and policy.");
       return;
     }
-  
+
     try {
-      
       const requestData = {
-        client_id: selectedClient,  // Ensure this holds the client's ID
-        policy_id: selectedPolicy,  // Ensure this holds the policy's ID
+        client_id: selectedClient, // Ensure this holds the client's ID
+        policy_id: selectedPolicy, // Ensure this holds the policy's ID
       };
 
       const response = await triggerKyc(requestData);
-      alert("New Kyc is triggrered !")
+      alert("New Kyc is triggrered !");
       // Add the new KYC request to the state
-      
+
       const kycResponse = await getKycRequests();
       setKycRequests(kycResponse.data);
 
@@ -102,8 +104,6 @@ const Dashboard = () => {
       alert(error.error || "Failed to trigger KYC. Please try again.");
     }
   };
-  
-
 
   const filteredRequests = kycRequests.filter((request) =>
     Object.values(request).some((value) =>
@@ -132,7 +132,9 @@ const Dashboard = () => {
               className="w-16 h-16 rounded-full border-2 border-gray-300 shadow-sm"
             />
             <div>
-              <h2 className="text-xl font-semibold text-gray-800">{user.name}</h2>
+              <h2 className="text-xl font-semibold text-gray-800">
+                {user.name}
+              </h2>
               <p className="text-gray-500">{user.email}</p>
               <p className="text-gray-600 font-medium">{user.department}</p>
             </div>
@@ -166,9 +168,12 @@ const Dashboard = () => {
         <table className="w-full border-collapse border border-gray-200">
           <thead>
             <tr className="bg-gray-200">
-            <th className="px-4 py-2 border cursor-pointer" onClick={handleSortById}>
-              KYC ID {sortOrder === "asc" ? "🔼" : "🔽"}
-            </th>
+              <th
+                className="px-4 py-2 border cursor-pointer"
+                onClick={handleSortById}
+              >
+                KYC ID {sortOrder === "asc" ? "🔼" : "🔽"}
+              </th>
               <th className="border p-3">Client Name</th>
               <th className="border p-3">Policy</th>
               <th className="border p-3">Trigger Date</th>
@@ -222,19 +227,28 @@ const Dashboard = () => {
         {isModalOpen && (
           <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50">
             <div className="bg-white p-6 rounded-lg shadow-lg w-[80%] max-w-3xl">
-            
-              <h2 className="text-xl font-semibold mb-4">Select Client and Policy</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Select Client and Policy
+              </h2>
               <div className="mb-4">
                 <label className="block text-gray-700">Client</label>
                 {/* Clients Dropdown */}
                 <select
                   value={selectedClient}
-                  onChange={(e) => setSelectedClient(e.target.options[e.target.selectedIndex].id)}
+                  onChange={(e) =>
+                    setSelectedClient(
+                      e.target.options[e.target.selectedIndex].id
+                    )
+                  }
                   className="w-full p-2 border rounded-lg"
                 >
                   <option value="">Select Client</option>
                   {clients.map((client, index) => (
-                    <option key={client.client_id} value={client.client_id} id={client.client_id}>
+                    <option
+                      key={client.client_id}
+                      value={client.client_id}
+                      id={client.client_id}
+                    >
                       {client.client_name}
                     </option>
                   ))}
@@ -242,19 +256,27 @@ const Dashboard = () => {
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Policy</label>
-                  {/* Policies Dropdown */}
-                  <select
-                    value={selectedPolicy}
-                    onChange={(e) => setSelectedPolicy(e.target.options[e.target.selectedIndex].id)}
-                    className="w-full p-2 border rounded-lg"
-                  >
-                    <option value="">Select Policy</option>
-                    {policies.map((policy, index) => (
-                      <option key={policy.policy_id} value={policy.policy_id} id={policy.policy_id}>
-                        {policy.policy_name}
-                      </option>
-                    ))}
-                  </select>
+                {/* Policies Dropdown */}
+                <select
+                  value={selectedPolicy}
+                  onChange={(e) =>
+                    setSelectedPolicy(
+                      e.target.options[e.target.selectedIndex].id
+                    )
+                  }
+                  className="w-full p-2 border rounded-lg"
+                >
+                  <option value="">Select Policy</option>
+                  {policies.map((policy, index) => (
+                    <option
+                      key={policy.policy_id}
+                      value={policy.policy_id}
+                      id={policy.policy_id}
+                    >
+                      {policy.policy_name}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div className="flex justify-between">
                 <button
