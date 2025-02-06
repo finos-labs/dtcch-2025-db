@@ -27,7 +27,7 @@ For any concerns or inquiries, please refer to the repository's license terms an
 
 ## Table of contents 
 
-- [Why AI KYC AGENT?](#why-ai-kyc-agent)
+- [Why AI KYC Agent?](#why-ai-kyc-agent)
 - [Getting Started](#getting-started)
 - [Key Features](#key-features)
 - [Examples](#examples)
@@ -37,7 +37,7 @@ For any concerns or inquiries, please refer to the repository's license terms an
 - [Project Members](#project-members)
 - [License](#license)
 
-# Why AI KYC AGENT?
+# Why AI KYC Agent?
 
 ### Why Is KYC Important?
 Know Your Customer (KYC) processes are essential in the financial industry to prevent fraud, money laundering, and other illicit activities. Regulatory compliance ensures that businesses operate within legal frameworks, protecting both institutions and customers from financial crimes.
@@ -71,88 +71,41 @@ To install the required dependencies, run:
 pip install requirements.txt
 ```
 
-### 2. Project Folder Structure
+### 2. Running Your AI KYC AGENT
 
-```
-dtcch-2025-db /
-└── database/
-    ├── ddl.sql
-    ├── insertion.sql
-└── documentation/
-    ├── 
-    ├── 
-└── kyc-ui-dashboard/
-    └── public/
-    └── src/
-└── llm_agent_workflows/
-    └── agents/
-    └── client_documents/
-    └── crew/
-    └── examples_pdf/
-    └── tools/
-└── web/
-    └── api.py/
-    └── app.py/
-    └── data.py/
-├── web-backend/
-    └── app/
-    └── model/
-    └── static/
-    └── templates/
-├── .gitignore
-├── 
-├── README.md
-├── .env
-└── database/
-    ├── 
-    ├── 
-    ├── 
-└── web-backend/
-└── web/
-└── kyc-ui-dashboard/
-└── llm_agent_workflows/
+>TODO: add commands how to run it locally or in cloud
 
-```
+# Functionality
 
-
-### 3. Running Your AI KYC AGENT
-
-Before running your crew, make sure you have the following keys set as environment variables in your `.env` file:
-
-- ...
-- ...
-
-Lock the dependencies and install them by using the CLI command but first, navigate to your project directory:
-
-```shell
-cd ...
-...
-```
-
-
-# Key features 
+## Key Features (work in progress)
+* Perform E2E KYC for a client
+    * Request information from a client
+    * Extract information from client messages and documents
+    * Perform risk assessment 
+    * Provide summarisation of the client risk and risk matrix
+    * Support 4-eyes review
+    * Escalate risk to AFC
+* Reassess risks for all clients affected by changed policies 
+* Transparency and explainability on every step, fully audit-friendly
+## Overview diagram
 
 
 
 ![KYC Agent Technical Flow](images/technical_flowchart.png)
 
+## Autonomy diagram
+
+![AI KYC Agent Autonomy pyramid](images/autonomy.png)
+
 # Examples 
 A demo of the AI KYC AGENT use case is provided below:
-
-# How AI KYC AGENT Compares
-How does AI KYC AGENT compare to other KYC agents availible? 
-
-# FAQ 
+> TODO: add gif / video
 
 
 # Contribution
 We welcome contributions to this project! Whether you're fixing a bug, adding a new feature, or improving the documentation, we appreciate your help in making this project better.
 
-For detailed information on how the system is architected, how features are implemented, and the technologies used, please refer to the [TECHNICAL.md](./TECHNICAL.md) file. This file provides an in-depth look into the project’s structure, including explanations of key components, deployment instructions, and the overall technology stack. It also contains functional diagrams, feature requirements, and best practices for developing and maintaining the project.
-
-If you’d like to contribute, we’ve outlined the process for submitting your changes in the [TECHNICAL.md](./TECHNICAL.md). It covers how to fork the repository, create new branches, and submit pull requests, along with our code review process. Before contributing, we recommend reviewing this document to familiarize yourself with the project’s technical setup and coding standards.
-
-By referring to the [TECHNICAL.md](./TECHNICAL.md), you’ll have a clear understanding of how to make meaningful contributions to the project, ensuring consistency and alignment with the overall architecture and goals. Thank you for your interest, and we look forward to your contributions!
+For detailed information on how the system is architected, how features are implemented, and the technologies used, please refer to the [TECHNICAL.md](./TECHNICAL.md) file. Before contributing, we recommend reviewing this document to familiarize yourself with the project’s technical setup and coding standards.
 
 # Project Members 
 Team members involved in the DTCC Hackathon with FINOS, resposible for the initial PoC of the AI KYC AGENT. 
@@ -161,15 +114,15 @@ Team members involved in the DTCC Hackathon with FINOS, resposible for the initi
 **Team Member**     | **Title**              | **Resposible Topics**  
 ------------------  | ---------------------- | ------------------  
 Maxim Romanovsky    | Team Lead              | All areas
-Valeria Bladinieres | Fullstack Engineer     | RAG, Agent, Frontend CI/CD 
 Haydn Griffith-Jones| Product Owner          | Product 
+Valeria Bladinieres | ML Engineer     | RAG, Agent, Frontend, CI/CD 
 Matthew Barley      | ML Engineer            | Agent, RAG, Prompt Engineering
-Somnath Pailwan     | Fullstack Engineer     | Frontend, Backend, CI/CD
 Pulkit Khera        | ML Engineer            | Data pipelines, RAG, CI/CD
-Elena Podgornova    | Fullstack Engineer     | Backend, Frontend, CI/CD
-Nikolay Tolstokulakov | Infra Engineer       | CI/CD, Backend, RAG
-Meeka Lenisa        | Data Scientist         | Product, Evaluation Framework, Prompt Engineering
 Alessio Sordo       | ML Engineer            | Evaluation framework, Agent, Backend, Prompt Engineering
+Meeka Lenisa        | Data Scientist         | Product, Evaluation Framework, Prompt Engineering
+Nikolay Tolstokulakov | Fullstack Engineer       | CI/CD, Backend, RAG
+Somnath Pailwan     | Fullstack Engineer     | Frontend, Backend, CI/CD
+Elena Podgornova    | Fullstack Engineer     | Backend, Frontend, CI/CD
 
 
 # License
