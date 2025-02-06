@@ -281,13 +281,14 @@ def upload_document():
                     new_policy = Policy(
                             policy_name=policy_name,
                             policy_version=policy_version,
-                            policy_file_path=file.filename
+                            policy_file_path=filename
                             )
 
                     db.session.add(new_policy)
                     db.session.commit()
                     asyncio.run(run_process(app.config['POLICY_RUN'],
-                                     '--policy_id', str(new_policy.policy_id)))
+                                     '--policy_id', str(new_policy.policy_id),
+                                     '-v', '/home/ubuntu/dtcch-2025-db/llm_agent_workflows/tools/input/variables_reference'))
 
              except Exception as e:
                   db.session.rollback()
