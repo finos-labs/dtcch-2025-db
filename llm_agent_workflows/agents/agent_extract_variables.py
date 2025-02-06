@@ -1,6 +1,6 @@
 import json
 
-from typing import List, Dict, Union
+from typing import List, Dict
 from pydantic import BaseModel, ConfigDict, ValidationError
 
 from crew import Agent, Task
