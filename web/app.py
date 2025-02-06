@@ -24,11 +24,13 @@ jwt = JWTManager(app)
 
 # Folder to save uploaded files
 UPLOAD_FOLDER = '/home/ubuntu/data/kyc/uploads'
+KYC_RUN_SCRYPT = '/home/ubuntu/dtcch-2025-db/llm_agent_workflows/main.py'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'docx', 'txt', 'jpg', 'png', 'jpeg'}
+app.config['KYC_RUN'] = os.environ['KYC_RUN']
 
 if __name__ == '__main__':
     from api import *
