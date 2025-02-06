@@ -16,7 +16,7 @@ class Sentence(BaseModel):
     sentence_number: int
     sentence: str
     type_of_sentence: str
-    page_number: str
+    page_number: int
 
 ta = TypeAdapter(List[Sentence])
 
