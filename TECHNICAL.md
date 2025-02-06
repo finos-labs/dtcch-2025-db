@@ -1,7 +1,7 @@
 # Technical Documentation  
 
 ## Project Name
-KYC Agent: Automate Routine work of KYC process
+AI KYC Agent: Automate Routine work of KYC process
 
 ## Disclaimer
 
