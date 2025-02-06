@@ -4,7 +4,7 @@ import json
 from pydantic import BaseModel, ValidationError, ConfigDict
 
 from agents.agent_risk_assessment import AgentRiskAssessment
-from db_functions import kyc_process_insert_risks
+from tools.db_functions import kyc_process_insert_risks
 
 class RiskAssessment(BaseModel):
     model_config = ConfigDict(strict=True)
@@ -41,6 +41,8 @@ class RiskHandler:
             kyc_process_insert_risks(risk_assessment, kyc_id)
         except ValidationError as e:
             print(e)
+            
+        
 
 
 

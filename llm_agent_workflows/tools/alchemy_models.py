@@ -24,6 +24,7 @@ class Policy(Base):
     policy_name = Column(String(255), nullable=False)
     policy_version = Column(String(50), nullable=False)
     policy_file_path = Column(String(255), nullable=False)
+    processed_policy_json = Column(Text)
 
 # Table: kyc_process
 class KycProcess(Base):

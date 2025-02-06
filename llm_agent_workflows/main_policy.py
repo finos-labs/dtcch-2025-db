@@ -1,21 +1,18 @@
-from dotenv import load_dotenv
-from crew import Task, Crew
-from agents.agent_kyc_review_policy import AgentKYCReviewPolicy
-from agents.agent_kyc_background_check_specialist import AgentKYCBackgroundCheckOps
-from pdfplumber import PDF
-from pydantic import BaseModel, ConfigDict, ValidationError
-from tools.variables_extractor import VariablesExtractor
-from agents.agent_extract_variables import AgentExtractVariables
-from tools.pdf_handler_type import PDFHandlerType
-from tools.db_functions import fetch_policy_file_path, fetch_client_data_file_path, update_action_in_progress, fetch_all_data_points_variables
 import json
 import argparse
 import fitz
+
+from dotenv import load_dotenv
+from crew import Crew
 from pathlib import Path
-import os
-import time
-from .tools.evidence_handler import EvidenceHandler
-from .tools.risk_handler import RiskHandler
+from pydantic import BaseModel, ConfigDict, ValidationError
+
+from agents.agent_extract_variables import AgentExtractVariables
+from agents.agent_kyc_review_policy import AgentKYCReviewPolicy
+from tools.variables_extractor import VariablesExtractor
+from tools.pdf_handler_type import PDFHandlerType
+from tools.db_functions import fetch_policy_file_path, store_processed_policy_json
+
 
 class SectionOutput(BaseModel):
     model_config = ConfigDict(strict=True)
@@ -25,24 +22,9 @@ class SectionOutput(BaseModel):
     data_point: str
 
 def main():
-    RISK_PATH = "llm_agent_workflows/tools/input/risks/risks.csv"
-    evidence_handler = EvidenceHandler()
-    risk_handler = RiskHandler()
 
-    # TODO: this will be passed when this is triggered
-    kyc_id = 2
-    data_point = "Transaction Monitoring"
-    image_path = "llm_agent_workflows/tools/input/examples_evidence/evidence_driving_licence.jpeg"
-
-    # the evidence will process the image and extract the text and insert it in the db
-    evidence_handler.process_evidence(image_path, kyc_id, data_point)
-    risk_handler.risk_assessment(RISK_PATH, kyc_id, data_point)
-
-    """
     parser = argparse.ArgumentParser(description='Extract KYC variables with AWS Bedrock analysis')
-    parser.add_argument('--kyc_id', '-kycid', required=True, help='Current process kyc ID')
     parser.add_argument('--policy_id', '-pid', required=True, help='ID of the policy to be processed')
-    parser.add_argument('--client_id', '-cid', required=True, help='ID of the client to be processed')
     parser.add_argument('--pages', '-pg', required=False, default='67', help='Page range (e.g., "1-20" or "1,2,3")')
     parser.add_argument('--variable_references_path', '-v',
                        required=False,
@@ -54,12 +36,9 @@ def main():
 
     # Load environment variables
     load_dotenv()
-    
+
     #PDF file path for the policy
     policy_pdf_document_path = fetch_policy_file_path(policy_id=args.policy_id)
-    
-    #TXT file path for internal client information for initial background check
-    client_data_file_path = fetch_client_data_file_path(client_id=args.client_id)
 
     output_path = args.output_path
     # pdf_path = args.policy_pdf
@@ -118,7 +97,7 @@ def main():
                 sentence = sentences[i]["sentence"]
                 task_action_to_data_point = agent_kyc_review_policy.task_actions_to_data_points(previous_task=sentence)
                 tasks = [task_action_to_data_point]
-                
+
                 crew_results = crew.execute_tasks(tasks)
                 list_crew_results = list(crew_results.items())
                 action_result = list_crew_results[i][1]
@@ -140,7 +119,7 @@ def main():
             print(f"Error processing PDF: {str(e)}")
             import traceback
             traceback.print_exc()
-            
+
     # if output_path is None:
     #         policy_name, _ = os.path.splitext(pdf_name)
     #         timestamp = time.strftime('%Y%m%d_%H%M%S')
@@ -150,37 +129,9 @@ def main():
     # with open(output_path, 'w') as output_file:
     #     json.dump(result, output_file)
     
+    # Inserting json into databse under processed_policy
     
-    ############ Agent Ops Workflow 2 Begins
-        
-    #Storing the output from phase 1 into database
-    update_action_in_progress(result, args.kyc_id)
-    
-    #Read internal client data for performing background check
-    with open(client_data_file_path, "r", encoding="utf-8") as file:
-        client_internal_data = file.read()
-        
-    #Fetch all required data points and corresponding variables from database
-    client_required_data_points_variables = fetch_all_data_points_variables(kyc_id=args.kyc_id)
-    
-    agent_kyc_ops = AgentKYCBackgroundCheckOps(client_internal_data=client_internal_data,
-                                client_required_data_points_variables=client_required_data_points_variables)
-    
-    # Create a crew for kyc ops
-    crew_ops = Crew(
-        agents=[agent_kyc_ops],
-        max_iterations=1,  # Agents will iterate through tasks twice
-        verbose=False
-    )
-    
-    # Go through all data points and check each one by one in internal client data document
-    background_check_task = agent_kyc_ops.task_background_check()
-    
-     # Starting background check workflow
-    print("\nStarting background check...\n")
-    results = crew_ops.execute_tasks([background_check_task])
-    pass
-    """
+    store_processed_policy_json(policy_id=args.policy_id,result=result)
 
 if __name__ == "__main__":
     main()
