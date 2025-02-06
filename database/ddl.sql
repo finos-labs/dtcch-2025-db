@@ -50,3 +50,13 @@ CREATE TABLE actions (
     PRIMARY KEY (kyc_id, data_point),
     FOREIGN KEY (kyc_id) REFERENCES kyc_process(kyc_id) ON DELETE CASCADE
 );
+
+CREATE TABLE REQUEST_FOR_DOCS (
+    id SERIAL PRIMARY KEY,
+    email TEXT NOT NULL,
+    doc_types TEXT NOT NULL,
+    email_text TEXT NOT NULL,
+    callback_url TEXT NOT NULL,
+    string_id VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

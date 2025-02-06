@@ -26,11 +26,11 @@ def request_docs(string_id, callback_url, email_text, email, doc_types):
     return response.json() if response.status_code == 200 else response.text
 
 # Example usage:
-string_id = "UUID"
+string_id = "236927324jwdhwjdw"
 callback_url = "some callback"
 email_text = f"Please upload documents for KYC: https://dtcch-2025-db.sibnick.men/backend2/static/upload.html?uid={string_id}"
-email = "someemail@some.domain.com"
-doc_types = ["Passport", "Directors list"]
+email = "pulkit.khera@db.com"
+doc_types = ["Passport"]
 
 response = request_docs(string_id, callback_url, email_text, email, doc_types)
 print(response)
