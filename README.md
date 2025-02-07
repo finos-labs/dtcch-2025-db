@@ -29,10 +29,10 @@ For any concerns or inquiries, please refer to the repository's license terms an
 
 - [Why AI KYC Agent?](#why-ai-kyc-agent)
 - [Getting Started](#getting-started)
-- [Key Features](#key-features)
+- [Functionality](#functionality)
+  - [Key Features](#key-features)
+  - [Autonomy Diagram](#autonomy-diagram)
 - [Examples](#examples)
-- [How AI KYC AGENT Compares](#how-ai-kyc-agent-compares)
-- [Frequently Asked Questions (FAQ)](#faq)
 - [Contribution](#contribution)
 - [Project Members](#project-members)
 - [License](#license)
@@ -58,7 +58,7 @@ Our AI-powered KYC agent offers a smarter alternative by:
 
 By leveraging advanced AI, this solution transforms KYC into a streamlined, cost-effective, and highly compliant process—empowering businesses to operate more efficiently in an increasingly regulated landscape.
 
-# Getting started 
+# Getting started
 AI KYC AGENT has two flows which act as a comprehensive KYC Agent. The first flow is a KYC procedure Agent, to analyse Policy Documents via the KYC Procedure agent. The second flow to analyse Client Documentation via the KYC Ops Agent. 
 
 ### 1. Installation
@@ -131,7 +131,7 @@ open config.py
 
 # Functionality
 
-## Key Features (work in progress)
+## Key Features
 * Perform E2E KYC for a client
     * Request information from a client
     * Extract information from client messages and documents
@@ -152,7 +152,7 @@ This diagram illustrates the current level of autonomy in the KYC landscape. As 
 
 ![AI KYC Agent Autonomy pyramid](documentation/images/autonomy.png)
 
-# Examples 
+# Examples
 Below are some screenshots of the user interface (UI), illustrating key features and the overall design of the application.
 The login page:
 ![LoginPage](documentation/screenshot/1.%20login.png)
@@ -174,7 +174,7 @@ We welcome contributions to this project! Whether you're fixing a bug, adding a 
 
 For detailed information on how the system is architected, how features are implemented, and the technologies used, please refer to the [TECHNICAL.md](./TECHNICAL.md) file. Before contributing, we recommend reviewing this document to familiarize yourself with the project’s technical setup and coding standards.
 
-# Project Members 
+# Project Members
 Team members involved in the DTCC Hackathon with FINOS, resposible for the initial PoC of the AI KYC AGENT. 
 
 
