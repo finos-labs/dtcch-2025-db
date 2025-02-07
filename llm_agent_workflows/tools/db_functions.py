@@ -130,6 +130,11 @@ def fetch_processed_policy_json(policy_id):
     policy_json = session.query(Policy).filter_by(policy_id=policy_id).first().processed_policy_json
     return json.loads(policy_json)
 
+def store_uuid(uuid, kyc_id):
+    session.query(Actions).filter_by(kyc_id=kyc_id).update({Actions.uuid: uuid})
+    print("Updated evidence UUID in the database.")
+    
+
 # Example usage
 payload = """[
     {

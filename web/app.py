@@ -11,7 +11,7 @@ import os
 app = Flask(__name__)
 
 # Configure the database connection
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dtcch:mypassword@localhost:5432/dtcch'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres@localhost:6000/postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -23,9 +23,9 @@ bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 
 # Folder to save uploaded files
-UPLOAD_FOLDER = '/home/ubuntu/data/kyc/uploads'
-KYC_RUN_SCRIPT = '/home/ubuntu/dtcch-2025-db/llm_agent_workflows/main_kyc_process.py'
-POLICY_RUN_SCRIPT = '/home/ubuntu/dtcch-2025-db/llm_agent_workflows/main_policy.py'
+UPLOAD_FOLDER = '/Users/pulkitkhera/Documents/uploads'
+KYC_RUN_SCRIPT = '/Users/pulkitkhera/Documents/dtcc_hackathon/dtcch-2025-db/llm_agent_workflows/main_kyc_process.py'
+POLICY_RUN_SCRIPT = '/Users/pulkitkhera/Documents/dtcc_hackathon/dtcch-2025-db/llm_agent_workflows/main_policy.py'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 

@@ -4,7 +4,7 @@ from pydantic import BaseModel, ConfigDict
 import uuid
 
 from agents.agent_kyc_background_check_specialist import AgentKYCBackgroundCheckOps
-from tools.db_functions import fetch_all_data_points_variables, update_action_in_progress, fetch_client_data_file_path, fetch_processed_policy_json
+from tools.db_functions import fetch_all_data_points_variables, update_action_in_progress, fetch_client_data_file_path, fetch_processed_policy_json, store_uuid
 from tools.trigger_mails import request_docs
 
 
@@ -59,14 +59,18 @@ def main():
     
     unique_evidence_id = str(uuid.uuid4())
     
+    print("\nStoring UUID in database...\n")
+    #Storing UUID in database
+    store_uuid(uuid=unique_evidence_id, kyc_id=args.kyc_id)
+
     print("\nTriggering client doc request mail...\n")
     #Requesting docs from clients
     request_docs(string_id=unique_evidence_id, 
                  callback_url = "some callback", 
                  email_text=f"Please upload documents for KYC: https://dtcch-2025-db.sibnick.men/backend2/static/upload.html?uid={unique_evidence_id}",
-                 email="sibnick@gmail.com",
+                 email="pulkitkhera97@gmail.com",
                  doc_types = ["Passport"]
                  )
-
+    
 if __name__ == "__main__":
     main()
