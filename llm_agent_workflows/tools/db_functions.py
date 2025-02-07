@@ -26,7 +26,7 @@ session = SessionLocal()
 
 # Function to insert data into kyc_ops table
 def update_action_in_progress(payload, kyc_id):
-
+    print("Payload", payload, kyc_id)
     for row in payload:
         db_entry = Actions(
             kyc_id = kyc_id,
@@ -53,7 +53,6 @@ def update_action_in_progress(payload, kyc_id):
             print(f"Added output action info to the database.")
         except Exception as e:
             print(e)
-
 
 
 def fetch_policy_file_path(policy_id):
@@ -99,9 +98,9 @@ def kyc_process_insert_risks(risk_assessment, kyc_id:int):
 def kyc_process_check_status_actions(uuid: str) -> int:
     action = session.query(Actions).filter_by(uuid=uuid).first()
     actions_from_kyc_process = session.query(Actions).filter_by(kyc_id=action.kyc_id).all()
-    all_done = all(action.latest_action_activity == "DONE" for action in actions_from_kyc_process)
+    all_done = all(action.latest_action_activity == "COMPLETED" for action in actions_from_kyc_process)
     if all_done:
-        session.query(KycProcess).filter_by(kyc_id=action.kyc_id).update({KycProcess.overall_status: "DONE"})
+        session.query(KycProcess).filter_by(kyc_id=action.kyc_id).update({KycProcess.overall_status: "COMPLETED"})
         print(f"Updated kyc_process status to DONE for kyc_id: {action.kyc_id}")
         try:
            session.commit()
@@ -113,6 +112,15 @@ def kyc_process_check_status_actions(uuid: str) -> int:
     else:
         print(f"Not all actions are done for kyc_id: {action.kyc_id}")
         return 0
+
+def update_flow_status(kyc_id, status):
+    try:
+        session.query(KycProcess).filter_by(kyc_id=kyc_id).update({KycProcess.overall_status:status})
+        session.commit()
+        print ("Updated Status.")
+    except Exception as e:
+        print(f"Failed updating Status: {str(e)}")
+        session.rollback()
 
 def store_processed_policy_json(policy_id, result):
 
