@@ -51,9 +51,8 @@ def update_action_in_progress(payload, kyc_id):
         try:
             session.commit()
             print(f"Added output action info to the database.")
-        except IntegrityError:
-            session.rollback()
-            print(f"Skipping duplicate entry kyc id: {kyc_id}")
+        except Exception as e:
+            print(e)
 
 
 
