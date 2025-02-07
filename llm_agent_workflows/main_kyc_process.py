@@ -4,7 +4,7 @@ from pydantic import BaseModel, ConfigDict
 import uuid
 
 from agents.agent_kyc_background_check_specialist import AgentKYCBackgroundCheckOps
-from tools.db_functions import fetch_all_data_points_variables, update_action_in_progress, fetch_client_data_file_path, fetch_processed_policy_json
+from tools.db_functions import fetch_all_data_points_variables, update_action_in_progress, fetch_client_data_file_path, fetch_processed_policy_json, store_evidence_uuid
 from tools.trigger_mails import request_docs
 
 
@@ -58,6 +58,8 @@ def main():
     result_json = list(results.values())[0]
     
     unique_evidence_id = str(uuid.uuid4())
+    
+    store_evidence_uuid(unique_evidence_id, args.kyc_id)
     
     print("\nTriggering client doc request mail...\n")
     #Requesting docs from clients

@@ -130,6 +130,16 @@ def fetch_processed_policy_json(policy_id):
     policy_json = session.query(Policy).filter_by(policy_id=policy_id).first().processed_policy_json
     return json.loads(policy_json)
 
+def store_evidence_uuid(uuid, kyc_id):
+    try:
+        session.query(Actions).filter_by(kyc_id=kyc_id).update({Actions.uuid:uuid})
+        session.commit()
+        print ("Inserted Evidence extract in the database.")
+    except Exception as e:
+        print(f"Error inserting evidence in the database: {str(e)}")
+        session.rollback()
+    
+
 # Example usage
 payload = """[
     {
