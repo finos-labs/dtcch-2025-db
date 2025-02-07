@@ -12,77 +12,6 @@ from app import app, db
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 
-# Simulated user database
-users = {
-    "admin": {
-        "id": 1,
-        "password": bcrypt.generate_password_hash("password").decode("utf-8"),
-        "email": "john@example.com",
-        "department": "Compliance",
-        "avatar": "https://i.pravatar.cc/100"
-    }
-}
-
-def send_email_request(new_request):
-    pass
-    # from mailersend import emails
-    # # assigning NewEmail() without params defaults to MAILERSEND_API_KEY env var
-    # mailer = emails.NewEmail()
-    # # define an empty dict to populate with mail values
-    # mail_body = {}
-    # mail_from = {
-    #     "name": "KYC check",
-    #     "email": "info@trial-z86org8q66zgew13.mlsender.net",
-    # }
-    # recipients = [
-    #     {
-    #         "name": "Y  our Client",
-    #         "email": "your@client.com",
-    #     }
-    # ]
-    # mailer.set_mail_from(mail_from, mail_body)
-    # mailer.set_mail_to(recipients, mail_body)
-    # mailer.set_subject("Hello!", mail_body)
-    # mailer.set_html_content("This is the HTML content", mail_body)
-    # mailer.set_plaintext_content("This is the text content", mail_body)
-    # mailer.set_reply_to(reply_to, mail_body)
-    #
-    # # using print() will also return status code and data
-    # mailer.send(mail_body)
-
-
-@app.route('/request_docs', methods=['POST'])
-def request_docs():
-    data = request.get_json()
-
-    if not data or 'email_text' not in data or 'callback_url' not in data or 'string_id' not in data:
-        return jsonify({'error': 'Missing required fields'}), 400
-
-    email_text = data['email']
-    email_text = data['email_text']
-    callback_url = data['callback_url']
-    string_id = data['string_id']
-
-    try:
-        # Create a new RequestForDocs object
-        new_request = RequestForDocs(
-            email_text=email_text,
-            callback_url=callback_url,
-            string_id=string_id
-        )
-
-        # Add and commit the new request to the database
-        db.session.add(new_request)
-    except Exception as e:
-        db.session.rollback()
-        return jsonify({'error': str(e)}), 500
-    finally:
-        db.session.commit()
-
-    send_email_request(new_request)
-
-    return jsonify({'message': 'Request stored successfully'}), 201
-
 # User Login API
 @app.route("/login", methods=["POST"])
 def login():
@@ -90,7 +19,9 @@ def login():
     username = data.get("username")
     password = data.get("password")
 
-    if username in users and bcrypt.check_password_hash(users[username]["password"], password):
+    user = KycOps.query.filter_by(ops_email=username).first()
+
+    if user and bcrypt.check_password_hash(user.ops_pass_hash, password):
         access_token = create_access_token(identity=username)
         print('Token created:', access_token)
         return jsonify(access_token=access_token)
@@ -110,10 +41,12 @@ def user_info():
         username = get_jwt_identity()  # ✅ Now returns only a string
         print("Current User:", username)
 
-        if username not in users:
+        user = KycOps.query.filter_by(ops_email=username).first()
+
+        if not user:
             return jsonify({"error": "User not found"}), 404
 
-        return jsonify(users[username])
+        return jsonify(User(user.ops_id, user.ops_email, user.ops_name, user.ops_department))
 
     except Exception as e:
         print("Error:", str(e))
@@ -135,9 +68,10 @@ def get_ops_details(ops_id):
 @jwt_required()
 def get_kyc_list():
     username = get_jwt_identity()  # ✅ Now returns only a string
-    if username not in users:
+    user = KycOps.query.filter_by(ops_email=username).first()
+    if not user:
         return jsonify({"error": "User not found"}), 404
-    ops_id = users[username]["id"]
+    ops_id = user.ops_id
     result = []
     try:
         kyc_processes = (db.session.query(
@@ -193,9 +127,10 @@ def trigger_kyc():
     if not data or 'client_id' not in data or 'policy_id' not in data:
         return jsonify({'error': 'Missing required fields'}), 400
     username = get_jwt_identity()
-    if username not in users:
+    user = KycOps.query.filter_by(ops_email=username).first()
+    if not user:
         return jsonify({"error": "User not found"}), 404
-    ops_id = users[username]["id"]
+    ops_id = user.ops_id
 
     try:
         new_kyc = KycProcess(

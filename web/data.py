@@ -15,13 +15,13 @@ class Kyc:
     risk_assessment_summary: str
     risk_tier: str
 
-# Define the REQUEST_FOR_DOCS model
-class RequestForDocs(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    email_text = db.Column(db.Text, nullable=False)
-    callback_url = db.Column(db.Text, nullable=False)
-    string_id = db.Column(db.String(255), nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+@dataclass
+class User:
+    id: int
+    email: str
+    name: str
+    department: str
+    avatar: str = 'https://i.pravatar.cc/100'
 
 @dataclass
 class Client(db.Model):
@@ -65,6 +65,9 @@ class KycOps(db.Model):
     ops_id: int = db.Column(db.Integer, primary_key=True)
     ops_name: str = db.Column(db.String(255), nullable=False)
     ops_designation: str = db.Column(db.String(255), nullable=False)
+    ops_department: str = db.Column(db.String(255))
+    ops_email: str = db.Column(db.String(255))
+    ops_pass_hash: str = db.Column(db.Text)
 
 @dataclass
 class Policy(db.Model):
