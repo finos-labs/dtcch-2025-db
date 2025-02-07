@@ -118,3 +118,4 @@ class AgentExtractVariables(Agent):
             return json.loads(response) 
         except ValidationError as e:
             print(e)
+            return None

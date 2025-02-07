@@ -53,17 +53,16 @@ def process_sentence(sentence: Sentence, pdf_name: str, agent_kyc_review_policy:
 def convert_crew_output_to_action_output(i: int, crew_output: List[Dict[str, str]]) -> ActionOutput:
     current_result = crew_output[i][1]
     try:
-        if current_result == '{"action_detected": False}' or current_result == '{"action_detected": false}':
-            return None
-        else:
-            ActionOutput.model_validate_json(current_result)
-            return json.loads(current_result)
-    except ValidationError as e:
+        ActionOutput.model_validate_json(current_result)
+        return json.loads(current_result)
+    except Exception as e:
         print(e)
         return None
 
 def process_action(sentence: Sentence, action_result: ActionOutput, variables_options: Dict[str, str], agent_extract_variables: AgentExtractVariables) -> Dict[str, str]:
     extracted_variables = agent_extract_variables._analyze_quote_and_action(action_result['action'], action_result['quote'], variables_options)
+    if not extracted_variables:
+        return None
     action_result.update(extracted_variables)
     sentence.pop("sentence")
     sentence.update(action_result)
@@ -116,9 +115,10 @@ def main():
                 if not action_result:
                     continue
                 final_processed_sentence = process_action(sentences[i], action_result, variables_options, agent_extract_variables)
+                if not final_processed_sentence:
+                    continue
                 result.append(final_processed_sentence)
             print("-------------------------")
-
     except Exception as e:
             print(f"Error processing PDF: {str(e)}")
             import traceback
