@@ -29,10 +29,10 @@ For any concerns or inquiries, please refer to the repository's license terms an
 
 - [Why AI KYC Agent?](#why-ai-kyc-agent)
 - [Getting Started](#getting-started)
-- [Key Features](#key-features)
+- [Functionality](#functionality)
+  - [Key Features](#key-features)
+  - [Autonomy Diagram](#autonomy-diagram)
 - [Examples](#examples)
-- [How AI KYC AGENT Compares](#how-ai-kyc-agent-compares)
-- [Frequently Asked Questions (FAQ)](#faq)
 - [Contribution](#contribution)
 - [Project Members](#project-members)
 - [License](#license)
@@ -58,7 +58,7 @@ Our AI-powered KYC agent offers a smarter alternative by:
 
 By leveraging advanced AI, this solution transforms KYC into a streamlined, cost-effective, and highly compliant process—empowering businesses to operate more efficiently in an increasingly regulated landscape.
 
-# Getting started 
+# Getting started
 AI KYC AGENT has two flows which act as a comprehensive KYC Agent. The first flow is a KYC procedure Agent, to analyse Policy Documents via the KYC Procedure agent. The second flow to analyse Client Documentation via the KYC Ops Agent. 
 
 ### 1. Installation
@@ -85,7 +85,7 @@ cd llm_agent_workflows
 pip install -r requirements.txt
 ```
 
-Install Pytesseract, follow the steps listed in [Pytesseract README](./README_pytesseract.md).
+Install Pytesseract, follow the steps listed in [Pytesseract README](documentation/pytesserac_installation.md).
 
 Create the tables to store all your objects by running the folloing script [Database Schemas](./database/ddl.sql).
 
@@ -131,7 +131,7 @@ open config.py
 
 # Functionality
 
-## Key Features (work in progress)
+## Key Features
 * Perform E2E KYC for a client
     * Request information from a client
     * Extract information from client messages and documents
@@ -145,27 +145,27 @@ open config.py
 
 
 
-![KYC Agent Technical Flow](images/technical_flowchart.png)
+![KYC Agent Technical Flow](documentation/images/technical_flowchart.png)
 
 ## Autonomy diagram
 This diagram illustrates the current level of autonomy in the KYC landscape. As shown below, autonomy is categorized into five levels. It is important to note that most existing KYC tools fall under Level 1 or 2, where KYC Operations drive the process, potentially with AI answering KYC-related questions. This solution aims to achieve Level 4, where an AI Agent can manage the entire process, with KYC Operations providing supervision.
 
-![AI KYC Agent Autonomy pyramid](images/autonomy.png)
+![AI KYC Agent Autonomy pyramid](documentation/images/autonomy.png)
 
-# Examples 
+# Examples
 Below are some screenshots of the user interface (UI), illustrating key features and the overall design of the application.
 The login page:
-![LoginPage](screenshot/1.%20login.png)
+![LoginPage](documentation/screenshot/1.%20login.png)
 The landing page, where you can be directed to eitehr the KYC Ops Dashboard, ot the admin document upload:
-![LandingPage](screenshot/2.%20landing_page.png)
+![LandingPage](documentation/screenshot/2.%20landing_page.png)
 The dashboard of KYC Ops, where a client can be selected from:
-![Dashbaord](screenshot/3.%20dashboard.png)
+![Dashbaord](documentation/screenshot/3.%20dashboard.png)
 The KYC details for a specific client, where a specific action can be selected:
-![KYCDetails](screenshot/5.%20kyc_details.png)
+![KYCDetails](documentation/screenshot/5.%20kyc_details.png)
 The specific action details: 
-![ActionDetails](screenshot/6.%20action_details.png)
+![ActionDetails](documentation/screenshot/6.%20action_details.png)
 The admin document upload page: 
-![AdminDocumentUpload](screenshot/7.%20admin_document_upload.png)
+![AdminDocumentUpload](documentation/screenshot/7.%20admin_document_upload.png)
 
 
 
@@ -174,7 +174,7 @@ We welcome contributions to this project! Whether you're fixing a bug, adding a 
 
 For detailed information on how the system is architected, how features are implemented, and the technologies used, please refer to the [TECHNICAL.md](./TECHNICAL.md) file. Before contributing, we recommend reviewing this document to familiarize yourself with the project’s technical setup and coding standards.
 
-# Project Members 
+# Project Members
 Team members involved in the DTCC Hackathon with FINOS, resposible for the initial PoC of the AI KYC AGENT. 
 
 
