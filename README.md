@@ -85,7 +85,7 @@ cd llm_agent_workflows
 pip install -r requirements.txt
 ```
 
-Install Pytesseract, follow the steps listed in [Pytesseract README](documentation/pytesserac_installation).
+Install Pytesseract, follow the steps listed in [Pytesseract README](documentation/pytesserac_installation.md).
 
 Create the tables to store all your objects by running the folloing script [Database Schemas](./database/ddl.sql).
 
