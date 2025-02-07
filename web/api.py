@@ -288,7 +288,7 @@ def upload_document():
                     db.session.commit()
                     asyncio.run(run_process(app.config['POLICY_RUN'],
                                      '--policy_id', str(new_policy.policy_id),
-                                     '--variable_references_path', '/home/ubuntu/dtcch-2025-db/llm_agent_workflows/tools/input/variables_reference'))
+                                     '-v', '/home/ubuntu/dtcch-2025-db/llm_agent_workflows/tools/input/variables_reference'))
 
              except Exception as e:
                   db.session.rollback()
