@@ -41,7 +41,7 @@ This documentation serves as a guide for engineers, developers, and contributors
 This section includes a high-level design diagram illustrating the overall structure of the solution. The diagram below outlines the logical flow of the two processes, which are explained in detail in the [Solution Structure](#solution-structure) section. 
 
 
-![KYC Logical Flow](images/logical_flow.png)
+![KYC Logical Flow](documentation/images/logical_flow.png)
 
 
 ## Solution Structure
@@ -98,13 +98,13 @@ This section outlines the technologies used throughout the project, including pr
 ## Functionality Diagrams
 The below diagram that showcase the flow of functionalities and the interaction between different components of the system. This diagram shows the ways in which the KYC Agent can be interacted with. As detailed in the [Solution Structure](#solution-structure) section, there are two flows, each with their own agent. The KYC Policy Procedure Agent is responsible for the first flow, namely the KYC Policy Procedure, which maps the policy documents. The KYC Ops Agent is responsible for the second flow, namely the KYC Ops Process, where the client specific data is managed. The corresponding UIs and stakeholders are also shows in this diagram.
 
-![KYC Agent Technical Flow](images/technical_flowchart.png)
+![KYC Agent Technical Flow](documentation/images/technical_flowchart.png)
 
 ## Data Structure
 
 In this section, we outline the structure of the data used within the system. The data is organized into tables, each with specific entries that relate to various aspects of the system's functionality. Below is a high-level overview of the data flow, with tables and entries mapped to the relevant parts of the application.
 
-![Data Flow Diagram](images/data_model.png)
+![Data Flow Diagram](documentation/images/data_model.png)
 
 
 ### Key Data Tables:

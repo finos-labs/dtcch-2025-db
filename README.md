@@ -85,7 +85,7 @@ cd llm_agent_workflows
 pip install -r requirements.txt
 ```
 
-Install Pytesseract, follow the steps listed in [Pytesseract README](./README_pytesseract.md).
+Install Pytesseract, follow the steps listed in [Pytesseract README](documentation/pytesserac_installation).
 
 Create the tables to store all your objects by running the folloing script [Database Schemas](./database/ddl.sql).
 
@@ -145,27 +145,27 @@ open config.py
 
 
 
-![KYC Agent Technical Flow](images/technical_flowchart.png)
+![KYC Agent Technical Flow](documentation/images/technical_flowchart.png)
 
 ## Autonomy diagram
 This diagram illustrates the current level of autonomy in the KYC landscape. As shown below, autonomy is categorized into five levels. It is important to note that most existing KYC tools fall under Level 1 or 2, where KYC Operations drive the process, potentially with AI answering KYC-related questions. This solution aims to achieve Level 4, where an AI Agent can manage the entire process, with KYC Operations providing supervision.
 
-![AI KYC Agent Autonomy pyramid](images/autonomy.png)
+![AI KYC Agent Autonomy pyramid](documentation/images/autonomy.png)
 
 # Examples 
 Below are some screenshots of the user interface (UI), illustrating key features and the overall design of the application.
 The login page:
-![LoginPage](screenshot/1.%20login.png)
+![LoginPage](documentation/screenshot/1.%20login.png)
 The landing page, where you can be directed to eitehr the KYC Ops Dashboard, ot the admin document upload:
-![LandingPage](screenshot/2.%20landing_page.png)
+![LandingPage](documentation/screenshot/2.%20landing_page.png)
 The dashboard of KYC Ops, where a client can be selected from:
-![Dashbaord](screenshot/3.%20dashboard.png)
+![Dashbaord](documentation/screenshot/3.%20dashboard.png)
 The KYC details for a specific client, where a specific action can be selected:
-![KYCDetails](screenshot/5.%20kyc_details.png)
+![KYCDetails](documentation/screenshot/5.%20kyc_details.png)
 The specific action details: 
-![ActionDetails](screenshot/6.%20action_details.png)
+![ActionDetails](documentation/screenshot/6.%20action_details.png)
 The admin document upload page: 
-![AdminDocumentUpload](screenshot/7.%20admin_document_upload.png)
+![AdminDocumentUpload](documentation/screenshot/7.%20admin_document_upload.png)
 
 
 
